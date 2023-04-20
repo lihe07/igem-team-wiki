@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
 
   /** @type {HTMLElement} */
-  let container;
   let content;
 
   let hide = false;
@@ -24,12 +23,12 @@
   function updateScroll() {
     hide = false;
     lastUpdate = Date.now();
-    barHeight = container.clientHeight / container.scrollHeight;
+
+    barHeight = window.innerHeight / content.scrollHeight;
 
     percent =
-      (container.scrollTop /
-        (container.scrollHeight - container.clientHeight)) *
-      barHeight;
+      (window.scrollY / (content.scrollHeight - window.innerHeight)) *
+      (1 - barHeight);
 
     if (!interval) {
       interval = setInterval(updateChecker, 1000);
@@ -38,15 +37,11 @@
 
   onMount(() => {
     updateScroll();
+    window.addEventListener("scroll", updateScroll);
   });
 </script>
 
-<div
-  class="container"
-  id="scroll"
-  bind:this={container}
-  on:scroll={updateScroll}
->
+<div>
   <div class="content" bind:this={content}>
     <slot />
   </div>
@@ -63,20 +58,15 @@
 </div>
 
 <style>
-  .container {
-    height: 100vh;
-    width: 100%;
-    overflow: scroll;
+  :global(html) {
     scrollbar-width: none;
-    position: relative;
   }
   /* Hide scrollbar */
-  .container::-webkit-scrollbar {
+  :global(::-webkit-scrollbar) {
     display: none;
   }
   .content {
     min-width: 100%;
-    overflow: hidden;
   }
   .mouse {
     position: fixed;
@@ -89,7 +79,7 @@
     position: fixed;
     right: 1px;
     top: 0;
-    background-color: white;
+    background-color: black;
     opacity: 50%;
     width: 5px;
     transition: opacity 0.3s;
