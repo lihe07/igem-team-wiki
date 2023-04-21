@@ -65,6 +65,12 @@
     width: 100%;
   }
 
+  @media (max-width: 768px) {
+    svg {
+      transform: translateY(-150%) scaleY(2);
+    }
+  }
+
   @keyframes move {
     0% {
       transform: translateX(-100%) var(--scale);

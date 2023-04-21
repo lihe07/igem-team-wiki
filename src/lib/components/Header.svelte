@@ -1,15 +1,13 @@
 <script>
   export let autoHide = true;
-  import routes from "$lib/header";
+  import HeaderLinks from "./HeaderLinks.svelte";
 </script>
 
 <header class:autoHide>
   <span class="team-name">BAID-China</span>
 
-  <div class="routes">
-    {#each routes as route}
-      <p>{route.text}</p>
-    {/each}
+  <div class="links">
+    <HeaderLinks />
   </div>
 </header>
 
@@ -38,8 +36,17 @@
     font-weight: bold;
     font-size: 1.5rem;
   }
-  .routes {
+  .links {
     display: flex;
     gap: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      padding: 0 2rem;
+    }
+    .links {
+      display: none;
+    }
   }
 </style>

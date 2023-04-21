@@ -1,12 +1,15 @@
 <script>
   import Header from "$lib/components/Header.svelte";
   import PageScroll from "$lib/components/PageScroll.svelte";
+  import Splash from "$lib/components/Splash.svelte";
 </script>
 
-<Header />
-<PageScroll>
-  <slot />
-</PageScroll>
+<Splash>
+  <Header />
+  <PageScroll>
+    <slot />
+  </PageScroll>
+</Splash>
 
 <style>
   :global(body) {

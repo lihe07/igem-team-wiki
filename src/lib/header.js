@@ -22,7 +22,7 @@ export default [
     ],
   },
   {
-    text: "Human Practice",
-    link: "/Human_Practice",
+    text: "Human Practices",
+    link: "/Human_Practices",
   },
 ];
