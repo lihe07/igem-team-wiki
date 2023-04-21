@@ -1,9 +1,9 @@
 <script>
-  export let autoHide = true;
+  export let fixed = true;
   import HeaderLinks from "./HeaderLinks.svelte";
 </script>
 
-<header class:autoHide>
+<header class:fixed>
   <span class="team-name">BAID-China</span>
 
   <div class="links">
@@ -21,7 +21,7 @@
     color: white;
   }
 
-  header.autoHide {
+  header.fixed {
     position: fixed;
     top: 1.5rem;
     left: 0;

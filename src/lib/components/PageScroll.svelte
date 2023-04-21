@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
 
   /** @type {HTMLElement} */
   let content;
@@ -38,6 +38,11 @@
   onMount(() => {
     updateScroll();
     window.addEventListener("scroll", updateScroll);
+  });
+
+  onDestroy(() => {
+    if (typeof window !== "undefined")
+      window.removeEventListener("scroll", updateScroll);
   });
 </script>
 

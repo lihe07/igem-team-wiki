@@ -2,12 +2,15 @@
   import Header from "$lib/components/Header.svelte";
   import PageScroll from "$lib/components/PageScroll.svelte";
   import Splash from "$lib/components/Splash.svelte";
+  import PageTransition from "$lib/components/PageTransition.svelte";
 </script>
 
 <Splash>
   <Header />
   <PageScroll>
-    <slot />
+    <PageTransition>
+      <slot />
+    </PageTransition>
   </PageScroll>
 </Splash>
 

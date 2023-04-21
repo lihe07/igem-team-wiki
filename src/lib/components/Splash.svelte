@@ -32,12 +32,12 @@
 <style>
   .container {
     position: fixed;
-    z-index: 10;
+    z-index: 20;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-color: #99f6e4;
     transition: opacity 0.3s;
 
     display: flex;
