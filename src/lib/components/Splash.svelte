@@ -23,7 +23,9 @@
   });
 </script>
 
-<div class="container" class:loaded>Hello World!</div>
+<div class="container" class:loaded>
+  <h1>Transition: Splash</h1>
+</div>
 
 <div class="content" class:loaded>
   <slot />

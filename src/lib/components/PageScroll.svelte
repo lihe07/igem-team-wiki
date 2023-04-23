@@ -1,5 +1,6 @@
 <script>
   import { onDestroy, onMount } from "svelte";
+  import { spring } from "svelte/motion";
 
   /** @type {HTMLElement} */
   let content;
@@ -18,7 +19,7 @@
     }
   }
 
-  let percent = 0;
+  let percent = spring(0);
   let barHeight = 0;
   function updateScroll() {
     hide = false;
@@ -26,9 +27,10 @@
 
     barHeight = window.innerHeight / content.scrollHeight;
 
-    percent =
+    percent.set(
       (window.scrollY / (content.scrollHeight - window.innerHeight)) *
-      (1 - barHeight);
+        (1 - barHeight)
+    );
 
     if (!interval) {
       interval = setInterval(updateChecker, 1000);
@@ -58,7 +60,7 @@
   <div
     class="scroll"
     class:hide={hide && !enter}
-    style="height: {barHeight * 100}%; top: {percent * 100}%"
+    style="height: {barHeight * 100}%; top: {$percent * 100}%"
   />
 </div>
 
@@ -85,6 +87,7 @@
     right: 1px;
     top: 0;
     background-color: black;
+    border-radius: 1em;
     opacity: 50%;
     width: 5px;
     transition: opacity 0.3s;
@@ -96,6 +99,6 @@
     opacity: 70%;
   }
   .scroll:active {
-    opacity: 30%;
+    opacity: 50%;
   }
 </style>

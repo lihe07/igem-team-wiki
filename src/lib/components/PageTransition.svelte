@@ -5,14 +5,23 @@
 
   let skip = false;
 
+  /** @type {import("@sveltejs/kit").NavigationTarget?} */
+  let from;
+
+  /** @type {import("@sveltejs/kit").NavigationTarget?} */
+  let to;
+
   beforeNavigate((n) => {
-    if (!n.to) return;
+    if (!n.to || !n.from) return;
 
     if (skip) {
       console.log("skip");
       skip = false;
       return;
     }
+
+    from = n.from;
+    to = n.to;
 
     n.cancel();
     console.log(n);
@@ -26,7 +35,7 @@
   });
 
   afterNavigate(() => {
-    loaded = true;
+    setTimeout(() => (loaded = true), 300);
   });
 </script>
 
@@ -34,7 +43,11 @@
   <slot />
 </div>
 
-<div class="splash" class:loaded>TR</div>
+<div class="splash" class:loaded>
+  <h1>
+    Transition: from {from?.route.id} to {to?.route.id}
+  </h1>
+</div>
 
 <style>
   .splash {
@@ -46,6 +59,10 @@
     height: 100vh;
     background-color: black;
     transition: opacity 0.3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .content {
     opacity: 0;
@@ -57,5 +74,9 @@
   .splash.loaded {
     opacity: 0;
     pointer-events: none;
+  }
+
+  h1 {
+    color: white;
   }
 </style>
