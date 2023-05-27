@@ -3,6 +3,9 @@
   import PageScroll from "$lib/components/PageScroll.svelte";
   import Splash from "$lib/components/Splash.svelte";
   import PageTransition from "$lib/components/PageTransition.svelte";
+
+  // import "@fontsource/roboto";
+  import "@fontsource/mate-sc";
 </script>
 
 <Splash>

@@ -47,7 +47,7 @@
     text-align: center;
     color: white;
     font-size: 3rem;
-    font-family: serif;
+    font-family: "Mate SC";
     width: max-content;
     max-width: 30rem;
   }

@@ -1,6 +1,4 @@
 <script>
-  import { tweened } from "svelte/motion";
-
   /**
    * @param {SVGPathElement} el
    * @param {number} duration
