@@ -7,28 +7,33 @@
   import human from "$lib/assets/human.webp";
   import Arrow from "./Arrow.svelte";
 
+  import calculate from "./main";
+
   let t = 5;
 
-  function initHistogram(ele: HTMLCanvasElement) {
+  function initHistogram(ele: HTMLCanvasElement, label: string) {
     // Calculate height
 
-    const dummyData = [0, 10, 5, 2, 20, 30, 45, 50, 60, 70];
+    const dummyData = [
+      { x: 0.5, y: 10 },
+      { x: 1.5, y: 20 },
+      { x: 2.5, y: 30 },
+      { x: 3.5, y: 40 },
+      { x: 4.5, y: 50 },
+      { x: 5.5, y: 60 },
+      { x: 6.5, y: 70 },
+      { x: 7.5, y: 80 },
+      { x: 8.5, y: 90 },
+      { x: 9.5, y: 100 },
+    ];
 
     const ctx = ele.getContext("2d")!;
     const chart = new Chart(ctx, {
-      // type: "line",
+      type: "bar",
       data: {
-        labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
         datasets: [
           {
-            type: "line",
-            data: dummyData,
-            hidden: true,
-            tension: 0.3,
-            pointRadius: 0,
-          },
-          {
-            type: "bar",
+            label,
             data: dummyData,
             backgroundColor: "#00bce2",
             borderColor: "#00bce2",
@@ -42,7 +47,16 @@
         scales: {
           y: {
             beginAtZero: true,
-            max: 100,
+          },
+          x: {
+            type: "linear",
+            offset: false,
+            grid: {
+              offset: false,
+            },
+            ticks: {
+              stepSize: 1,
+            },
           },
         },
         plugins: {
@@ -50,7 +64,14 @@
             display: false,
           },
           tooltip: {
-            enabled: false,
+            callbacks: {
+              title: (items) => {
+                if (items.length === 0) return "";
+                const min = items[0].parsed.x - 0.5;
+                const max = items[0].parsed.x + 0.5;
+                return `Conc ${min}~${max}`;
+              },
+            },
           },
         },
         responsive: true,
@@ -66,8 +87,8 @@
 
   onMount(() => {
     // Init charts
-    tissue_chart = initHistogram(tissue);
-    gut_chart = initHistogram(gut);
+    tissue_chart = initHistogram(tissue, "Tissue");
+    gut_chart = initHistogram(gut, "Gut");
 
     // Init Arrows
 
@@ -81,7 +102,31 @@
       defaultIR: 0.5,
     },
     {
-      name: "Meat",
+      name: "Mollusc",
+      defaultIR: 0.5,
+    },
+    {
+      name: "Crustaceans",
+      defaultIR: 0.5,
+    },
+    {
+      name: "Tap Water",
+      defaultIR: 0.5,
+    },
+    {
+      name: "Bottled Water",
+      defaultIR: 0.5,
+    },
+    {
+      name: "Salt",
+      defaultIR: 0.5,
+    },
+    {
+      name: "Beer",
+      defaultIR: 0.5,
+    },
+    {
+      name: "Milk",
       defaultIR: 0.5,
     },
   ];
@@ -89,46 +134,46 @@
   interface Irs {
     [key: string]: number;
   }
-  let selectedFoods = ["Fish"];
+  let selectedFoods = ["Fish", "Bottled Water", "Salt", "Milk"];
   let irs: Irs = {};
 
   foods.forEach((food) => {
-    foods.forEach((food) => {
-      irs[food.name] = food.defaultIR;
-    });
+    irs[food.name] = food.defaultIR;
   });
 
+  const SAMPLE_NUM = 500;
+
+  interface Samples {
+    [key: number]: number;
+  }
+
   $: if (tissue_chart && gut_chart) {
-    tissue_chart.data.datasets[1].data = [
-      0,
-      10 * t,
-      5,
-      2,
-      20 * t,
-      30,
-      45 + t,
-      50 + t,
-      60 + t,
-      70 + t,
-    ];
-    tissue_chart.data.datasets[0].data = tissue_chart.data.datasets[1].data;
+    const C_tis_samples: Samples = {};
+    const C_mp_samples: Samples = {};
+    for (let i = 0; i < SAMPLE_NUM; i++) {
+      const res = calculate(t, selectedFoods, irs);
+
+      C_tis_samples[res.C_tis - 0.5] =
+        (C_tis_samples[res.C_tis - 0.5] || 0) + 1;
+
+      C_mp_samples[res.C_mp - 0.5] = (C_mp_samples[res.C_mp - 0.5] || 0) + 1;
+    }
+
+    tissue_chart.data.datasets[0].data = Object.entries(C_tis_samples).map(
+      ([x, y]) => ({
+        x: Number(x),
+        y,
+      })
+    );
 
     tissue_chart.update();
 
-    gut_chart.data.datasets[0].data = [
-      0,
-      10 * t,
-      5,
-      2,
-      20 * t,
-      30,
-      45 + t,
-      50 + t,
-      60 + t,
-      70 + t,
-    ];
-
-    gut_chart.data.datasets[1].data = gut_chart.data.datasets[0].data;
+    gut_chart.data.datasets[0].data = Object.entries(C_mp_samples).map(
+      ([x, y]) => ({
+        x: Number(x),
+        y,
+      })
+    );
 
     gut_chart.update();
   }
@@ -216,8 +261,8 @@
       </Card>
 
       <Card title="Accumulation time">
-        <p>TODO: Beautify Widgets</p>
-        <input type="range" bind:value={t} min="0" max="10" step="1" />
+        <p>TODO: Beautify Widgets: {t} years</p>
+        <input type="range" bind:value={t} min="1" max="70" step="1" />
       </Card>
     </div>
     <div class="center">
@@ -262,11 +307,6 @@
     display: flex;
     justify-content: space-between;
   }
-
-  /* canvas {
-    height: 100%;
-    width: 100%;
-  } */
 
   .canvas-container {
     width: 100%;

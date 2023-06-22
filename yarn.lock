@@ -639,6 +639,11 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmmirror.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+ranjs@^1.24.5:
+  version "1.24.5"
+  resolved "https://registry.npmmirror.com/ranjs/-/ranjs-1.24.5.tgz#15e1665bdbebb99ab45745310d44cd57732e24d7"
+  integrity sha512-ZW4Bgc5jPRDYqBWuTcwS3GgSMemG5t+eltzS1aGIM7AVBx3JJymqqWN+TiKb5t0gfK//lsJUYPDkNsZ+oLIXIQ==
+
 readdirp@~3.6.0:
   version "3.6.0"
   resolved "https://registry.npmmirror.com/readdirp/-/readdirp-3.6.0.tgz#74a370bd857116e245b29cc97340cd431a02a6c7"
