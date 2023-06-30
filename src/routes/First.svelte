@@ -4,7 +4,7 @@
 </script>
 
 <div class="header-container">
-  <Header fixed={false} />
+  <Header fixed={false} white={true} />
 </div>
 
 <img

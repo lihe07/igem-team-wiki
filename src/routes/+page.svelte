@@ -26,7 +26,6 @@
     position: sticky;
     top: 0;
     background-color: white;
-    padding: 3rem;
     box-sizing: border-box;
   }
 </style>

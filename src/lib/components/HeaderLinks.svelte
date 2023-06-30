@@ -1,13 +1,17 @@
 <script>
   import routes from "$lib/header";
+  import Icon from "@iconify/svelte";
+  import { page } from "$app/stores";
+
+  export let white = false; // If fg is white
 </script>
 
 {#each routes as route}
   {#if route.link}
-    <a href={route.link}>{route.text}</a>
+    <a class="toplevel" href={route.link} class:white>{route.text}</a>
   {:else}
     <div class="container">
-      <p>
+      <p class:white class="toplevel">
         {route.text}
         <svg width="20" height="20" viewBox="0 0 20 20" class="chevron">
           <path
@@ -16,9 +20,23 @@
           />
         </svg>
       </p>
-      <div class="glass">
-        {#each route.children as route}
-          <a href={route.link}>{route.text}</a>
+      <div class="glass" class:blue={!white}>
+        {#each route.children as child}
+          <a
+            class="child"
+            class:active={$page.url.pathname === child.link}
+            href={child.link}
+          >
+            <div>
+              <Icon style="font-size: 20px;" icon={child.icon} />
+              <span>{child.text}</span>
+            </div>
+            {#if child.desc}
+              <p class="desc">
+                {child.desc}
+              </p>
+            {/if}
+          </a>
           <br />
         {/each}
       </div>
@@ -27,19 +45,51 @@
 {/each}
 
 <style>
-  p,
-  a {
-    color: white;
+  .toplevel {
+    line-height: 3rem;
+    opacity: 0.7;
+  }
+
+  a,
+  p {
+    color: black;
     text-decoration: none;
     margin: 0;
-    line-height: 3rem;
-    opacity: 0.8;
     cursor: pointer;
     transition: opacity 0.15s;
   }
 
-  .container:hover p,
-  a:hover {
+  a.child {
+    padding: 0.7rem;
+    display: block;
+    line-height: 1rem;
+    border-radius: 0.5rem;
+    --bg-op: 0;
+    background-color: rgba(255, 255, 255, var(--bg-op));
+    transition: all 0.15s;
+  }
+
+  a.child:hover,
+  a.child.active {
+    --bg-op: 0.3;
+  }
+
+  a.child div {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  a.child .desc {
+    margin-top: 0.3rem;
+    opacity: 0.7;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  .toplevel.white {
+    color: white;
+  }
+  .toplevel:hover {
     opacity: 1;
   }
 
@@ -65,18 +115,20 @@
     position: absolute;
     top: 90%;
     left: 0;
-    padding: 1rem;
+    padding: 0.5rem;
     width: 10rem;
-    /* height: 100%; */
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
-    /* border: 1px solid rgba(0, 0, 0, 0.5); */
     transform-origin: top;
     transform: scale(0.8);
     pointer-events: none;
     border-radius: 0.5rem;
     opacity: 0;
     transition: all 0.15s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
   }
 
   .container:hover .glass {

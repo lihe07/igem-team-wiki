@@ -9,9 +9,9 @@
 </script>
 
 <Splash>
-  <Header />
   <PageScroll>
     <PageTransition>
+      <Header />
       <slot />
     </PageTransition>
   </PageScroll>

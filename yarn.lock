@@ -122,6 +122,13 @@
   resolved "https://registry.npmmirror.com/@fontsource/roboto/-/roboto-5.0.2.tgz#06f10be117be622e6c720a1c6579b00475420bcd"
   integrity sha512-SLw0o3kWwJ53/Ogyk8GGwSaULNX6Hogs+GsVempDdqpX8wm5hKBLYgUkdUPk+NogiViPp1x++OnkuLA+fAd9Kg==
 
+"@iconify/svelte@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.npmmirror.com/@iconify/svelte/-/svelte-3.1.4.tgz#728fa18ea03da8541a64565c1b2b0c2b8dc0d417"
+  integrity sha512-YDwQlN46ka8KPRayDb7TivmkAPizfTXi6BSRNqa1IV0+byA907n8JcgQafA7FD//pW5XCuuAhVx6uRbKTo+CfA==
+  dependencies:
+    "@iconify/types" "^2.0.0"
+
 "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.npmmirror.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
@@ -324,6 +331,11 @@ cookie@^0.5.0:
   resolved "https://registry.npmmirror.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
+core-js@^3.6.4:
+  version "3.31.0"
+  resolved "https://registry.npmmirror.com/core-js/-/core-js-3.31.0.tgz#4471dd33e366c79d8c0977ed2d940821719db344"
+  integrity sha512-NIp2TQSGfR6ba5aalZD+ZQ1fSxGhDo/s1w0nx3RYzf2pnJxt7YynxFlFScP6eV7+GZsKO95NSjGxyJsU3DZgeQ==
+
 debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.npmmirror.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
@@ -452,13 +464,6 @@ graceful-fs@^4.1.3:
   version "4.2.11"
   resolved "https://registry.npmmirror.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
-
-iconify-icon@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.npmmirror.com/iconify-icon/-/iconify-icon-1.0.7.tgz#d7e1f5d45a88486abcc977583da62e6e9e635572"
-  integrity sha512-MxaO3Jhf3f5ymPWGHR9x74f90TNKcq1D+B2iGucGhVtqAgbC9EtM06kKiTGH2CKELNnexckwhrA3/+OpT4HKFw==
-  dependencies:
-    "@iconify/types" "^2.0.0"
 
 import-fresh@^3.2.1:
   version "3.3.0"
@@ -713,6 +718,14 @@ sirv@^2.0.2:
     mrmime "^1.0.0"
     totalist "^3.0.0"
 
+smooth-scrollbar@^8.8.4:
+  version "8.8.4"
+  resolved "https://registry.npmmirror.com/smooth-scrollbar/-/smooth-scrollbar-8.8.4.tgz#0705e9b3defeb5b46cd43871f3ebcd62ae389a26"
+  integrity sha512-Wn2Q/iE+PE1ef4EfhFMhgaIMfSrjJl2LalRu0hBWSrw5nZKGsUIjWFWHnLB/Lpx7N+a1pJH6+wkQzBr+5nWPUg==
+  dependencies:
+    core-js "^3.6.4"
+    tslib "^1.10.0"
+
 sorcery@^0.11.0:
   version "0.11.0"
   resolved "https://registry.npmmirror.com/sorcery/-/sorcery-0.11.0.tgz#310c80ee993433854bb55bb9aa4003acd147fca8"
@@ -794,6 +807,11 @@ totalist@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmmirror.com/totalist/-/totalist-3.0.1.tgz#ba3a3d600c915b1a97872348f79c127475f6acf8"
   integrity sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==
+
+tslib@^1.10.0:
+  version "1.14.1"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
+  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 typescript@^5.0.3, typescript@^5.0.4:
   version "5.0.4"
