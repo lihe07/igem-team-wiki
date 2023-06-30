@@ -10,6 +10,9 @@ const config = {
       assets: "build",
       fallback: null,
     }),
+    prerender: {
+      handleHttpError: "warn",
+    },
   },
 };
 
