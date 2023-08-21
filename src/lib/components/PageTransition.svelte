@@ -1,5 +1,7 @@
 <script>
   import { afterNavigate, beforeNavigate, goto } from "$app/navigation";
+  import Icon from "@iconify/svelte";
+  import header from "$lib/header";
 
   let loaded = true;
 
@@ -37,6 +39,37 @@
   afterNavigate(() => {
     setTimeout(() => (loaded = true), 300);
   });
+
+  let entry = {
+    icon: null,
+    text: "",
+  };
+
+  function update(entries, _ = undefined) {
+    entries.forEach((e) => {
+      if (e.link === to?.route.id) {
+        entry = e;
+        return;
+      }
+      if (e.children) {
+        update(e.children);
+      }
+    });
+  }
+
+  function choose(choices) {
+    var index = Math.floor(Math.random() * choices.length);
+    return choices[index];
+  }
+
+  $: {
+    if (to?.route.id == "/") {
+      entry = {
+        icon: "fluent:home-48-filled",
+        text: "Home",
+      };
+    } else update(header, to);
+  }
 </script>
 
 <div class="content" class:loaded>
@@ -44,12 +77,18 @@
 </div>
 
 <div class="splash" class:loaded>
-  <h1>
-    Transition: from {from?.route.id} to {to?.route.id}
-  </h1>
+  <div class="circle" style="background-color: {choose(['#d6eaf8'])};">
+    <Icon
+      icon={entry.icon || "fluent:document-text-24-regular"}
+      style="font-size: 100px;"
+    />
+  </div>
+  <div class="text">
+    <h2>{entry.text}</h2>
+  </div>
 </div>
 
-<style>
+<style scoped>
   .splash {
     position: fixed;
     z-index: 19;
@@ -57,12 +96,23 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: white;
     transition: opacity 0.3s;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    animation: blink infinite 1.5s;
   }
   .content {
     opacity: 0;
@@ -76,7 +126,24 @@
     pointer-events: none;
   }
 
-  h1 {
-    color: white;
+  .text {
+    font-family: sans-serif;
+  }
+  .text h2 {
+    font-family: serif;
+    font-size: 50px;
+    margin: 0;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 100%;
+    }
+    50% {
+      opacity: 50%;
+    }
+    100% {
+      opacity: 100%;
+    }
   }
 </style>

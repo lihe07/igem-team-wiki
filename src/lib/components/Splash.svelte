@@ -24,7 +24,7 @@
 </script>
 
 <div class="container" class:loaded>
-  <h1>Transition: Splash</h1>
+  <h2>LOADING...</h2>
 </div>
 
 <div class="content" class:loaded>

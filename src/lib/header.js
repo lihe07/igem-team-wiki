@@ -11,19 +11,19 @@ export default [
       {
         text: "Contributions",
         link: "/Contributions",
-        icon: "fluent:people-team-28-regular",
+        icon: "fluent:arrow-trending-lines-24-regular",
         desc: "A brief overview of our project",
       },
       {
         text: "Experiments",
         link: "/Experiments",
-        icon: "fluent:beaker-28-regular",
+        icon: "fluent:beaker-24-regular",
         desc: "A brief overview of our project",
       },
       {
         text: "Safety",
         link: "/Safety",
-        icon: "",
+        icon: "fluent:shield-task-28-regular",
         desc: "A brief overview of our project",
       },
     ],
@@ -34,13 +34,13 @@ export default [
       {
         text: "Team",
         link: "/Team",
-        icon: "",
+        icon: "fluent:people-team-28-regular",
         desc: "A brief overview of our project",
       },
       {
         text: "Attributions",
         link: "/Attributions",
-        icon: "",
+        icon: "fluent:people-money-24-regular",
         desc: "A brief overview of our project",
       },
     ],
