@@ -41,7 +41,7 @@
   });
 
   let entry = {
-    icon: null,
+    icon: "",
     text: "",
   };
 

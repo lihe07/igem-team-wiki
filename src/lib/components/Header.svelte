@@ -83,6 +83,7 @@
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(5px);
+    box-sizing: border-box;
   }
   .mobile-links {
     pointer-events: none;
@@ -169,7 +170,7 @@
       padding-left: 2rem !important;
       padding-right: 2rem !important;
     }
-    header.fixed {
+    header {
       height: 64px;
     }
     .links {

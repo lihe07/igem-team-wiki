@@ -17,7 +17,9 @@
 
 <h1>Lorem ipsum dolor sit amet. Some slogan here.</h1>
 
-<Wave />
+<div class="float">
+  <Wave />
+</div>
 
 <style>
   img {
@@ -38,6 +40,19 @@
     );
   }
 
+  :global(.splash) .cover {
+    animation: fade-blur 0.5s linear 1s forwards;
+  }
+
+  @keyframes fade-blur {
+    from {
+      backdrop-filter: blur(0px);
+    }
+    to {
+      backdrop-filter: blur(10px);
+    }
+  }
+
   h1 {
     position: absolute;
     top: 50%;
@@ -50,6 +65,41 @@
     font-family: "Mate SC";
     width: max-content;
     max-width: 30rem;
+    opacity: 0;
+  }
+
+  :global(.splash) h1 {
+    animation: fade 0.5s ease-in 0.5s forwards;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .float {
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+  }
+
+  :global(.splash) .float {
+    animation: float 1s ease-in forwards;
+  }
+
+  @keyframes float {
+    from {
+      opacity: 0;
+      bottom: -50px;
+    }
+    to {
+      opacity: 1;
+      bottom: 0;
+    }
   }
 
   @media (max-width: 768px) {
