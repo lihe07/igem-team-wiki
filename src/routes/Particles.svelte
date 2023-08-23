@@ -54,16 +54,12 @@
   }
 </script>
 
-<div class="particles" class:show={percent > 0.1}>
+<div class="particles" style:opacity={Math.min(Math.max(percent / 0.3, 0), 1)}>
   <Particles {options} {particlesInit} on:particlesLoaded={onParticlesLoaded} />
 </div>
 
 <style>
   .particles {
     opacity: 0;
-    transition: opacity 1s;
-  }
-  .show {
-    opacity: 1;
   }
 </style>

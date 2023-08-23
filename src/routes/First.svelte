@@ -15,7 +15,16 @@
 
 <div class="cover" />
 
-<h1>Lorem ipsum dolor sit amet. Some slogan here.</h1>
+<div class="text">
+  <p style="filter:opacity(0.8);" class="a">Introducing</p>
+  <h1 class="b">Plasticlear</h1>
+  <p
+    style="filter: opacity(0.6); font-weight: normal; font-size: 1.3rem"
+    class="c"
+  >
+    Simple production. High efficiency. Absent Microplastics.
+  </p>
+</div>
 
 <div class="float">
   <Wave />
@@ -53,23 +62,46 @@
     }
   }
 
-  h1 {
+  .text {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: 0;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    max-width: 30rem;
+  }
+  .text p {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  h1 {
+    margin: 10px;
+    text-align: center;
     font-size: 3rem;
     font-family: "Mate SC";
-    width: max-content;
-    max-width: 30rem;
+    font-weight: bold;
+  }
+
+  .text * {
     opacity: 0;
   }
 
-  :global(.splash) h1 {
+  :global(.splash) .text * {
     animation: fade 0.5s ease-in 0.5s forwards;
+  }
+
+  .a {
+    animation-delay: 0.3s !important;
+  }
+  .b {
+    animation-delay: 1s !important;
+  }
+  .c {
+    animation-delay: 1s !important;
   }
 
   @keyframes fade {
