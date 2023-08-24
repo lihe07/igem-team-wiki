@@ -24,12 +24,26 @@
       },
       collisions: {
         enable: true,
-        absorb: {
-          speed: 2,
-        },
       },
       number: {
-        value: 100,
+        value: 300,
+      },
+    },
+    interactivity: {
+      detectsOn: "window",
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse",
+        },
+      },
+      modes: {
+        repulse: {
+          distance: 100,
+          duration: 5,
+          speed: 1,
+          maxSpeed: 3,
+        },
       },
     },
   };
@@ -54,11 +68,20 @@
   }
 </script>
 
-<div class="particles" style:opacity={Math.min(Math.max(percent / 0.3, 0), 1)}>
-  <Particles {options} {particlesInit} on:particlesLoaded={onParticlesLoaded} />
-</div>
+<section>
+  <div class="particles" style:opacity={(percent + 1) / 2}>
+    <Particles
+      {options}
+      {particlesInit}
+      on:particlesLoaded={onParticlesLoaded}
+    />
+  </div>
+</section>
 
 <style>
+  section {
+    background: #bae6fd;
+  }
   .particles {
     opacity: 0;
   }

@@ -1,31 +1,33 @@
 <script>
   import First from "./First.svelte";
-  import Second from "./Second.svelte";
+  import Inplace from "./Inplace.svelte";
+  import Microplastics from "./Microplastics.svelte";
+  import Particles from "./Particles.svelte";
+  import Video from "./Video.svelte";
+  let anchor;
 </script>
 
 <First />
-<Second />
 
-<div>
-  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, nostrum. Sequi
-  perspiciatis enim eaque beatae soluta. Dolore deleniti nulla laboriosam
-  accusantium, magni qui delectus inventore necessitatibus ad quidem recusandae
-  dignissimos.
-</div>
+<Inplace height="200vh" let:percent>
+  <Particles {percent} />
+</Inplace>
 
-<div style="background-color: azure;">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet accusamus
-  delectus, expedita explicabo eos sunt mollitia recusandae nesciunt sequi vel
-  placeat quasi eum totam, repellat soluta alias necessitatibus, harum ipsam.
-</div>
+<Inplace let:percent>
+  <Microplastics {percent} />
+  <div style="height: 100vh;width: 100%;" />
+
+  <div bind:this={anchor} />
+  <div style="position: sticky; bottom: 0; z-index: -1;">
+    <Inplace height="500vh" let:percent {anchor}>
+      <Video {percent} />
+    </Inplace>
+  </div>
+</Inplace>
+
+<Inplace let:percent>
+  <div style="height: 100vh; background: gray;">FOOTER</div>
+</Inplace>
 
 <style>
-  div {
-    width: 100%;
-    height: 50rem;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    box-sizing: border-box;
-  }
 </style>
