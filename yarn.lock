@@ -331,11 +331,6 @@ cookie@^0.5.0:
   resolved "https://registry.npmmirror.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
-core-js@^3.6.4:
-  version "3.31.0"
-  resolved "https://registry.npmmirror.com/core-js/-/core-js-3.31.0.tgz#4471dd33e366c79d8c0977ed2d940821719db344"
-  integrity sha512-NIp2TQSGfR6ba5aalZD+ZQ1fSxGhDo/s1w0nx3RYzf2pnJxt7YynxFlFScP6eV7+GZsKO95NSjGxyJsU3DZgeQ==
-
 debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.npmmirror.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
@@ -576,6 +571,11 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "^1.2.6"
 
+mp4box@^0.4.9:
+  version "0.4.9"
+  resolved "https://registry.npmjs.org/mp4box/-/mp4box-0.4.9.tgz#b8e59be72053417bb68704b14ac7afff9e962a19"
+  integrity sha512-APZb4ZaCBBXdyxA9nXF5lVb/xc2OPRWbnxwlHOn7tXxiBVchpLUl+nZMF52MLLv0oESnZBSy5qnDj9sRE9LCoQ==
+
 mri@^1.1.0:
   version "1.2.0"
   resolved "https://registry.npmmirror.com/mri/-/mri-1.2.0.tgz#6721480fec2a11a4889861115a48b6cbe7cc8f0b"
@@ -704,6 +704,14 @@ sander@^0.5.0:
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
+scrolly-video@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.npmjs.org/scrolly-video/-/scrolly-video-0.0.16.tgz#4adfb1276242de4844609161ce2158ba40f69484"
+  integrity sha512-3NE+V0z8HbMuafyWcqPHbg/5+rzwrmqS8+mAYUTb7Cgiea8EALFadaYvlRLrEVR8Fg7Rn6Q8M9tqWib++WfQ0A==
+  dependencies:
+    mp4box "^0.4.9"
+    ua-parser-js "^1.0.2"
+
 set-cookie-parser@^2.6.0:
   version "2.6.0"
   resolved "https://registry.npmmirror.com/set-cookie-parser/-/set-cookie-parser-2.6.0.tgz#131921e50f62ff1a66a461d7d62d7b21d5d15a51"
@@ -717,14 +725,6 @@ sirv@^2.0.2:
     "@polka/url" "^1.0.0-next.20"
     mrmime "^1.0.0"
     totalist "^3.0.0"
-
-smooth-scrollbar@^8.8.4:
-  version "8.8.4"
-  resolved "https://registry.npmmirror.com/smooth-scrollbar/-/smooth-scrollbar-8.8.4.tgz#0705e9b3defeb5b46cd43871f3ebcd62ae389a26"
-  integrity sha512-Wn2Q/iE+PE1ef4EfhFMhgaIMfSrjJl2LalRu0hBWSrw5nZKGsUIjWFWHnLB/Lpx7N+a1pJH6+wkQzBr+5nWPUg==
-  dependencies:
-    core-js "^3.6.4"
-    tslib "^1.10.0"
 
 sorcery@^0.11.0:
   version "0.11.0"
@@ -814,11 +814,6 @@ totalist@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmmirror.com/totalist/-/totalist-3.0.1.tgz#ba3a3d600c915b1a97872348f79c127475f6acf8"
   integrity sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==
-
-tslib@^1.10.0:
-  version "1.14.1"
-  resolved "https://registry.npmmirror.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
-  integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tsparticles-basic@^2.12.0:
   version "2.12.0"
@@ -1170,6 +1165,11 @@ typescript@^5.0.3, typescript@^5.0.4:
   version "5.0.4"
   resolved "https://registry.npmmirror.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
   integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
+
+ua-parser-js@^1.0.2:
+  version "1.0.35"
+  resolved "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-1.0.35.tgz#c4ef44343bc3db0a3cbefdf21822f1b1fc1ab011"
+  integrity sha512-fKnGuqmTBnIE+/KXSzCn4db8RTigUzw1AN0DmdU6hJovUTbYJKyqj+8Mt1c4VfRDnOVJnENmfYkIPZ946UrSAA==
 
 undici@~5.22.0:
   version "5.22.1"
