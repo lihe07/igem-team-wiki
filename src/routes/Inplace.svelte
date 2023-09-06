@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { spring } from "svelte/motion";
+  import { tweened } from "svelte/motion";
 
   export let height = "";
 
@@ -31,14 +31,14 @@
     window.addEventListener("resize", onScroll);
   });
 
-  const s = spring(percent);
+  const s = tweened(percent);
   $: s.set(percent);
 </script>
 
 <div class="anchor" bind:this={_anchor} />
 <div class="container" bind:this={container} style:height>
   <div class="inner" class:screen={height.length} bind:this={inner}>
-    <slot {percent} />
+    <slot percent={$s} />
   </div>
 </div>
 

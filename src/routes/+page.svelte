@@ -19,7 +19,7 @@
 
   <div bind:this={anchor} />
   <div style="position: sticky; bottom: 0; z-index: -1;">
-    <Inplace height="600vh" let:percent {anchor}>
+    <Inplace height="1000vh" let:percent {anchor}>
       <Video {percent} />
     </Inplace>
   </div>
