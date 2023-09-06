@@ -116,7 +116,8 @@ export default function calculate(
       (-zeta / k_loss - kappa / (k_tis - k_loss) - kappa / k_loss) +
     (zeta + kappa) / k_loss;
 
-  const C_tis = kappa / k_tis - (kappa * Math.exp(-k_tis * days)) / k_tis;
+  const C_tis = kappa / k_tis + zeta +
+    (kappa * Math.exp(-k_tis * days)) / (k_tis - k_loss)
 
   return {
     C_tis: Math.ceil(Math.abs(C_tis)),

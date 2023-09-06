@@ -166,6 +166,8 @@
       })
     );
 
+    console.log(C_tis_samples);
+
     tissue_chart.update();
 
     gut_chart.data.datasets[0].data = Object.entries(C_mp_samples).map(
