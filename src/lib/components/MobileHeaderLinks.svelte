@@ -43,7 +43,7 @@
     width: 100%;
     left: 0;
     overflow: hidden;
-    margin-top: 1.3rem;
+    margin-top: 0.3rem;
   }
   .container {
     border-radius: 1rem;
