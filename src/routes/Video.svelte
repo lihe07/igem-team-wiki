@@ -20,6 +20,6 @@
 
 <div style:opacity={percent + 1} style="">
   {#if bloburl.length}
-    <ScrollyVideo src={bloburl} videoPercentage={percent / 5} frameRate={60} />
+    <ScrollyVideo src={bloburl} videoPercentage={percent / 10} frameRate={60} />
   {/if}
 </div>

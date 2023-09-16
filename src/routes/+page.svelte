@@ -1,5 +1,6 @@
 <script>
   import First from "./First.svelte";
+  import Footer from "./Footer.svelte";
   import Inplace from "./Inplace.svelte";
   import Microplastics from "./Microplastics.svelte";
   import Particles from "./Particles.svelte";
@@ -26,7 +27,7 @@
 </Inplace>
 
 <Inplace let:percent>
-  <div style="height: 100vh; background: gray;">FOOTER</div>
+  <Footer />
 </Inplace>
 
 <style>

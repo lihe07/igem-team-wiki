@@ -13,6 +13,9 @@
     if (!show && fixed) {
       show_mobile_menu = false;
     }
+    if (fixed) {
+      show_mobile_menu = false;
+    }
   }
 
   function onResize() {
@@ -51,7 +54,7 @@
   </div>
 
   <div class="mobile-links" class:show={show_mobile_menu}>
-    <MobileHeaderLinks {white} />
+    <MobileHeaderLinks {white} active={show_mobile_menu} />
   </div>
 </header>
 
@@ -89,6 +92,7 @@
     pointer-events: none;
     opacity: 0;
     height: 0;
+    width: 100vw;
     transition: all 0.3s;
   }
 
@@ -172,6 +176,8 @@
     }
     header {
       height: 64px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
     .links {
       display: none;
