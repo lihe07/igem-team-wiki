@@ -140,7 +140,7 @@
       opacity: 100%;
     }
     50% {
-      opacity: 50%;
+      opacity: 70%;
     }
     100% {
       opacity: 100%;

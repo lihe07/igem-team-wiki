@@ -18,11 +18,11 @@
   $: p = percent / 10;
 
   function check() {
-    if (p - last_p > 0) {
+    if (p - last_p > 0.01) {
       reverse = false;
     }
 
-    if (p - last_p < 0) {
+    if (p - last_p < -0.01) {
       reverse = true;
     }
 
@@ -43,6 +43,9 @@
   <div style="opacity: {reverse ? 0 : 1};" class="v">
     <ScrollyVideo src={video} videoPercentage={p} useWebCodec={false} />
   </div>
+  <!-- <div style="position: absolute; top: 50vh; color: white;">
+    <h1>{p} {reverse}</h1>
+  </div> -->
 </div>
 
 <style>

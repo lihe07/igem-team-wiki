@@ -27,7 +27,7 @@
 </Inplace>
 
 <Inplace let:percent>
-  <Footer />
+  <Footer {percent} />
 </Inplace>
 
 <style>
