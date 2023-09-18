@@ -61,6 +61,7 @@
 <style>
   header {
     transition: all 0.15s ease-in;
+    overflow: hidden;
   }
   .main {
     box-sizing: border-box;

@@ -133,6 +133,7 @@
     font-family: serif;
     font-size: 50px;
     margin: 0;
+    text-align: center;
   }
 
   @keyframes blink {

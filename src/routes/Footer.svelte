@@ -59,4 +59,14 @@
 
     gap: 3rem;
   }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column-reverse;
+    }
+
+    .boxes {
+      margin: 0;
+    }
+  }
 </style>
