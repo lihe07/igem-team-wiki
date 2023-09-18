@@ -3,13 +3,19 @@
 
   export let fixed = true;
   export let white = false; // Fg: white
+
   import HeaderLinks from "./HeaderLinks.svelte";
   import MobileHeaderLinks from "./MobileHeaderLinks.svelte";
 
   let show = false;
 
   function onScroll() {
-    show = window.scrollY > window.innerHeight;
+    if (typeof window?.header_thres != "number") {
+      show = window.scrollY > window.innerHeight;
+    } else {
+      show = window.scrollY > window.header_thres;
+    }
+
     if (!show && fixed) {
       show_mobile_menu = false;
     }
