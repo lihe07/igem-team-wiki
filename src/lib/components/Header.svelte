@@ -46,6 +46,7 @@
       class:active={show_mobile_menu}
       class:white
       on:click={() => (show_mobile_menu = !show_mobile_menu)}
+      on:keydown={() => {}}
     >
       <div class="line" />
       <div class="line" />
@@ -61,7 +62,6 @@
 <style>
   header {
     transition: all 0.15s ease-in;
-    overflow: hidden;
   }
   .main {
     box-sizing: border-box;
@@ -179,6 +179,7 @@
       height: 64px;
       padding-left: 0 !important;
       padding-right: 0 !important;
+      overflow: hidden;
     }
     .links {
       display: none;
