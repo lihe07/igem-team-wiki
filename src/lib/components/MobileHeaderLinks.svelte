@@ -9,14 +9,20 @@
 
 <div class="bg">
   {#each routes as route, index}
-    <div class="container" class:active style="transition-delay: 0.{index}s;">
+    <div
+      class="container"
+      class:full={route.children}
+      class:half={!route.children}
+      class:active
+      style="transition-delay: 0.{index}s;"
+    >
       {#if route.link}
         <a class="toplevel" href={route.link} class:white>{route.text}</a>
       {:else}
         <p class:white class="toplevel">
           {route.text}
         </p>
-        {#each route.children as child}
+        {#each route.children || [] as child, i}
           <a
             class="child"
             class:active={$page.url.pathname === child.link}
@@ -32,6 +38,9 @@
               </p>
             {/if}
           </a>
+          {#if i < route.children.length - 1}
+            <hr />
+          {/if}
         {/each}
       {/if}
     </div>
@@ -42,23 +51,45 @@
   .bg {
     width: 100%;
     left: 0;
-    overflow: hidden;
     margin-top: 0.3rem;
+    transition: all 0.3s;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
   }
+
   .container {
     border-radius: 1rem;
     padding: 1rem;
-    margin: 1rem;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
     transform: translateX(50vw);
+    transition: all 0.3s ease-in-out;
     opacity: 0;
-    transition: all 0.3s;
   }
+
   .container.active {
     opacity: 1;
     transform: translateX(0);
   }
+
+  .container.full {
+    grid-column: span 2;
+  }
+
+  .container.half {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container.half a {
+    text-align: center;
+    margin: 0;
+  }
+
   a,
   p {
     color: black;
@@ -67,19 +98,23 @@
     cursor: pointer;
     transition: opacity 0.15s;
   }
+
   .toplevel {
     font-size: 1.3rem;
-
     font-family: sans-serif;
     margin: 0 0.5rem;
     margin-bottom: 0.5rem;
+  }
+
+  hr {
+    margin: 0;
+    border-color: rgba(0, 0, 0, 0.3);
   }
 
   a.child {
     padding: 0.7rem;
     display: block;
     line-height: 1rem;
-    border-radius: 0.5rem;
     transition: all 0.15s;
   }
 

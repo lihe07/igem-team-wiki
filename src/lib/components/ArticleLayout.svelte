@@ -15,31 +15,33 @@
 
   let outline = [];
 
-  function addHeading(ele, h) {
-    let h2s = ele.querySelectorAll("h" + h);
+  /**
+   * @param {HTMLElement} ele
+   */
+  function makeOutline(ele) {
+    let h2s = ele.querySelectorAll("h1,h2,h3");
     // Give them ids
     h2s.forEach((e) => {
       e.id = e.textContent.replace(/\s/g, "-").toLowerCase();
       outline.push({
         id: e.id,
         text: e.textContent,
-        level: h,
+        level: e.tagName,
       });
     });
-  }
-
-  /**
-   * @param {HTMLElement} ele
-   */
-  function makeOutline(ele) {
-    addHeading(ele, 1);
-    addHeading(ele, 2);
-    addHeading(ele, 3);
 
     console.log(outline);
 
     outline = outline;
   }
+
+  /** @type {HTMLDivElement} */
+  let body;
+
+  onMount(() => {
+    outline = [];
+    makeOutline(body);
+  });
 </script>
 
 <img class="bg" src={bg} alt="background" />
@@ -48,7 +50,7 @@
 </div>
 
 <main>
-  <div class="markdown-body" style="margin: 4rem 0; " use:makeOutline>
+  <div class="markdown-body" style="margin: 4rem 0; " bind:this={body}>
     <slot />
   </div>
 

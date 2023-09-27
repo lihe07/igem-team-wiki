@@ -20,7 +20,11 @@
           />
         </svg>
       </p>
-      <div class="glass" class:blue={!white}>
+      <div
+        class="glass"
+        class:blue={!white}
+        class:wide={route.children.length >= 4}
+      >
         {#each route.children as child}
           <a
             class="child"
@@ -37,7 +41,7 @@
               </p>
             {/if}
           </a>
-          <br />
+          <!-- <br /> -->
         {/each}
       </div>
     </div>
@@ -116,7 +120,7 @@
     top: 90%;
     left: 0;
     padding: 0.5rem;
-    width: 10rem;
+    /* width: 10rem; */
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
     transform-origin: top;
@@ -126,9 +130,13 @@
     opacity: 0;
     transition: all 0.15s;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 0.15rem;
+  }
+
+  .glass.wide {
+    grid-template-columns: 1fr 1fr;
   }
 
   .container:hover .glass {

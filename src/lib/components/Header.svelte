@@ -106,7 +106,7 @@
   .mobile-links.show {
     pointer-events: all;
     opacity: 100%;
-    height: max-content;
+    height: 100vh;
   }
 
   header.fixed .main {
