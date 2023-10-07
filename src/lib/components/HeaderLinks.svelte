@@ -99,6 +99,7 @@
 
   a:active {
     opacity: 0.5;
+    transform: scale(0.95);
   }
 
   .chevron {
@@ -120,9 +121,7 @@
     top: 90%;
     left: 0;
     padding: 0.5rem;
-    /* width: 10rem; */
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
     transform-origin: top;
     transform: scale(0.8);
     pointer-events: none;

@@ -1,19 +1,24 @@
 <script>
   import FooterBox from "./FooterBox.svelte";
+  import header from "$lib/header";
 
   export let percent = 0;
 </script>
 
 <div class="bg" style="opacity: {percent + 2.3};">
   <div class="container">
-    <h1 class="logo">BAID-China <br /> (LOGO)</h1>
+    <h1 class="logo">BAID-China</h1>
     <div class="links">
       <h1>Next Steps</h1>
 
       <div class="boxes">
-        <FooterBox title="Project">Description</FooterBox>
-
-        <FooterBox title="People">Team Attributions</FooterBox>
+        {#each header as entry}
+          <FooterBox title={entry.text}>
+            {#each entry.children || [] as child}
+              <a href={child.link}>{child.text}</a>
+            {/each}
+          </FooterBox>
+        {/each}
       </div>
     </div>
   </div>
@@ -33,6 +38,7 @@
   .logo {
     font-family: sans-serif;
     text-align: center;
+    opacity: 0.7;
   }
   .links {
     flex: 1;
@@ -53,10 +59,9 @@
   }
 
   .boxes {
-    display: flex;
-    justify-content: space-between;
-    margin: 3rem 0;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 1rem 0;
     gap: 3rem;
   }
 

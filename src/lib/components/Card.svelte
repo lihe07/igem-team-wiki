@@ -8,10 +8,13 @@
 
 <style>
   div {
-    padding: 2rem;
     border-radius: 2rem;
+    box-sizing: border-box;
     font-size: 2rem;
-    margin: 3rem 0;
     background-size: cover !important;
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
   }
 </style>

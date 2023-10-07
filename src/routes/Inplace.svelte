@@ -31,7 +31,9 @@
     window.addEventListener("resize", onScroll);
   });
 
-  const s = tweened(percent);
+  const s = tweened(percent, {
+    duration: 500,
+  });
   $: s.set(percent);
 </script>
 
