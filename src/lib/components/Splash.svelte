@@ -30,7 +30,7 @@
   function bg(ele) {
     function animate() {
       ele.style.background = colors[Math.floor(Math.random() * colors.length)];
-      setTimeout(animate, Math.random() * 2000);
+      // setTimeout(animate, Math.random() * 2000);
     }
     setTimeout(() => (ele.style.opacity = "1"), 300);
     animate();
@@ -100,8 +100,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
 
   .bg {
@@ -119,13 +120,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  h2 {
-    color: white;
-    font-size: 50px;
-    font-family: serif;
-    text-shadow: 0 0 50px white;
   }
 
   .container.loaded {

@@ -61,6 +61,7 @@
     left: 0;
     transform: translateY(-100%);
     width: 100%;
+    overflow: hidden;
   }
 
   @media (max-width: 768px) {
