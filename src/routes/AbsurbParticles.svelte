@@ -63,7 +63,7 @@
 </script>
 
 <section>
-  <div class="particles" style:opacity={(percent + 1) / 2}>
+  <div class="particles">
     <Particles
       {options}
       {particlesInit}

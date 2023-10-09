@@ -41,9 +41,6 @@
   <div style="opacity: {reverse ? 0 : 1};" class="v">
     <ScrollyVideo src={video} videoPercentage={p} />
   </div>
-  <!-- <div style="position: absolute; top: 50vh; color: white;"> -->
-  <!--   <h1>{p} {reverse}</h1> -->
-  <!-- </div> -->
 </div>
 
 <style>

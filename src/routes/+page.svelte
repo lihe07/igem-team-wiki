@@ -1,4 +1,5 @@
 <script>
+  import AbsurbParticles from "./AbsurbParticles.svelte";
   import First from "./First.svelte";
   import Footer from "./Footer.svelte";
   import Inplace from "./Inplace.svelte";
@@ -21,6 +22,7 @@
   <div bind:this={anchor} />
   <div style="position: sticky; bottom: 0; z-index: -1;">
     <Inplace height="1000vh" let:percent {anchor}>
+      <AbsurbParticles />
       <Video {percent} />
     </Inplace>
   </div>

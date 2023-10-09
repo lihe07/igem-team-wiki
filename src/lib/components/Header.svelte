@@ -90,6 +90,7 @@
     width: 100%;
     z-index: 10;
     opacity: 0;
+    pointer-events: none;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(5px);
@@ -120,6 +121,7 @@
   header.show {
     top: 0;
     opacity: 1;
+    pointer-events: all;
   }
 
   .team-name {

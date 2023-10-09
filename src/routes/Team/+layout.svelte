@@ -1,8 +1,7 @@
 <script>
-  import ArticleLayout from "$lib/components/ArticleLayout.svelte";
+  import PlainLayout from "$lib/components/PlainLayout.svelte";
 </script>
 
-<ArticleLayout>
+<PlainLayout bg="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5">
   <slot />
-</ArticleLayout>
-
+</PlainLayout>

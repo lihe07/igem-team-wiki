@@ -67,6 +67,7 @@
 <style>
   :global(html) {
     scrollbar-width: none;
+    overflow-x: hidden;
   }
   /* Hide scrollbar */
   :global(::-webkit-scrollbar) {

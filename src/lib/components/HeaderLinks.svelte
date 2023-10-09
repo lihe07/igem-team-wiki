@@ -29,7 +29,7 @@
           <a
             class="child"
             class:active={$page.url.pathname === child.link}
-            href={child.link}
+            href={$page.url.pathname === child.link ? "#" : child.link}
           >
             <div>
               <Icon style="font-size: 20px;" icon={child.icon} />
@@ -100,6 +100,11 @@
   a:active {
     opacity: 0.5;
     transform: scale(0.95);
+  }
+
+  a.active:active {
+    opacity: 1;
+    transform: none;
   }
 
   .chevron {
