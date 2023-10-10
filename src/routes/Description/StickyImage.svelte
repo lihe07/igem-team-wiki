@@ -4,7 +4,7 @@
   export let images = [
     "https://lms.d.zhan.com/zhanlms/addon_homework/2023/02/846314863eaf7ae27fe2/kvblurred.png",
     "https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/186646524fa047daa3/kv.webp",
-    "/placeholder.jpg",
+    "https://static.igem.wiki/teams/4714/wiki/for-test/placeholder.jpg",
   ];
 
   export let descriptions = [

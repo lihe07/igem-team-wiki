@@ -25,7 +25,7 @@
   }
 
   function onResize() {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 830) {
       show_mobile_menu = false;
     }
   }
@@ -178,7 +178,7 @@
     opacity: 0;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 830px) {
     .main {
       padding-left: 2rem !important;
       padding-right: 2rem !important;

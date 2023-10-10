@@ -44,6 +44,7 @@
 
   p {
     font-size: 1rem;
+    opacity: 0.7;
   }
 
   img {
@@ -54,5 +55,22 @@
     border: white;
     border-style: solid;
     border-width: 5px;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: row;
+      padding: 1rem;
+    }
+    img {
+      width: 8rem;
+      height: 10rem;
+    }
+    h2 {
+      text-align: left;
+    }
+    p {
+      font-size: 0.8rem;
+    }
   }
 </style>

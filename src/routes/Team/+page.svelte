@@ -6,38 +6,35 @@
     {
       name: "Akaza Akari",
       tags: ["Student", "PI", "Human Practice"],
-      avatar:
-        "https://img.moegirl.org.cn/common/7/79/%E8%B5%A4%E5%BA%A7%E7%81%AF%E9%87%8C%E8%A7%92%E8%89%B2%E6%AD%8C2.jpg",
+      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/akari.jpg",
       background:
-        "url(https://img.moegirl.org.cn/common/b/b5/Diyizhongxue_02.JPG)",
+        "url(https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/3561956652545f3b9847/Diyizhongxue_02.JPG)",
     },
     {
       name: "Toshino Kyoko",
       tags: ["Student", "Modelling"],
-      avatar:
-        "https://img.moegirl.org.cn/common/a/ae/%E5%B2%81%E7%BA%B3%E4%BA%AC%E5%AD%90%E8%A7%92%E8%89%B2%E6%AD%8C3.jpg",
+      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/kyoko.jpg",
       background:
-        "url(https://img.moegirl.org.cn/common/8/82/%E6%A0%85%E5%B7%9D%E4%B8%AD%E5%AD%A6%E6%A0%A1.png)",
+        "url(https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/7275164652546138f518/%E6%A0%85%E5%B7%9D%E4%B8%AD%E5%AD%A6%E6%A0%A1.png)",
     },
   ];
 
   const minor = [
     {
       name: "Omuro Sakurako",
-      avatar: "https://img.moegirl.org.cn/common/f/f8/YRYRomurosing1.jpg",
+      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/sakurako.jpg",
     },
     {
       name: "Sugiura Ayano",
-      avatar:
-        "https://img.moegirl.org.cn/common/7/71/%E6%9D%89%E6%B5%A6%E7%BB%AB%E4%B9%83%E8%A7%92%E8%89%B2%E6%AD%8C3.jpg",
+      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/ayano.jpg",
     },
     {
       name: "Furutani Himawari",
-      avatar: "https://img.moegirl.org.cn/common/7/7f/YRYRhmwrsing1.jpg",
+      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/himawari.jpg",
     },
     {
       name: "Yoshikawa Chinatsu",
-      avatar: "https://img.moegirl.org.cn/common/b/bf/YRYRnatsusing1.jpg",
+      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/chinatsu.jpg",
     },
   ];
 </script>
@@ -76,13 +73,19 @@
     gap: 5rem;
     grid-template-columns: repeat(4, 1fr);
   }
+  @media (max-width: 1400px) {
+    .minor {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
   @media (max-width: 768px) {
     .major {
       flex-direction: column;
     }
     .minor {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
     }
   }
 </style>

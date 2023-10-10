@@ -5,9 +5,11 @@
   // import ScrollyVideo from "scrolly-video/dist/ScrollyVideo.svelte";
   export let percent = 0;
 
-  const video = "/goldengate.mp4";
+  const video =
+    "https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/2480817652550b2b5858/goldengate.mp4";
 
-  const rvideo = "/rgoldengate.mp4";
+  const rvideo =
+    "https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/4960684652550f16e09b/rgoldengate.mp4";
 
   let reverse = false;
 

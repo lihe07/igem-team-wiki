@@ -1,6 +1,7 @@
 <script>
   import Header from "$lib/components/Header.svelte";
   import Wave from "./Wave.svelte";
+  import logo from "$lib/assets/white.svg";
 </script>
 
 <div class="header-container">
@@ -11,18 +12,21 @@
   src="https://img.js.design/assets/img/643f7bd8493676d9ede0f364.jpg"
   alt=""
   srcset=""
+  class="bg"
 />
 
 <div class="cover" />
 
 <div class="text">
-  <p style="filter:opacity(0.8);" class="a">Introducing</p>
-  <h1 class="b">Plasticlear</h1>
+  <!-- <p style="filter:opacity(0.8);" class="a">Introducing</p> -->
+  <img class="a logo" src={logo} alt="" />
   <p
-    style="filter: opacity(0.6); font-weight: normal; font-size: 1.3rem"
-    class="c"
+    style="filter: opacity(0.6); font-weight: normal; font-size: 1.5rem; line-height: 1.6;"
+    class="b"
   >
-    Simple production. High efficiency. Absent Microplastics.
+    Simple production. High efficiency.
+    <br />
+    Absent Microplastics.
   </p>
 </div>
 
@@ -31,7 +35,7 @@
 </div>
 
 <style>
-  img {
+  .bg {
     width: 100%;
     height: 100vh;
     object-fit: cover;
@@ -78,12 +82,9 @@
     margin: 0;
   }
 
-  h1 {
-    margin: 10px;
-    text-align: center;
-    font-size: 3rem;
-    font-family: "Mate SC";
-    font-weight: bold;
+  .logo {
+    margin: 20px;
+    width: 16rem;
   }
 
   .text * {
@@ -98,9 +99,6 @@
     animation-delay: 0.3s !important;
   }
   .b {
-    animation-delay: 1s !important;
-  }
-  .c {
     animation-delay: 1s !important;
   }
 

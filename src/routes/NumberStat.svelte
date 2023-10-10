@@ -3,7 +3,7 @@
 </script>
 
 <Card
-  background="url(https://img.js.design/assets/img/643f7bd8493676d9ede0f364.jpg)"
+  background="url(https://static.igem.wiki/teams/4714/wiki/for-test/placeholder.jpg)"
 >
   <div class="overlay">
     <p class="over">Over</p>

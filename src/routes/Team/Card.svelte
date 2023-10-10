@@ -45,6 +45,7 @@
   .tags {
     margin-top: 0.4rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
   }
   .tag {
@@ -86,5 +87,12 @@
     border: white;
     border-width: 10px;
     border-style: solid;
+  }
+
+  @media (max-width: 1400px) {
+    .content {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
   }
 </style>

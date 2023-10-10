@@ -2,7 +2,8 @@
   import "$lib/assets/markdown.css";
   import Header from "$lib/components/Header.svelte";
   import { onDestroy, onMount } from "svelte";
-  export let bg = "/placeholder.jpg";
+  export let bg =
+    "https://static.igem.wiki/teams/4714/wiki/for-test/placeholder.jpg";
 
   onMount(() => (window.header_thres = 300));
   onDestroy(() => {

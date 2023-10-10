@@ -1,6 +1,7 @@
 <script>
   import FooterBox from "./FooterBox.svelte";
   import NextStepBox from "./NextStepBox.svelte";
+  import logo from "$lib/assets/black.svg";
 
   export let percent = 0;
 
@@ -70,10 +71,10 @@
 
     <div class="bottom">
       <FooterBox>
-        <h2 class="logo">Team: BAID-China</h2>
-        <p
-          style="font-family: sans-serif; opacity:  0.7; line-height: 2rem; font-size: 1.3rem;"
-        >
+        <div class="product">
+          <img src={logo} alt="plasticlear logo" />
+        </div>
+        <p class="desc">
           Team Wiki made with Svelte + Svelte Kit.
           <br />
 
@@ -137,14 +138,23 @@
     overflow: hidden;
   }
 
-  .logo {
+  .product {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .product img {
+    width: 60%;
+  }
+  .desc {
     font-family: sans-serif;
     opacity: 0.7;
-    font-size: 2rem;
+    line-height: 1.8;
+    font-size: 1.3rem;
     margin: 0;
-  }
-  .links {
-    flex: 1;
   }
 
   .container {

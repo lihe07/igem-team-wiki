@@ -1,29 +1,48 @@
 <script>
   import "molstar/build/viewer/molstar.css";
-  async function viewer(ele) {
-    console.log(molstar);
-    const viewer = await molstar.Viewer.create(ele, {
-      layoutIsExpanded: false,
-      layoutShowControls: false,
-      layoutShowRemoteState: false,
-      layoutShowSequence: true,
-      layoutShowLog: false,
-      layoutShowLeftPanel: true,
+  import { onMount } from "svelte";
 
-      viewportShowExpand: true,
-      viewportShowSelectionMode: false,
-      viewportShowAnimation: false,
+  onMount(async () => {
+    if (window.molstar) return;
 
-      pdbProvider: "rcsb",
-      emdbProvider: "rcsb",
+    const resp = await fetch(
+      "https://static.igem.wiki/teams/4714/wiki/molstar.js"
+    );
+
+    const ele = document.createElement("script");
+    ele.type = "text/javascript";
+    ele.appendChild(document.createTextNode(await resp.text()));
+
+    document.head.appendChild(ele);
+  });
+
+  function viewer(ele) {
+    const i = setInterval(async () => {
+      if (window.molstar) {
+        console.log(molstar);
+        const viewer = await molstar.Viewer.create(ele, {
+          layoutIsExpanded: false,
+          layoutShowControls: false,
+          layoutShowRemoteState: false,
+          layoutShowSequence: true,
+          layoutShowLog: false,
+          layoutShowLeftPanel: true,
+
+          viewportShowExpand: true,
+          viewportShowSelectionMode: false,
+          viewportShowAnimation: false,
+
+          pdbProvider: "rcsb",
+          emdbProvider: "rcsb",
+        });
+        viewer.loadPdb("7bv2");
+        clearInterval(i);
+      }
     });
-    viewer.loadPdb("7bv2");
+
+    return () => clearInterval(i);
   }
 </script>
-
-<svelte:head>
-  <script type="text/javascript" src="/molstar.js"></script>
-</svelte:head>
 
 <div use:viewer class="viewer" />
 

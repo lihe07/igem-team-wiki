@@ -1,5 +1,6 @@
 <script>
-  export let background = "url(/placeholder.jpg)";
+  export let background =
+    "url(https://static.igem.wiki/teams/4714/wiki/for-test/placeholder.jpg)";
   export let title = "";
 </script>
 
