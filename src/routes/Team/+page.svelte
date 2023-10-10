@@ -76,4 +76,13 @@
     gap: 5rem;
     grid-template-columns: repeat(4, 1fr);
   }
+
+  @media (max-width: 768px) {
+    .major {
+      flex-direction: column;
+    }
+    .minor {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 </style>

@@ -83,5 +83,8 @@
     height: 15rem;
     object-fit: cover;
     border-radius: 1rem;
+    border: white;
+    border-width: 10px;
+    border-style: solid;
   }
 </style>

@@ -1,5 +1,7 @@
 <script>
-  import ArticleLayout from "$lib/components/ArticleLayout.svelte";
+  import PlainLayout from "$lib/components/PlainLayout.svelte";
 </script>
 
-<ArticleLayout><slot /></ArticleLayout>
+<PlainLayout>
+  <slot />
+</PlainLayout>

@@ -106,7 +106,7 @@
   }
 
   .bg {
-    transition: all 0.5s ease-in;
+    transition: background 0.5s ease-in;
   }
   .container {
     z-index: 20;
@@ -115,7 +115,6 @@
   }
 
   .cover {
-    backdrop-filter: blur(500px);
     background: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;

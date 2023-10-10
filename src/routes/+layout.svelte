@@ -6,6 +6,7 @@
 
   // import "@fontsource/roboto";
   import "@fontsource/mate-sc";
+  import Footer from "$lib/components/Footer.svelte";
 </script>
 
 <Splash>
@@ -13,6 +14,7 @@
     <PageTransition>
       <Header />
       <slot />
+      <Footer />
     </PageTransition>
   </PageScroll>
 </Splash>
