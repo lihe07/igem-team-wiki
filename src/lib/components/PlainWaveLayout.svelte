@@ -2,8 +2,7 @@
   import "$lib/assets/markdown.css";
   import Header from "$lib/components/Header.svelte";
   import { onDestroy, onMount } from "svelte";
-  export let bg =
-    "https://images.unsplash.com/photo-1439405326854-014607f694d7";
+  export let bg = "/placeholder.jpg";
 
   onMount(() => (window.header_thres = 300));
   onDestroy(() => {

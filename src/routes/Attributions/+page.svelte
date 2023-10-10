@@ -7,6 +7,14 @@
 
 <h1>Attribution Form</h1>
 
+<p>
+  In accordance with the
+  <a href="https://competition.igem.org/deliverables/project-attribution">
+    new requirements
+  </a>
+  for the project attributions form, we provide the standard attributions form below:
+</p>
+
 <div class="container">
   <div class="header">
     <div class="icons">
@@ -72,7 +80,17 @@
     width: 100%;
     outline: none;
     border: none;
-    height: 100vh;
+    height: 60vh;
     margin-top: -1rem;
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      display: none;
+    }
+
+    iframe {
+      height: 100vh;
+    }
   }
 </style>

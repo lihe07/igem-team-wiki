@@ -27,8 +27,14 @@ export default [
 				desc: "A brief overview of our project",
 			},
 			{
-				text: "Result",
-				link: "/Result",
+				text: "Results",
+				link: "/Results",
+				icon: "fluent:shield-task-28-regular",
+				desc: "A brief overview of our project",
+			},
+			{
+				text: "Measurement",
+				link: "/Measurement",
 				icon: "fluent:shield-task-28-regular",
 				desc: "A brief overview of our project",
 			},

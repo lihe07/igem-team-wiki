@@ -1,4 +1,10 @@
+<script>
+  import Molstar from "$lib/components/Molstar.svelte";
+</script>
+
 <h1>Modelling</h1>
+
+<Molstar />
 
 <p>
   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates voluptate

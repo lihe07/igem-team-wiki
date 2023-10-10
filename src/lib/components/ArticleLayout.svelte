@@ -2,9 +2,7 @@
   import "$lib/assets/markdown.css";
   import Header from "$lib/components/Header.svelte";
   import { onDestroy, onMount } from "svelte";
-  import { each } from "svelte/internal";
-  export let bg =
-    "https://images.unsplash.com/photo-1439405326854-014607f694d7";
+  export let bg = "/placeholder.jpg";
 
   onMount(() => (window.header_thres = 300));
   onDestroy(() => {
@@ -114,12 +112,15 @@
 
     display: flex;
   }
+
   .markdown-body {
     flex: 1;
+    line-height: 2.5;
   }
+
   .aside {
     width: 20rem;
-    margin-left: 2rem;
+    margin-left: 3rem;
     margin-top: 3rem;
   }
   .outline {
@@ -137,6 +138,7 @@
     }
     .markdown-body {
       margin-top: 2.5rem !important;
+      line-height: 2;
     }
   }
 </style>

@@ -21,4 +21,10 @@
         min-height: 30rem;
         margin-top: 3rem;
     }
+    h1 {
+        margin: 0;
+    }
+    div * {
+        border: none !important;
+    }
 </style>
