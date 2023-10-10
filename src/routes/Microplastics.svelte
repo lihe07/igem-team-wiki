@@ -4,6 +4,7 @@
   import LearnMore from "./LearnMore.svelte";
   import NumberStat from "./NumberStat.svelte";
   import ChartStat from "./ChartStat.svelte";
+  import { transform } from "$lib/header";
 
   export let percent = 0;
 </script>
@@ -31,7 +32,7 @@
               We made an interactive model to show how microplastics can enter
               the human body.
             </p>
-            <LearnMore href="/vispoc">Learn More</LearnMore>
+            <LearnMore href={transform("/vispoc")}>Learn More</LearnMore>
           </div>
         </Card>
       </div>

@@ -2,6 +2,7 @@
   import FooterBox from "./FooterBox.svelte";
   import NextStepBox from "./NextStepBox.svelte";
   import logo from "$lib/assets/black.svg";
+  import { transform } from "$lib/header";
 
   export let percent = 0;
 
@@ -10,21 +11,25 @@
       name: "Project Description",
       icon: "fluent:slide-text-sparkle-28-regular",
       color: "#059669",
+      href: transform("/Description"),
     },
     {
       name: "Modelling",
       icon: "fluent:slide-text-sparkle-28-regular",
       color: "#0ea5e9",
+      href: transform("/Modelling"),
     },
     {
       name: "Experiments",
       icon: "fluent:slide-text-sparkle-28-regular",
       color: "#06b6d4",
+      href: transform("/Experiments"),
     },
     {
-      name: "Result",
+      name: "Results",
       icon: "fluent:slide-text-sparkle-28-regular",
       color: "#6366f1",
+      href: transform("/Results"),
     },
   ];
 
@@ -35,20 +40,20 @@
     },
     {
       logo: "https://vitejs.dev/stackblitz.svg",
-      href: "",
+      href: "#",
     },
 
     {
       logo: "https://sponsors.vuejs.org/images/divriots.png",
-      href: "",
+      href: "#",
     },
     {
       logo: "https://vitejs.dev/stackblitz.svg",
-      href: "",
+      href: "#",
     },
     {
       logo: "https://vitejs.dev/stackblitz.svg",
-      href: "",
+      href: "#",
     },
     {
       logo: "https://old.igem.org/wiki/images/e/e4/Main_igem_logo.svg",

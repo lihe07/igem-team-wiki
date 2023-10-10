@@ -53,8 +53,6 @@
   {/each}
 </div>
 
-<div style="height: 300rem" />
-
 <style>
   h1 {
     text-align: center;

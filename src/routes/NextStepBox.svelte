@@ -137,7 +137,7 @@
     }
 
     .container.active .bg {
-      transform: scale(4) translateX(-13%);
+      transform: scale(4.5) translateX(-13%);
     }
     .container.active {
       opacity: 1;

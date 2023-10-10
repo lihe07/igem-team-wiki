@@ -2,6 +2,7 @@
   import "$lib/assets/markdown.css";
   import Header from "$lib/components/Header.svelte";
   import { onDestroy, onMount } from "svelte";
+  import Footer from "./Footer.svelte";
   export let bg =
     "https://static.igem.wiki/teams/4714/wiki/for-test/placeholder.jpg";
 
@@ -31,6 +32,9 @@
   <main>
     <slot />
   </main>
+  <div style="padding-bottom: 1rem; background: #f5f5f4;">
+    <Footer />
+  </div>
 </div>
 
 <style scoped>
@@ -40,11 +44,12 @@
     width: 100%;
     margin: auto;
     box-sizing: border-box;
+    margin-bottom: 5rem;
     background: white;
   }
   .container {
     background: white;
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 500px;
     z-index: 3;

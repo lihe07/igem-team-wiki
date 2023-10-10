@@ -6,10 +6,10 @@
   export let percent = 0;
 
   const video =
-    "https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/2480817652550b2b5858/goldengate.mp4";
+    "https://static.igem.wiki/teams/4714/wiki/for-test/goldengate.js";
 
   const rvideo =
-    "https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/4960684652550f16e09b/rgoldengate.mp4";
+    "https://static.igem.wiki/teams/4714/wiki/for-test/rgoldengate.js";
 
   let reverse = false;
 
@@ -38,10 +38,10 @@
 
 <div style:opacity={percent + 1} style="" class="c">
   <div style="opacity: {reverse ? 1 : 0};" class="v">
-    <ScrollyVideo src={rvideo} videoPercentage={1 - p} />
+    <ScrollyVideo src={rvideo} videoPercentage={1 - p} useWebCodecs={false} />
   </div>
   <div style="opacity: {reverse ? 0 : 1};" class="v">
-    <ScrollyVideo src={video} videoPercentage={p} />
+    <ScrollyVideo src={video} videoPercentage={p} useWebCodecs={false} />
   </div>
 </div>
 

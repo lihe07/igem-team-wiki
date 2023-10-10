@@ -5,6 +5,7 @@
   let splash = false;
   const t0 = Date.now();
   const duration = 1000;
+  const timeout = 5000;
 
   function checkReadyState() {
     if (Date.now() - t0 < duration) {
@@ -19,7 +20,9 @@
     }
   }
 
+  let show = false; // Show tip
   onMount(() => {
+    setTimeout(() => (show = true), timeout);
     checkReadyState();
     document.addEventListener("readystatechange", () => {
       checkReadyState();
@@ -40,7 +43,7 @@
 <div class="container full" class:loaded>
   <div class="bg full" style="opacity: 0;" use:bg />
   <div class="cover full">
-    <svg viewBox="0 0 193.03573 24.999786" version="1.1">
+    <svg viewBox="0 0 193.03573 24.999786" version="1.1" class:show>
       <defs id="defs1" />
       <g id="layer1" transform="translate(-202.58879,-325.94451)">
         <path
@@ -55,6 +58,8 @@
         />
       </g>
     </svg>
+
+    <p class:show>If you are stuck on this page, please try refreshing.</p>
   </div>
 </div>
 
@@ -94,6 +99,11 @@
     width: 40%;
     min-width: 240px;
     max-width: 500px;
+    transition: all 0.3s;
+    transform: translateY(2rem);
+  }
+  svg.show {
+    transform: translateY(0);
   }
 
   .full {
@@ -117,10 +127,22 @@
   .cover {
     background: rgba(0, 0, 0, 0.3);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
+  p {
+    color: white;
+    opacity: 0;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+  }
+
+  p.show {
+    opacity: 0.5;
+  }
   .container.loaded {
     opacity: 0;
     pointer-events: none;

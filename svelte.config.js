@@ -3,17 +3,20 @@ import { vitePreprocess } from "@sveltejs/kit/vite";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: [vitePreprocess()],
-  kit: {
-    adapter: adapter({
-      pages: "build",
-      assets: "build",
-      fallback: null,
-    }),
-    prerender: {
-      handleHttpError: "warn",
-    },
-  },
+	preprocess: [vitePreprocess()],
+	kit: {
+		adapter: adapter({
+			pages: "build",
+			assets: "build",
+			fallback: null,
+		}),
+		prerender: {
+			handleHttpError: "warn",
+		},
+		paths: {
+			base: "/baid-china",
+		},
+	},
 };
 
 export default config;
