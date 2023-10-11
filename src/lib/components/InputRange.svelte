@@ -1,8 +1,5 @@
 <script>
-  import Icon from "@iconify/svelte";
-
   export let value = 0;
-  export let icon = "fluent:alert-12-filled";
 </script>
 
 <label class="slider">

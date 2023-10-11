@@ -16,10 +16,4 @@
     height: 100%;
     box-sizing: border-box;
   }
-
-  h2 {
-    /* Text overflow: ... */
-    white-space: nowrap;
-    overflow: hidden;
-  }
 </style>

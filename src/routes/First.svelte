@@ -132,13 +132,6 @@
     }
   }
 
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2.3rem;
-      max-width: 80%;
-    }
-  }
-
   .header-container {
     position: absolute;
     top: 1.5rem;

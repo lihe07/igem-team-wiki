@@ -3,13 +3,14 @@
   import Card from "./VisCard.svelte";
   import Chart from "chart.js/auto";
 
-  import calculate from "./vis";
   import FoodBar from "./FoodBar.svelte";
   import InputRange from "./InputRange.svelte";
   import InputCheck from "./InputCheck.svelte";
   import AvgMed from "./AvgMed.svelte";
 
   let t = 5;
+
+  let calculate;
 
   function initHistogram(ele: HTMLCanvasElement, label: string, title: string) {
     // Calculate height
@@ -75,7 +76,9 @@
   let tissue_chart: Chart, gut_chart: Chart;
   let tissue: HTMLCanvasElement, gut: HTMLCanvasElement;
 
-  onMount(() => {
+  onMount(async () => {
+    calculate = (await import("./vis")).default;
+
     // Init charts
     tissue_chart = initHistogram(tissue, "Tissue", "MP Conc in Tissue");
     gut_chart = initHistogram(gut, "Gut", "MP Conc in Gut");
