@@ -1,13 +1,16 @@
 <script>
   export let background =
     "url(https://static.igem.wiki/teams/4714/wiki/for-test/placeholder.jpg)";
-  export let title = "";
+  export let title = "Title";
+  export let subtitle = "Subtitle";
 </script>
 
 <h2>{title}</h2>
 <div class="container" style={`background: ${background}`}>
   <div class="layer">
-    <p>{title}</p>
+    <p class="title">{title}</p>
+
+    <p class="subtitle">{subtitle}</p>
   </div>
 </div>
 
@@ -42,12 +45,21 @@
     background: rgba(0, 0, 0, 0.5);
     color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
   p {
-    font-size: 2rem;
+    margin: 0 !important;
+    line-height: 2 !important;
+  }
+
+  .title {
+    font-size: 3rem;
     font-weight: bold;
+  }
+  .subtitle {
+    font-size: 1.8rem;
   }
 </style>

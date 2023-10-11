@@ -38,7 +38,12 @@
 </script>
 
 <div class="anchor" bind:this={_anchor} />
-<div class="container" bind:this={container} style:height>
+<div
+  class="container"
+  bind:this={container}
+  style:height
+  class:sticky={height.length}
+>
   <div class="inner" class:screen={height.length} bind:this={inner}>
     <slot percent={$s} />
   </div>
@@ -47,6 +52,9 @@
 <style scoped>
   .container {
     width: 100%;
+  }
+
+  .container.sticky {
     position: sticky;
     top: 0;
   }

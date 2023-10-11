@@ -93,7 +93,7 @@
     position: relative;
     color: white;
     z-index: 10;
-    margin: 0;
+    margin: auto;
     margin-top: -1.3rem;
     transition: all 0.2s;
     transition-delay: 0.1s;
@@ -137,7 +137,7 @@
     }
 
     .container.active .bg {
-      transform: scale(4.5) translateX(-13%);
+      transform: scale(5) translateX(-10%);
     }
     .container.active {
       opacity: 1;

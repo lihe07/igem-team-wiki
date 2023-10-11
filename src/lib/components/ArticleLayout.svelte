@@ -71,7 +71,7 @@
 
 <style scoped>
   h3 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: sans-serif;
     margin-bottom: 0.7rem;
   }
@@ -83,6 +83,8 @@
     transition: opacity 0.2s;
     margin: 0.5rem 0;
     font-family: sans-serif;
+    font-size: 20px;
+    line-height: 2;
   }
 
   a:hover,
@@ -117,6 +119,7 @@
   .markdown-body {
     flex: 1;
     line-height: 2.5;
+    font-size: 20px;
   }
 
   .aside {

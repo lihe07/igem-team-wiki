@@ -58,6 +58,7 @@
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
+    font-family: sans-serif;
   }
 
   .container {
@@ -88,6 +89,7 @@
   .container.half a {
     text-align: center;
     margin: 0;
+    font-size: 1rem;
   }
 
   a,
@@ -107,8 +109,11 @@
   }
 
   hr {
-    margin: 0;
-    border-color: rgba(0, 0, 0, 0.3);
+    margin: auto;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-width: 1px;
+    width: calc(100% - 1rem);
   }
 
   a.child {
@@ -132,5 +137,11 @@
 
   a:active {
     opacity: 0.5;
+  }
+
+  @media (max-height: 760px) {
+    .desc {
+      display: none;
+    }
   }
 </style>

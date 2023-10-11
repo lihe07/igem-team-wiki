@@ -1,6 +1,7 @@
 <script>
   import "molstar/build/viewer/molstar.css";
   import { onMount } from "svelte";
+  export let pdb = "7bv2";
 
   onMount(async () => {
     if (window.molstar) return;
@@ -31,11 +32,11 @@
           viewportShowExpand: true,
           viewportShowSelectionMode: false,
           viewportShowAnimation: false,
-
-          pdbProvider: "rcsb",
-          emdbProvider: "rcsb",
+          volumesAndSegmentationsDefaultServer:
+            "https://static.igem.wiki/teams/4714/wiki/",
         });
-        viewer.loadPdb("7bv2");
+        // viewer.loadPdb("7bv2");
+        viewer.loadStructureFromUrl(pdb, "pdb");
         clearInterval(i);
       }
     });
@@ -50,10 +51,12 @@
   :global(.msp-viewport) {
     position: relative;
     height: 100%;
+    width: 100%;
   }
   :global(.msp-plugin) {
     position: relative;
     height: 100%;
+    width: 100%;
   }
   :global(.msp-layout-expanded) {
     z-index: 20;

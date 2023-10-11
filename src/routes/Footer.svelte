@@ -62,7 +62,7 @@
   ];
 </script>
 
-<div class="bg" style="opacity: {percent + 2.3};">
+<div class="bg" style="opacity: {percent + 1.5};">
   <div class="container">
     <div class="links">
       <h1>Next Steps</h1>
@@ -185,6 +185,22 @@
     display: grid;
     gap: 3rem;
     grid-template-columns: auto 1fr;
+  }
+
+  @media (max-width: 1400px) {
+    .link img {
+      width: 70%;
+      height: 6rem;
+    }
+    .links-grid {
+      min-width: 25rem;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .boxes {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   @media (max-width: 768px) {

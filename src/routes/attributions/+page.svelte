@@ -39,7 +39,6 @@
     justify-content: space-between;
     padding: 0.5rem 1rem;
     background: rgba(0, 0, 0, 0.3);
-    padding-bottom: 1.5rem;
   }
 
   .dots,
@@ -81,7 +80,6 @@
     outline: none;
     border: none;
     height: 60vh;
-    margin-top: -1rem;
   }
 
   @media (max-width: 768px) {

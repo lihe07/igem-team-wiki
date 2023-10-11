@@ -47,7 +47,7 @@
 
   function update(entries, _ = undefined) {
     entries.forEach((e) => {
-      if (e.link === to?.route.id) {
+      if (e.link && e.link.endsWith(to?.route.id)) {
         entry = e;
         return;
       }
@@ -63,9 +63,10 @@
   }
 
   $: {
+    console.log(to?.route);
     if (to?.route.id == "/") {
       entry = {
-        icon: "fluent:home-48-filled",
+        icon: "fluent:home-48-regular",
         text: "Home",
       };
     } else update(header, to);

@@ -1,4 +1,34 @@
 <script>
+  import { onMount } from "svelte";
+
+  export let enter = false;
+
+  /** @type {HTMLElement} */
+  let ele;
+
+  function onScroll() {
+    const rect = ele.getBoundingClientRect();
+
+    if (
+      (rect.top >= 0 && rect.top <= window.innerHeight) ||
+      (rect.bottom >= 0 && rect.bottom <= window.innerHeight)
+    ) {
+      enter = true;
+    } else {
+      enter = false;
+    }
+  }
+
+  onMount(() => {
+    window.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+    onScroll();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  });
+
   import Particles from "svelte-particles";
   import { loadFull } from "tsparticles";
 
@@ -9,7 +39,7 @@
     autoPlay: true,
     style: {
       position: "relative",
-      height: "100vh",
+      height: "64vh",
     },
     particles: {
       color: {
@@ -20,23 +50,24 @@
       },
       move: {
         enable: true,
-        speed: 2,
+        speed: 1,
+        gravity: {
+          acceleration: 20,
+          maxSpeed: {
+            min: 3,
+            max: 5,
+          },
+          enable: true,
+        },
       },
-      collisions: {
-        enable: true,
-      },
+
       number: {
         value: 300,
       },
     },
+
     interactivity: {
       detectsOn: "window",
-      events: {
-        onHover: {
-          enable: true,
-          mode: "repulse",
-        },
-      },
       modes: {
         repulse: {
           distance: 100,
@@ -62,21 +93,25 @@
   }
 </script>
 
-<section>
-  <div class="particles">
-    <Particles
-      {options}
-      {particlesInit}
-      on:particlesLoaded={onParticlesLoaded}
-    />
-  </div>
+<section bind:this={ele} class:enter>
+  {#if enter}
+    <div style:opacity={1 - percent} class="inner">
+      <Particles
+        {options}
+        {particlesInit}
+        on:particlesLoaded={onParticlesLoaded}
+      />
+    </div>
+  {/if}
 </section>
 
 <style>
   section {
-    background: #bae6fd;
-  }
-  .particles {
-    opacity: 0;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
   }
 </style>
