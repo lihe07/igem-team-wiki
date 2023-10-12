@@ -135,9 +135,9 @@
 
   .bg {
     min-height: 100vh;
-    background: rgba(245, 254, 255, 0.7);
+    background: rgba(245, 254, 255, 0.8);
     border-radius: 2rem 2rem 0 0;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     box-sizing: border-box;
     max-width: 100vw;
     overflow: hidden;

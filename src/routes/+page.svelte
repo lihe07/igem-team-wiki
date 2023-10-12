@@ -25,7 +25,7 @@
   <Microplastics {percent} />
 </Inplace>
 
-<Inplace height="1500vh" let:percent>
+<Inplace height="1300vh" let:percent>
   <AbsurbParticles bind:enter {percent} />
   <Video {percent} />
   <CompCard {percent} enter={3.15} leave={5}>

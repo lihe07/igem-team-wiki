@@ -20,16 +20,17 @@
     opacity: 0;
     margin: 0 !important;
   }
+
   .container {
-    position: sticky;
+    /* position: sticky; */
     top: 90px;
     margin: 0 -1rem;
     margin-bottom: 2rem;
     width: calc(100% + 2rem);
     border-radius: 1rem;
     overflow: hidden;
-    height: 30vh;
-    min-height: 20rem;
+    height: 20vh;
+    min-height: 15rem;
     max-height: 50rem;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
       0 8px 10px -6px rgb(0 0 0 / 0.1);

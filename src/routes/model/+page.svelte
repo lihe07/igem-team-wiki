@@ -794,7 +794,7 @@ E_{\text{vdw}} = \left [ D_{\text{IJ}}(\frac{6}{\zeta - 6})e^{\zeta }  \right ]e
     expression={`x_{\\text{IJ}}`}
   /> is the distance term, and the shape parameter <Math
     expression={`\\zeta`}
-  />. The the distance term can be expressed as
+  />. The the distance term can be expressed as:
 </p>
 
 <!-- $$x_{\text{I}} = \zeta / B_{\text{I}}$$
@@ -810,11 +810,11 @@ x_{\text{I}} = \zeta / B_{\text{I}}`}
  -->
 
 <p>
-  herein, the repulsion exponent <Math expression={`B_{\\text{I}}`} /> = 2 <Math
+  Herein, the repulsion exponent <Math expression={`B_{\\text{I}}`} /> = 2 <Math
     expression={`\\sqrt{2\\text{IP}}_{\\text{I}}`}
   /> and <Math expression={`\\text{IP}_{\\text{I}}`} /> is the ionization energy
   for each atom <Math expression={`I`} />. Meanwhile, for the well depth term,
-  we have
+  we have:
 </p>
 
 <!-- $$D_{\text{I}} = C_{6\text{II}}(\frac{\zeta - 6}{\zeta}) / x_{\text{I}}^{6}$$
@@ -833,7 +833,7 @@ D_{\text{I}} = C_{6\text{II}}(\frac{\zeta - 6}{\zeta}) / x_{\text{I}}^{6}`}
   where the dispersion terms <Math expression={`C_{6\\text{II}}`} /> is proportional
   to the upper bound numerical Hartree-Fock values presented by Fraga, Karwowski,
   and Saxena. Moreover, for the shape parameter <Math expression={`\\zeta`} /> of
-  the second-period atoms, we have
+  the second-period atoms, we have:
 </p>
 
 <Math
@@ -842,7 +842,7 @@ D_{\text{I}} = C_{6\text{II}}(\frac{\zeta - 6}{\zeta}) / x_{\text{I}}^{6}`}
 \zeta = 10.02 + 0.6775n`}
 />
 
-<p>for the third-period atoms, we have</p>
+<p>for the third-period atoms, we have:</p>
 
 <Math
   displayMode
@@ -850,7 +850,7 @@ D_{\text{I}} = C_{6\text{II}}(\frac{\zeta - 6}{\zeta}) / x_{\text{I}}^{6}`}
 \zeta = 8.587+0.897n`}
 />
 
-<p>and for the remaining main group elements, we have</p>
+<p>and for the remaining main group elements, we have:</p>
 
 <Math
   displayMode
@@ -865,7 +865,7 @@ D_{\text{I}} = C_{6\text{II}}(\frac{\zeta - 6}{\zeta}) / x_{\text{I}}^{6}`}
 </p>
 
 <p>
-  The electrostatic interactions can be calculated by the following equation
+  The electrostatic interactions can be calculated by the following equation:
 </p>
 
 <!-- $$E_{el} = 332.0637(Q_{i}Q_{j}/\epsilon R_{ij})$$
@@ -903,7 +903,7 @@ E_{el} = 332.0637(Q_{i}Q_{j}/\epsilon R_{ij})`}
   The model accepts the spatial structure of the filtration site and some
   contextual information as inputs. We kept track of each MP particle and
   statistically analyzed the performance of the filtration site, and the
-  resulting video is shown below
+  resulting video is shown below:
 </p>
 
 <div class="two-video">
@@ -912,10 +912,12 @@ E_{el} = 332.0637(Q_{i}Q_{j}/\epsilon R_{ij})`}
       src={remote("/modelling/absorb-fibre.js")}
       controls
       style="max-width: 40rem; margin: auto; "
-    />
+    >
+      <track kind="captions" />
+    </video>
 
     <figcaption>
-      Figure 2: simulation of the absorption of the PET by the nano-fibres
+      Simulation of the absorption of the PET by the nano-fibres
     </figcaption>
   </figure>
 
@@ -924,10 +926,12 @@ E_{el} = 332.0637(Q_{i}Q_{j}/\epsilon R_{ij})`}
       src={remote("/modelling/absorb-prot.js")}
       controls
       style="max-width: 40rem; margin: auto; "
-    />
+    >
+      <track kind="captions" />
+    </video>
 
     <figcaption>
-      Figure 2: simulation of the absorption of the PET by BC-APT membrane
+      Simulation of the absorption of the PET by BC-APT membrane
     </figcaption>
   </figure>
 </div>

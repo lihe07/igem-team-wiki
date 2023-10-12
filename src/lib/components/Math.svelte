@@ -14,3 +14,9 @@
 </script>
 
 {@html html}
+
+<style>
+  :global(.katex-display) {
+    margin: 2.3rem 0;
+  }
+</style>

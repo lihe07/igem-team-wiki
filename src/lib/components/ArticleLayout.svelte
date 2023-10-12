@@ -18,7 +18,7 @@
    * @param {HTMLElement} ele
    */
   function makeOutline(ele) {
-    let h2s = ele.querySelectorAll("h1,h2,h3");
+    let h2s = ele.querySelectorAll("h1,h2");
     // Give them ids
     h2s.forEach((e) => {
       e.id = e.textContent.replace(/\s/g, "-").toLowerCase();
@@ -133,7 +133,13 @@
     top: 6rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1500px) {
+    .markdown-body {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 930px) {
     main {
       padding: 0 2rem;
     }
