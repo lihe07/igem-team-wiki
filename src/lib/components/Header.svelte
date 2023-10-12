@@ -103,6 +103,7 @@
     height: 0;
     width: 100vw;
     transition: all 0.3s;
+    overflow-x: hidden;
   }
 
   .mobile-links.show {

@@ -2,18 +2,14 @@
   import Header from "$lib/components/Header.svelte";
   import Wave from "./Wave.svelte";
   import logo from "$lib/assets/white.svg";
+  import { remote } from "$lib/header";
 </script>
 
 <div class="header-container">
   <Header fixed={false} white={true} />
 </div>
 
-<img
-  src="https://img.js.design/assets/img/643f7bd8493676d9ede0f364.jpg"
-  alt=""
-  srcset=""
-  class="bg"
-/>
+<img src={remote("/for-test/cover.jpg")} alt="" srcset="" class="bg" />
 
 <div class="cover" />
 

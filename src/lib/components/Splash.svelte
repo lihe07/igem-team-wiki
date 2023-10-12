@@ -143,6 +143,7 @@
   p.show {
     opacity: 0.5;
   }
+
   .container.loaded {
     opacity: 0;
     pointer-events: none;

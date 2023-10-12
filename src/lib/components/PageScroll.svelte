@@ -67,7 +67,7 @@
 <style>
   :global(html) {
     scrollbar-width: none;
-    overflow-x: hidden;
+    max-width: 100vw;
   }
   /* Hide scrollbar */
   :global(::-webkit-scrollbar) {
@@ -75,6 +75,7 @@
   }
   .content {
     min-width: 100%;
+    max-width: 100vw;
   }
   .mouse {
     position: fixed;

@@ -141,6 +141,8 @@
     box-sizing: border-box;
     max-width: 100vw;
     overflow: hidden;
+    position: relative;
+    z-index: 10;
   }
 
   .product {

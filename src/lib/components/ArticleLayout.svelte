@@ -102,8 +102,9 @@
   }
   .bg {
     width: 100%;
-    height: 300px;
+    height: 500px;
     object-fit: cover;
+    filter: brightness(0.7);
   }
   main {
     padding: 0 5rem;

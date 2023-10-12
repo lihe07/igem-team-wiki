@@ -7,12 +7,12 @@
   export let percent = 0;
 </script>
 
-<div class="bg" style:opacity={Math.max(0, percent + 1)}>
+<div class="bg" style:opacity={Math.min(Math.max(0, percent + 1), 1)}>
   <section>
     <p class="intro">
-      <b>Microplastics</b> are minuscule plastic particles, smaller than 5
-      millimeters. We are already familiar with Microplastics, but how
-      microplastics affect human health? We made an interactive example. {percent}
+      <b>Microplastics</b> are minuscule plastic particles, smaller than 5 millimeters.
+      We are already familiar with Microplastics, but how microplastics affect human
+      health? We made an interactive example.
     </p>
 
     <Vis />
@@ -32,6 +32,8 @@
   .bg {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(3px);
+    position: relative;
+    z-index: 10;
   }
   section {
     max-width: 100rem;

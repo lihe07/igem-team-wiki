@@ -63,7 +63,7 @@
 </script>
 
 <section>
-  <div class="particles" style:opacity={(percent + 1) / 2}>
+  <div class="particles" style:opacity={Math.min((percent + 1) / 2, 1)}>
     <Particles
       {options}
       {particlesInit}
@@ -74,6 +74,7 @@
 
 <style>
   section {
+    z-index: -1;
     background: #bae6fd;
   }
   .particles {
