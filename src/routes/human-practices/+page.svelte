@@ -36,20 +36,20 @@
   ];
 
   const images = [
-    remote("/human-practices/1.svg"),
-    remote("/human-practices/2.svg"),
-    remote("/human-practices/3.svg"),
-    remote("/human-practices/4.svg"),
-    remote("/human-practices/5.svg"),
-    remote("/human-practices/6.svg"),
-    remote("/human-practices/7.svg"),
-    remote("/human-practices/8.svg"),
-    remote("/human-practices/9.svg"),
-    remote("/human-practices/10.svg"),
-    remote("/human-practices/11.svg"),
-    remote("/human-practices/12.svg"),
-    remote("/human-practices/13.svg"),
-    remote("/human-practices/14.svg"),
+    // remote("/human-practices/1.svg"),
+    // remote("/human-practices/2.svg"),
+    // remote("/human-practices/3.svg"),
+    // remote("/human-practices/4.svg"),
+    // remote("/human-practices/5.svg"),
+    // remote("/human-practices/6.svg"),
+    // remote("/human-practices/7.svg"),
+    // remote("/human-practices/8.svg"),
+    // remote("/human-practices/9.svg"),
+    // remote("/human-practices/10.svg"),
+    // remote("/human-practices/11.svg"),
+    // remote("/human-practices/12.svg"),
+    // remote("/human-practices/13.svg"),
+    // remote("/human-practices/14.svg"),
   ];
 </script>
 

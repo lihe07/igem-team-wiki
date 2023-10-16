@@ -12,8 +12,7 @@
   let ele;
 
   function play() {
-    if (ele) ele.currentTime = ele.duration * p;
-
+    if (ele) ele.currentTime = Number(ele.duration * p);
     requestAnimationFrame(play);
   }
 

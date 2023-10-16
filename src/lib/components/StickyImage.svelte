@@ -50,7 +50,11 @@
   });
 </script>
 
-<div class="images" bind:this={container} class:hide={current < 0}>
+<div
+  class="images"
+  bind:this={container}
+  class:hide={current < 0 || images.length <= 0}
+>
   {#each images as image, i}
     <img src={image} class:active={current === i} alt="" class:contain />
   {/each}

@@ -55,6 +55,12 @@
   Coca-Cola.
 </p>
 
+<figure>
+  <img
+    src="https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/6750693652cde17de967/image1.jpeg"
+  />
+</figure>
+
 <p>
   After concentrating microplastics from the water samples onto the filter
   membrane through vacuum filtration, we marked the membrane's surface.
@@ -72,6 +78,19 @@
   on peak comparisons, we also identified the presence of PC (polycarbonate)
   besides PET.
 </p>
+
+<figure>
+  <img
+    src="https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/8300519652cde4a66366/image2.png"
+    style="max-width: 90%;"
+  />
+
+  <figcaption>
+    The white portion in the spectrum represents the sample's spectroscopic
+    detection result, and the red line corresponds to the spectrum of PET
+    particles detected using Raman spectroscopy.
+  </figcaption>
+</figure>
 
 <p>
   After synthesizing the BAM membrane, we needed to conduct BAM membrane
