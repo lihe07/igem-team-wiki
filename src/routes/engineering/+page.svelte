@@ -1,51 +1,61 @@
-<h1>Engineering</h1>
+<script>
+  import { remote } from "$lib/header";
+</script>
 
 <h2>Overview</h2>
 
 <p>
-  The issue of microplastic pollution in human life is growing increasingly
-  severe. One of the primary sources of this pollution is plastic packaging for
-  bottled water or beverages. BAID - China aims to create a biodegradable
-  filtration membrane capable of efficiently removing microplastics. This
-  innovative membrane is designed to be applied at a specially designed bottle
-  cap, resulting in the production of a miniature microplastic filtration device
-  known as "Plasticlear."
+  BAID - China is dedicated to addressing the increasingly severe issue of
+  microplastic contamination in bottled water and beverages. We have developed
+  an eco-friendly and efficient biobased filtration membrane using synthetic
+  biology methods, which can achieve over 90% microplastic removal. This
+  groundbreaking filtration device is specially designed to fit onto
+  environmentally friendly and renewable materials used in bottle caps. It is
+  expected to be available for mass production at a price not exceeding $0.25
+  per unit, with an estimated reuse capacity of 20-30 times.
 </p>
 
 <p>
-  In the development of the biodegradable filtration membrane, we employ
-  bacterial cellulose as the cellulose matrix. To enhance adsorption
-  performance, we conducted tests to assess the impact of various additives on
-  the filtration efficiency of the biodegradable membrane. Initially, we
-  introduced genetically engineered oat proteins into the cellulose matrix. To
-  strengthen the binding between the two components, we employed synthetic
-  biology methods to design, build, and ultimately synthesize a specific
-  component. Subsequently, we designed and selected the addition of tannic acid
-  and tea polyphenol to increase the microplastic adsorption sites on the
-  cellulose base membrane. Characterization testing for each experimental group
-  was conducted using Raman spectroscopy and deep learning-based AI counting
-  techniques.
+  In addition, we have introduced a calculator program to help consumers
+  estimate their daily intake of microplastics. This tool aims to raise
+  awareness about microplastic ingestion, encouraging individuals to reduce
+  their reliance on plastic products in their daily lives.
 </p>
 
 <p>
-  For the supporting structure (a bottle cap made by cellulose composites), we
-  experimented with the utilization of a common agricultural waste product -
-  sugarcane bagasse. A mixture of extracted cellulose microfibers and lignin was
-  used to create a cellulose structure that could serve as an eco-friendly
-  alternative to plastic bottle caps. This structure was further surface-treated
-  with citric acid and sodium alginate to make it waterproof and resistant to
-  deformation. The production of the support structure involved the use of
-  specially customized molds. Due to the high cost of stainless-steel molds, we
-  opted for 3D printing using nylon material.
+  For the biobased filtration membrane, we employ bacterial cellulose as the
+  cellulose matrix. To enhance adsorption efficiency, we first engineer oat
+  proteins into the cellulose matrix using cellulose-binding modules (CBMs). We
+  have created a triblock structure component called "xxxx" to strengthen the
+  binding between cellulose and oat proteins. This combination forms the
+  foundational membrane for filtering microplastics, along with CBM3-OP-CBM3
+  composite proteins. Furthermore, we tested the addition of substances like
+  APT, tannic acid, and catechins to increase microplastic adsorption sites on
+  the membrane. In microplastic removal efficiency tests, we utilize a
+  microscopic Raman spectrometer to characterize the composition (types) of
+  microplastics in water. We have pioneered an AI-based algorithm for
+  high-precision microplastic counting in drinking water.
 </p>
 
 <p>
-  We anticipate that our product will become an effective alternative to plastic
-  bottle caps in the future bottled water market. Not only will it substantially
-  reduce plastic production, but it will also be ecologically sustainable.
+  For the bottle cap structure, we experimented with using a common agricultural
+  waste, sugarcane bagasse. We combined cellulose microfibers and lignin
+  extracted from sugarcane bagasse to create an alternative material for bottle
+  caps, replacing traditional plastic materials. Surface treatment with sodium
+  alginate and calcium lactate made the bottle caps waterproof and resistant to
+  deformation. We manufactured the mentioned bottle cap structures using 3D
+  printing technology and mold methods, reducing individual bottle cap
+  production costs to only 0.2% of traditional machining methods.
 </p>
 
-<h3>Target 1: Production of Oat Protein</h3>
+<p>
+  We hope our product will become an effective alternative to plastic bottle
+  caps in the bottled water market, potentially reducing the production and
+  usage of billions of plastic bottle caps each year and lowering consumer
+  microplastic ingestion by 40%-60%.
+</p>
+
+<h2>Target 1: Production of Oat Protein</h2>
 
 <ul>
   <li>Design</li>
@@ -75,6 +85,7 @@
       microplastics. Therefore, we have chosen to incorporate it into our
       biomaterials.
     </p>
+    <p>LMF</p>
   </li>
 
   <li>Build</li>
@@ -115,9 +126,9 @@
   </li>
 </ul>
 
-<h3>Target 2: Oat Protein as an Additive to the Base</h3>
+<h2>Target 2: Oat Protein as an Additive to the Base</h2>
 
-<h4>Target 2.1 Maillard reaction</h4>
+<h3>Target 2.1 Maillard reaction</h3>
 
 <ul>
   <li>Design</li>
@@ -236,13 +247,13 @@
   </li>
 </ul>
 
-<h4>Target 2.2 Cellulose Binding Module (CBM)</h4>
+<h3>Target 2.2 Cellulose Binding Module (CBM)</h3>
 
 <ul>
   <li>Design</li>
 
   <li style="list-style-type:none;">
-    - Wet Lab Design
+    <b>Wet Lab Design</b>
 
     <p>
       The cellulose-binding module (CBM) is a specific region on certain
@@ -278,10 +289,8 @@
     </p>
 
     <p>【质粒构建过程，2个】</p>
-  </li>
 
-  <li>
-    - <i>In Silico</i> Design
+    <b><i>In Silico</i> Design</b>
   </li>
 
   <li>Build</li>
@@ -303,7 +312,7 @@
   <li>Learn</li>
 </ul>
 
-<h3>Target 2: APT as an Additive to the Base</h3>
+<h2>Target 3: APT as an Additive to the Base</h2>
 
 <ul>
   <li>Design</li>
@@ -347,6 +356,325 @@
       mixture of BC and APT, followed by in-situ crosslinking.
     </p>
 
-    <p />
+    <p>
+      Firstly, a pre-treatment of APT was conducted. APT was placed in ultrapure
+      water, stirred, and allowed to settle for 8 hours, resulting in the
+      collection of fine particles in the intermediate layer. The obtained APT
+      was then acidified in HCl, and the mixture was subjected to
+      ultrasonication for 30 minutes to ensure the removal of any internal
+      organic matter. Subsequently, the APT was ultrasonically washed in
+      ultrapure water until the wash solution reached a neutral pH. Finally, it
+      was dried and sieved.
+    </p>
+
+    <p>
+      The BC-APT membrane was prepared by vacuum-assisted filtration of a BC/APT
+      suspension onto a PVDF membrane. Typically, a specific quantity of APT
+      powder and 3-aminopropyltriethoxysilane were added to the BC suspension,
+      and the mixture was sonicated for 30 minutes. The suspension was then
+      vacuum-filtered, and the resulting composite membrane was dried at ambient
+      temperature with an APT weight ratio of 5% to the BC.
+    </p>
+  </li>
+
+  <li>Test</li>
+
+  <li style="list-style-type: none;">
+    <b>Characterization</b>
+
+    <p>
+      Characterization of BAM was conducted using scanning electron microscopy
+      (SEM). Fiber structures highly resembling those reported by Jiang et al.
+      were observed, providing partial confirmation of the successful production
+      of BAM.
+    </p>
+
+    <b>Toxicity Test</b>
+
+    <p>
+      Due to the addition of 3-aminopropyltriethoxysilane in the production of
+      BAM, a commonly used chemical cross-linker in tissue engineering and
+      materials science, it can immobilize functional molecules on various
+      materials but carries some toxicity and environmental impact. In order to
+      investigate the potential toxicity of MPs/NPs on water quality after
+      filtration, acute toxicity tests were conducted using D. magna Straus as a
+      model organism. D. magna Straus was cultured for 1 to 3 generations, and
+      individuals aged between 6 hours and 24 hours were selected for the
+      experiment, with 10 water fleas in each group. Filtrate from BAM
+      filtration was used for the toxicity tests, and water was used as a
+      control. Each group was exposed in triplicate, and the water fleas were
+      maintained under starvation conditions during the experiment. Monitoring
+      was carried out at 24 and 48 hours to determine the number of water fleas
+      exhibiting activity inhibition (including mortality) as an indicator of
+      the toxicity of the experimental solution.
+    </p>
+
+    <p>
+      The data from the four experimental groups were analyzed, and the results
+      are presented in the table and graph.
+    </p>
+
+    <p>(Table/Graph)</p>
+
+    <p>
+      A two-way ANOVA analysis was conducted on the data related to D. magna
+      Straus activity inhibition. The analysis revealed a p-value of 0.896 for
+      the interaction between D. magna Straus activity and BAM filtrate
+      treatment. This p-value does not reach statistical significance at the
+      alpha level of 0.05. Therefore, there is no statistically significant
+      difference in the activity of D. magna Straus between the two groups,
+      confirming that BAM filtrate is not toxic or exhibits minimal toxicity.
+    </p>
+
+    <b>Removal Efficiency</b>
+
+    <p>
+      The measured removal efficiency of BAM for the MP mixture was 96.17%,
+      while Jiang et al. reported an efficiency of 99.81%. The discrepancy
+      between these results may stem from slight human errors, or it could also
+      be attributed to the use of a broader range of PS microspheres in our MP
+      suspension (Jiang et al. employed 100nm, 0.5μm, and 1μm PS microspheres,
+      whereas we used microspheres with diameters of 100nm, 1μm, 5μm, and 10μm).
+      However, overall, the observed filtration effectiveness of BAM for
+      microplastics is excellent. This suggests that APT, as the sole additive
+      on the BC membrane, plays a primary role in enhancing filtration
+      performance.
+    </p>
+  </li>
+
+  <li>Learn</li>
+
+  <li style="list-style-type: none;">
+    <p>
+      Toxicity Testing Round 1
+      <br />
+      Problem: D. magna Straus, when cultured under normal conditions, did not survive
+      for unknown reasons.
+      <br />
+      Toxicity Testing Round 2
+      <br />
+      Problem Resolved: By introducing a culture medium for green microalgae and
+      regularly changing the culture medium, there was a significant increase in
+      the reproduction rate of D. magna Straus. From 3 newborn D. magna Straus individual
+      per day for every 10 individual group, to up to 15 newborn D. magna Straus
+      individual per day for every 10 individual group.
+      <br />
+      Toxicity Testing Round 3
+      <br />
+      Reflection: D. magna Straus, as a simple planktonic crustacean, have limited
+      representativeness in toxicity tests. In the future, it will be necessary to
+      conduct toxicity testing using human tissue cells or other models that better
+      mimic real-life scenarios. The reason for not using these cells is the lack
+      of suitable laboratory conditions and animal testing certification.
+    </p>
   </li>
 </ul>
+
+<h2>Target 4: Production of the Support structure</h2>
+
+<h3>
+  4.1 Composition of the Support Structure-- Cellulose-Lignin Reinforced
+  Composites
+</h3>
+
+<ol>
+  <li>Design</li>
+
+  <li style="list-style-type:none">
+    <p>
+      Inspired by the principle of cellulose and lignin reinforcement found in
+      natural wood, we developed all-natural, biodegradable, strong, and
+      water-stable cellulose-lignin reinforced composites by integrating lignin
+      into micro-nanocellulose fibers as a replacement for plastic. Following
+      the method described in [Reference], the cellulose-lignin composite
+      consists of approximately 74 wt% cellulose fibers (a blend of cellulose
+      microfibers and nanofibrillated cellulose (NFC) for cost-efficiency and
+      mechanical performance balance) and approximately 26 wt% uniformly mixed
+      lignin powder, forming a wet film. The lignin content closely resembles
+      that of natural wood. The untreated fragments of natural wood still
+      maintain the intrinsic bonding between lignin and cellulose, which is
+      somewhat unfavorable for achieving high mechanical performance and water
+      resistance. Therefore, the use of commercially available cellulose
+      microfibers, nanofibers, and lignin components allows us to chemically
+      process and rebuild the cellulose-lignin reinforced composite structure,
+      thus achieving high mechanical performance and water stability in the
+      resulting support structure.
+    </p>
+
+    <p>PIC</p>
+    <p>
+      To demonstrate the superior mechanical strength and water stability of
+      cellulose-lignin reinforced composite materials, we further fabricated
+      drinking straws from this wet film, followed by baking in an oven at
+      150°C. Due to the abundant hydroxyl groups in cellulose molecular chains
+      and lignin, hydrogen bonds are readily formed between cellulose fibers and
+      lignin during the drying process. Consequently, the newly formed hydrogen
+      bonds between cellulose fibers and lignin effectively adhere to the edges
+      of the film without the need for additional additives. Baking at
+      temperatures higher than the glass transition temperature of lignin allows
+      molten lignin to penetrate the pores of cellulose fibers, forming a
+      permeable and dense structure.
+    </p>
+
+    <p>
+      Cellulose-lignin reinforced composite straws exhibit excellent properties,
+      including:
+    </p>
+
+    <ol>
+      <li>
+        Outstanding mechanical performance due to crosslinking between cellulose
+        and lignin.
+      </li>
+      <li>
+        High water stability resulting from the hydrophobic nature of lignin.
+      </li>
+      <li>Cost-effectiveness.</li>
+      <li>
+        Biodegradability, offering potential as an environmentally friendly
+        alternative to petroleum-derived plastic straws.
+      </li>
+    </ol>
+
+    <p>
+      Cellulose fibers have a high degree of hydrophilicity due to the presence
+      of numerous active hydroxyl groups on their surfaces. As a result, water
+      molecules penetrate the dense hydrogen bond network, causing it to expand
+      and subsequently reducing mechanical strength, resulting in insufficient
+      wet strength. To improve the user experience, we chose to introduce a thin
+      layer of sodium alginate to the surface of the support structure, which
+      was then converted into calcium alginate. As an edible natural
+      polysaccharide polymer, sodium alginate can infiltrate the pores of the 3D
+      nanoscale cellulose network. Both cellulose and alginates are
+      polysaccharides with many hydroxyl groups on their surfaces, which implies
+      that a considerable number of hydrogen bonds can be formed at the
+      interface, resulting in a strong connection. The addition of alginates,
+      along with the penetration of lignin, constitutes two steps that increase
+      the adhesion at the support structure joints, thus avoiding the use of
+      chemical adhesives commonly found in other biomaterials like paper straws.
+    </p>
+
+    <p>
+      Compared to paper and plastic, cellulose-lignin reinforced composite
+      materials can simultaneously achieve high water stability and
+      biodegradability.
+    </p>
+  </li>
+
+  <li>Build</li>
+
+  <li style="list-style-type:none">
+    <p>
+      According to the designed methods and plans, two components were produced:
+    </p>
+
+    <!--  1. Composite material thin rectangular prisms used for performance testing.
+2. Real bottle cap structures prepared using molds and baking. -->
+
+    <ol>
+      <li>
+        Composite material thin rectangular prisms used for performance testing.
+      </li>
+      <li>Real bottle cap structures prepared using molds and baking.</li>
+    </ol>
+
+    <p>[PIC]</p>
+  </li>
+
+  <li>Test</li>
+
+  <li style="list-style-type:none">
+    <p>
+      Due to a lack of the required equipment for mechanical performance
+      testing, we were unable to conduct three-point bending tests or other
+      mechanical tests on the support structures. However, literature mentions
+      that the tensile strength of cellulose-lignin reinforced composite
+      material (75.2 MPa) is 1.88 times higher than that of plastic straw
+      materials (40.0 MPa), replacing the original plastic components with the
+      support structures. Therefore, it is reasonable to assume that the
+      increased waterproofing, due to the surface treatment, should result in
+      superior performance compared to the literature.
+    </p>
+  </li>
+
+  <li>Learn</li>
+
+  <li style="list-style-type:none">
+    Surface Treatment Round 1 Issue: During the first immersion test (without
+    surface treatment, only baking), we observed noticeable darkening and slight
+    expansion in the portions of contact with water. After an internal team
+    discussion, it was unanimously agreed that this may reduce the user's
+    experience and trust in the product. Surface Treatment Round 2 Issue
+    Resolved: By conducting further literature research, we discovered a surface
+    treatment technique originally used for producing BC-based straws. We
+    applied this technique to our composite materials and achieved positive
+    results. Surface Treatment Round 3 Reflection: Due to equipment and time
+    constraints, detailed performance testing has not been conducted yet. This
+    aspect will need to be addressed in the future.
+  </li>
+</ol>
+
+<h3>The production of the Mold</h3>
+
+<ul>
+  <li>Design</li>
+
+  <li style="list-style-type:none">
+    The original plan was to use stainless steel molds for the most precise
+    control of microplastic contamination. However, due to cost constraints
+    (creating a stainless steel mold from scratch costs nearly 10,000 RMB or
+    approximately 1,370 dollars), we decided to use 3D printed heat-resistant
+    flexible nylon molds to produce the support structures. As shown in Figure
+    _, the envisioned support structures were modeled using Blender and
+    SolidWorks, and the initial drawings were used for test printing.
+  </li>
+
+  <li>Construction and Testing</li>
+
+  <li style="list-style-type:none">
+    <p>
+      Initially, common 3D printing material PLA (in pink) was used to print
+      plastic support structures to test the size compatibility between
+      different components. After three rounds of test printing and adjustments,
+      the dimensions at the bottle neck thread were modified to ensure a perfect
+      fit with the threads commonly found on bottled water in the Chinese
+      market, and to prevent water leakage when inverted, ensuring a good seal.
+    </p>
+
+    <p>
+      Once the final dimensions for the support structures were confirmed,
+      SolidWorks was used for the mold design. Elastic molds made of nylon were
+      then printed to facilitate demolding of threaded structures.
+    </p>
+  </li>
+
+  <li>Learning</li>
+
+  <li style="list-style-type:none">
+    <b>Mold Design Reflection:</b>
+
+    <p>
+      Given the constraints of time, cost, and technical capabilities, the mold
+      design currently in use is relatively simple and rough. To explore the
+      industrial application of Plasticlear, it will be essential to investigate
+      methods for demolding molds with internal threads using stainless steel
+      molds, which are rigid and lack elasticity.
+    </p>
+  </li>
+</ul>
+
+<h2>Summary</h2>
+
+<p>
+  Through the engineering cycles described above, we successfully produced all
+  the components of Plasticlear, assembled them, and ultimately, the
+  experimental results confirmed the feasibility of our theoretical design and
+  the outstanding filtration performance of Plasticlear.
+</p>
+
+<p>
+  It is evident that as a high school student team, there are still many areas
+  in the industrial application phase that require improvement. However, for
+  each part involved, we conducted a complete engineering cycle to test the
+  component's usability and continuously enhance its overall performance.
+</p>

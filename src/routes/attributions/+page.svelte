@@ -5,7 +5,7 @@
   const href = "https://attributions.igem.org?team=BAID-China&year=2023";
 </script>
 
-<h1>Attribution Form</h1>
+<h2>Attribution Form</h2>
 
 <p>
   In accordance with the

@@ -4,6 +4,7 @@
   import { onDestroy, onMount } from "svelte";
   export let bg =
     "https://static.igem.wiki/teams/4714/wiki/for-test/placeholder.jpg";
+  export let name = "";
 
   onMount(() => (window.header_thres = 300));
   onDestroy(() => {
@@ -44,6 +45,11 @@
 </script>
 
 <img class="bg" src={bg} alt="background" />
+
+<div class="title">
+  <h1>{name}</h1>
+</div>
+
 <div class="header-container">
   <Header fixed={false} white={true} />
 </div>
@@ -74,6 +80,22 @@
     font-size: 1.4rem;
     font-family: sans-serif;
     margin-bottom: 0.7rem;
+  }
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 4.5rem;
+    color: white;
   }
 
   a {
@@ -147,6 +169,16 @@
     .aside {
       display: none;
     }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    .bg,
+    .title {
+      height: 300px;
+    }
+
     .markdown-body {
       margin-top: 2.5rem !important;
       line-height: 2;

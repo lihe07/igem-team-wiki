@@ -2,6 +2,6 @@
   import ArticleLayout from "$lib/components/ArticleLayout.svelte";
 </script>
 
-<ArticleLayout>
+<ArticleLayout name="Human Practice">
   <slot />
 </ArticleLayout>

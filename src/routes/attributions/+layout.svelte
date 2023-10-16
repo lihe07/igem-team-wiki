@@ -2,6 +2,6 @@
   import PlainLayout from "$lib/components/PlainLayout.svelte";
 </script>
 
-<PlainLayout>
+<PlainLayout name="Attributions">
   <slot />
 </PlainLayout>

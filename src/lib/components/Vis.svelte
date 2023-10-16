@@ -258,6 +258,7 @@
     width: 100%;
     height: 100%;
     max-height: 20rem;
+    max-width: 40rem;
   }
 
   main {
@@ -307,7 +308,7 @@
     grid-column: 3;
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1600px) {
     main {
       grid-template-columns: 1fr 2fr;
       grid-template-rows: auto 1fr auto 1fr;

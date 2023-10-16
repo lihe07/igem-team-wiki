@@ -1,6 +1,7 @@
 <script>
   export let name = "";
   export let avatar = "";
+  export let desc = "No description provided.";
   export let tags = [""];
   export let background = "#e5e5e5";
 </script>
@@ -21,8 +22,7 @@
       </div>
 
       <p>
-        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-        cillum sint consectetur cupidatat.
+        {desc}
       </p>
     </div>
   </div>

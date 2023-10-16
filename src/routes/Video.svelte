@@ -12,7 +12,7 @@
   let ele;
 
   function play() {
-    ele.currentTime = ele.duration * p;
+    if (ele) ele.currentTime = ele.duration * p;
 
     requestAnimationFrame(play);
   }
@@ -22,8 +22,18 @@
   });
 </script>
 
+<svelte:head>
+  <link rel="preload" href={video} as="video" />
+</svelte:head>
+
 <div style="" class="c">
-  <video preload="auto" src={video} bind:this={ele} class="v">
+  <video
+    preload="auto"
+    src={video}
+    bind:this={ele}
+    class="v"
+    disablePictureInPicture={true}
+  >
     <track kind="captions" />
   </video>
   <!-- <div style="position: absolute; z-index: 10; top: 50%;">
@@ -41,10 +51,10 @@
 
   .v {
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh + 10px);
     object-fit: cover;
   }
 </style>

@@ -1,40 +1,100 @@
 <script>
+  import { remote } from "$lib/header";
   import Card from "./Card.svelte";
   import MinorCard from "./MinorCard.svelte";
 
   const major = [
     {
-      name: "Akaza Akari",
-      tags: ["Student", "PI", "Human Practice"],
-      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/akari.jpg",
-      background:
-        "url(https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/3561956652545f3b9847/Diyizhongxue_02.JPG)",
+      name: "Changsheng Liu",
+      tags: ["Instructor", "PI"],
+      avatar: remote("/avatars/changsheng.jpg"),
+      background: `url(${remote("/avatars/bg.jpg")})`,
+      desc: "Dr. Changsheng Liu received his Ph.D. from Peking University and worked as a postdoctoral fellow in Peking University.",
     },
     {
-      name: "Toshino Kyoko",
-      tags: ["Student", "Modelling"],
-      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/kyoko.jpg",
-      background:
-        "url(https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/7275164652546138f518/%E6%A0%85%E5%B7%9D%E4%B8%AD%E5%AD%A6%E6%A0%A1.png)",
+      name: "Ying Dai",
+      tags: ["Instructor"],
+      // avatar: "/ying.jpg",
+      // background: "url(/ba.jpg)",
+
+      avatar: remote("/avatars/ying.jpg"),
+      background: `url(${remote("/avatars/bg.jpg")})`,
+    },
+    {
+      name: "Han Gao",
+      tags: ["Student", "Leader"],
+      // avatar: "/baid-china/han.jpg",
+      // background: "url(/ba.jpg)",
+
+      avatar: remote("/avatars/han.jpg"),
+      background: `url(${remote("/avatars/bg.jpg")})`,
+    },
+    {
+      name: "He Li",
+      tags: ["Student", "Model", "Team Wiki"],
+      // avatar: "/baid-china/he.jpg",
+      // background: "url(/ba.jpg)",
+
+      avatar: remote("/avatars/he.jpg"),
+      background: `url(${remote("/avatars/bg.jpg")})`,
+    },
+    {
+      name: "Tianlang Gao",
+      tags: ["Student", "Model"],
+      // avatar: "/baid-china/tianlang.jpg",
+      // background: "url(/ba.jpg)",
+      avatar: remote("/avatars/tianlang.jpg"),
+      background: `url(${remote("/avatars/bg.jpg")})`,
+    },
+    {
+      name: "Yimo Chen",
+      tags: ["Student", "Human Practices"],
+      // avatar: "/baid-china/yimo.jpg",
+      avatar: remote("/avatars/yimo.jpg"),
+    },
+    {
+      name: "Mufeng Li",
+      tags: ["Student", "Wet Lab"],
+      // avatar: "/baid-china/mufeng.jpg",
+      avatar: remote("/avatars/mufeng.jpg"),
     },
   ];
 
   const minor = [
     {
-      name: "Omuro Sakurako",
-      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/sakurako.jpg",
+      name: "Yiyi Ding",
+      // avatar: "/yiyi.jpg",
+      avatar: remote("/avatars/yiyi.jpg"),
     },
     {
-      name: "Sugiura Ayano",
-      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/ayano.jpg",
+      name: "Yidi Ma",
+      // avatar: "/a.jpg",
+      avatar: remote("/avatars/a.jpg"),
     },
     {
-      name: "Furutani Himawari",
-      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/himawari.jpg",
+      name: "Chuyan Wen",
+      // avatar: "/b.jpg",
+      avatar: remote("/avatars/b.jpg"),
     },
     {
-      name: "Yoshikawa Chinatsu",
-      avatar: "https://static.igem.wiki/teams/4714/wiki/for-test/chinatsu.jpg",
+      name: "Zixi Wang",
+      // avatar: "/d.jpg",
+      avatar: remote("/avatars/d.jpg"),
+    },
+    {
+      name: "Jiayang Liu",
+      // avatar: "/jiayang.jpg",
+      avatar: remote("/avatars/jiayang.jpg"),
+    },
+    {
+      name: "Yiwei Wan",
+      // avatar: "/yiwei.jpg",
+      avatar: remote("/avatars/yiwei.jpg"),
+    },
+    {
+      name: "Lihan Zhang",
+      // avatar: "/lihan.jpg",
+      avatar: remote("/avatars/lihan.jpg"),
     },
   ];
 </script>
@@ -61,7 +121,8 @@
   }
   .major {
     margin-top: 3rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
   }
 
@@ -79,6 +140,7 @@
 
   @media (max-width: 768px) {
     .major {
+      display: flex;
       flex-direction: column;
     }
     .minor {

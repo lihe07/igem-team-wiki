@@ -70,8 +70,18 @@
   }
 
   .learn-more p {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     margin: 0;
+  }
+
+  @media (max-width: 1400px) {
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+    .learn-more {
+      font-size: 1.5rem;
+    }
   }
 
   @media (max-width: 768px) {

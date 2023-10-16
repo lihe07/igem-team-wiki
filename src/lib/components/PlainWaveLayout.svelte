@@ -6,7 +6,7 @@
   export let bg =
     "https://static.igem.wiki/teams/4714/wiki/for-test/placeholder.jpg";
 
-  onMount(() => (window.header_thres = 300));
+  onMount(() => (window.header_thres = 500));
   onDestroy(() => {
     if (typeof window !== "undefined") {
       window.header_thres = "window";
@@ -51,7 +51,7 @@
     background: white;
     position: relative;
     width: 100%;
-    top: 500px;
+    top: 600px;
     z-index: 3;
   }
 
@@ -61,7 +61,7 @@
   }
   .bg {
     width: 100%;
-    height: 500px;
+    height: 600px;
     object-fit: cover;
     position: fixed;
     top: 0;

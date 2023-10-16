@@ -2,7 +2,7 @@
   import FooterBox from "./FooterBox.svelte";
   import NextStepBox from "./NextStepBox.svelte";
   import logo from "$lib/assets/black.svg";
-  import { transform } from "$lib/header";
+  import { remote, transform } from "$lib/header";
 
   export let percent = 0;
 
@@ -11,53 +11,57 @@
       name: "Project Description",
       icon: "fluent:slide-text-sparkle-28-regular",
       color: "#059669",
-      href: transform("/Description"),
+      href: transform("/description"),
+      desc: "A brief introduction to our project.",
     },
     {
-      name: "Modelling",
-      icon: "fluent:slide-text-sparkle-28-regular",
+      name: "Model",
+      icon: "fluent:math-formula-24-filled",
       color: "#0ea5e9",
-      href: transform("/Modelling"),
+      href: transform("/model"),
+      desc: "Math and computational models",
     },
     {
       name: "Experiments",
-      icon: "fluent:slide-text-sparkle-28-regular",
+      icon: "fluent:beaker-24-regular",
       color: "#06b6d4",
-      href: transform("/Experiments"),
+      href: transform("/experiments"),
+      desc: "Experiments by our Wetlab team",
     },
     {
-      name: "Results",
-      icon: "fluent:slide-text-sparkle-28-regular",
+      name: "Human Practices",
+      icon: "fluent:accessibility-28-regular",
       color: "#6366f1",
-      href: transform("/Results"),
+      href: transform("/human-practices"),
+      desc: "Our connection with the public",
     },
   ];
 
   const external_links = [
     {
-      logo: "https://old.igem.org/wiki/images/e/e4/Main_igem_logo.svg",
+      logo: remote("/igem.svg"),
       href: "https://www.igem.org/",
     },
     {
-      logo: "https://vitejs.dev/stackblitz.svg",
-      href: "#",
+      logo: remote("/scm.svg"),
+      href: "https://www.scm.com",
     },
 
     {
-      logo: "https://sponsors.vuejs.org/images/divriots.png",
-      href: "#",
+      logo: remote("/snapgene.svg"),
+      href: "https://www.snapgene.com",
     },
     {
-      logo: "https://vitejs.dev/stackblitz.svg",
-      href: "#",
+      logo: remote("/svelte.svg"),
+      href: "https://kit.svelte.dev/",
     },
     {
-      logo: "https://vitejs.dev/stackblitz.svg",
-      href: "#",
+      logo: remote("/tsingke.png"),
+      href: "https://tsingke.com.cn/",
     },
     {
-      logo: "https://old.igem.org/wiki/images/e/e4/Main_igem_logo.svg",
-      href: "https://www.igem.org/",
+      logo: remote("/swwls.png"),
+      href: "http://www.ibp.cas.cn/",
     },
   ];
 </script>
@@ -80,7 +84,8 @@
           <img src={logo} alt="plasticlear logo" />
         </div>
         <p class="desc">
-          Team Wiki made with Svelte + Svelte Kit.
+          BAID-China Team Wiki by He Li
+
           <br />
 
           Made for iGEM 2023
@@ -142,7 +147,7 @@
     max-width: 100vw;
     overflow: hidden;
     position: relative;
-    z-index: 10;
+    z-index: 5;
   }
 
   .product {
@@ -193,6 +198,9 @@
     .link img {
       width: 70%;
       height: 6rem;
+    }
+    .desc {
+      font-size: 1rem;
     }
     .links-grid {
       min-width: 25rem;

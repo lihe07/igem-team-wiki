@@ -14,6 +14,7 @@
   ];
 
   let current = 0;
+  export let contain = false;
 
   /** @type {HTMLDivElement} */
   let container;
@@ -27,7 +28,7 @@
       const index = Number(ele.getAttribute("data-index"));
       if (
         ele.getBoundingClientRect().top <
-        container.getBoundingClientRect().bottom + 100
+        container.getBoundingClientRect().bottom + 200
       ) {
         if (index > active) active = index;
         if (index == -1) {
@@ -51,14 +52,15 @@
 
 <div class="images" bind:this={container} class:hide={current < 0}>
   {#each images as image, i}
-    <img src={image} class:active={current === i} alt="" />
+    <img src={image} class:active={current === i} alt="" class:contain />
   {/each}
 </div>
 <div class="texts" bind:this={texts}>
   {#each descriptions as description, i}
     <div data-index={i} class:active={current === i} class="text">
       {#if typeof description === "string"}
-        <p>{description}</p>
+        <!-- <p>{description}</p> -->
+        {@html description}
       {:else}
         <svelte:component this={description} />
       {/if}
@@ -81,7 +83,7 @@
     overflow: hidden;
     height: 40vh;
     min-height: 20rem;
-    max-height: 50rem;
+    max-height: 33vh;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
       0 8px 10px -6px rgb(0 0 0 / 0.1);
     pointer-events: none;
@@ -113,6 +115,9 @@
     opacity: 0;
     transition: all 0.3s;
     object-fit: cover;
+  }
+  img.contain {
+    object-fit: contain;
   }
 
   img.active {

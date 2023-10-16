@@ -1,16 +1,41 @@
 <script>
+  import FoodBar from "$lib/components/FoodBar.svelte";
   import Math from "$lib/components/Math.svelte";
   import Molstar from "$lib/components/Molstar.svelte";
   import { remote } from "$lib/header";
 </script>
 
-<h1>Model</h1>
+<h2>The Accumulation of MPs in human body</h2>
 
 <h2>Protein Structure Prediction</h2>
 
 <h3>Protein Docking</h3>
 
+<p>
+  To predict the three-location structure of the filtration matrix, we applied
+  Protein-Protein Docking.
+</p>
+
+<p>
+  The acceptor of Docking is oat protein and the ligand is protein on BCM. For
+  the energy fraction calculation, we used the equilibrated weights.
+</p>
+
+<Math
+  displayMode
+  expression={String.raw`
+E = 0.40 E_{rep} - 0.40 E_{att}+600 E_{elec}+1.00 E_{DARS}
+`}
+/>
+
+<p>The results of Docking are shown below.</p>
+
 <Molstar pdb={remote("/modelling/docking-000.js")} />
+
+<p>
+  The first ranked protein fraction after binding was accepted for thermal
+  stability simulation by molecular dynamics.
+</p>
 
 <h3>AlphaFold2</h3>
 
@@ -954,6 +979,167 @@ E_{el} = 332.0637(Q_{i}Q_{j}/\epsilon R_{ij})`}
   strong simulation evidence for the final results and comparisons of adsorption
   efficiencies.
 </p>
+
+<h2>Kinetic Model</h2>
+
+<p>
+  To determine the adsorption kinetics of the BAM with CBM membrane, we
+  conducted a series of experiments to measure the adsorption rate of the BAM
+  with CBM.
+</p>
+
+<p>
+  From the experimental data and previous research, we speculate that the
+  reaction path is either pseudo-first-order or pseudo-second-order.
+</p>
+
+<!-- The pseudo-first-order model generally obeys the following linear relationship $$\frac{\mathrm{d} q_{t}}{\mathrm{d} t} =k_{1}(q_{e}-q_{t}) $$ where $q_{e}$ and $q_{t}$ (mg/g) are the amounts of the amount adsorbed at equilibrium and at time $t$ respectively, and $k_{1}$ is the equilibrium rate constant (L/min)
+ -->
+
+<p>
+  The pseudo-first-order model generally obeys the following linear relationship
+</p>
+
+<Math
+  displayMode
+  expression={String.raw`
+\frac{\mathrm{d} q_{t}}{\mathrm{d} t} =k_{1}(q_{e}-q_{t}) `}
+/>
+
+<p>
+  where <Math expression={`q_{e}`} /> and <Math expression={`q_{t}`} /> (mg/g) are
+  the amounts of the amount adsorbed at equilibrium and at time <Math
+    expression={`t`}
+  /> respectively, and <Math expression={`k_{1}`} /> is the equilibrium rate constant
+  (L/min).
+</p>
+
+<!-- After some integration, the previous equation can be transformed to $$\ln{(q_{e}-q_{t})} = \ln{(q_{e})}-k_{1}t$$ this equation also implies that whether the reaction is pseudo-first-order can be determined by its half-life. When the reaction has a half-life, then it should be pseudo-first-order.
+ -->
+
+<p>After some integration, the previous equation can be transformed to</p>
+
+<Math
+  displayMode
+  expression={String.raw`
+\ln{(q_{e}-q_{t})} = \ln{(q_{e})}-k_{1}t`}
+/>
+
+<p>
+  this equation also implies that whether the reaction is pseudo-first-order can
+  be determined by its half-life. When the reaction has a half-life, then it
+  should be pseudo-first-order.
+</p>
+
+<!-- The pseudo-second-order model can be expressed as $$\frac{\mathrm{d} q_{t}}{\mathrm{d} t} = k_{2}(q_{e}-q_{t})^{2}$$ In a similar way, by applying integration, we have $$\frac{t}{q_{t}}=\frac{1}{k_{2}q_{e}^{2}}+\frac{1}{q_{e}}$$
+ -->
+
+<p>The pseudo-second-order model can be expressed as</p>
+
+<Math
+  displayMode
+  expression={String.raw`
+\frac{\mathrm{d} q_{t}}{\mathrm{d} t} = k_{2}(q_{e}-q_{t})^{2}`}
+/>
+
+<p>In a similar way, by applying integration, we have</p>
+
+<Math
+  displayMode
+  expression={String.raw`
+\frac{t}{q_{t}}=\frac{1}{k_{2}q_{e}^{2}}+\frac{1}{q_{e}}`}
+/>
+
+<!-- We fit our data set in both pseudo-first and pseudo-second-order models, which are given in the two diagrams above. The adsorption capacity increases rapidly in the first 1.5 minutes and reaches the adsorption equilibrium in about 4 minutes. In addition, the correlation coefficient $R^{2}$ of the pseudo-first-order model is 0.99615, which is higher than the correlation coefficient of the pseudo-second-order model -- 0.98645. Thus, the pseudo-first-order model is more consistent with the adsorptive kinetics of microplastics on our membrane. -->
+
+<p>
+  We fit our data set in both pseudo-first and pseudo-second-order models, which
+  are given in the two diagrams above. The adsorption capacity increases rapidly
+  in the first 1.5 minutes and reaches the adsorption equilibrium in about 4
+  minutes. In addition, the correlation coefficient <Math
+    expression={`R^{2}`}
+  /> of the pseudo-first-order model is 0.99615, which is higher than the correlation
+  coefficient of the pseudo-second-order model -- 0.98645. Thus, the pseudo-first-order
+  model is more consistent with the adsorptive kinetics of microplastics on our membrane.
+</p>
+
+<figure>
+  <div class="two">
+    <img src={remote("/modelling/kin-1.jpg")} alt="Pseudo-first-order model" />
+    <img src={remote("/modelling/kin-2.jpg")} alt="Pseudo-second-order model" />
+  </div>
+</figure>
+
+<h2>Adsorption isotherm</h2>
+
+<!-- Freundlich adsorption isotherm equation is:
+$$q_{e}=k_{F}{c_{e}^{\frac{1}{n}}}$$
+ -->
+
+<p>Freundlich adsorption isotherm equation is:</p>
+<Math displayMode expression={String.raw`q_{e}=k_{F}{c_{e}^{\frac{1}{n}}}`} />
+
+<!-- where $q_{e}$ is the adsorption amount of the adsorbent in the equilibrium state (mg/g), $c_{e}$ is the equilibrium concentration of the solute in the liquid phase (mg/L), n is the inhomogeneity factor of the adsorption strength of .... ions, which varies with the inhomogeneity of the adsorbent, and $k_{F}$ is the constant related to adsorption capacity.
+ -->
+
+<p>
+  where <Math expression={`q_{e}`} /> is the adsorption amount of the adsorbent in
+  the equilibrium state (mg/g), <Math expression={`c_{e}`} /> is the equilibrium
+  concentration of the solute in the liquid phase (mg/L), <Math
+    expression={`n`}
+  /> is the inhomogeneity factor of the adsorption strength of .... ions, which varies
+  with the inhomogeneity of the adsorbent, and <Math expression={`k_{F}`} /> is the
+  constant related to adsorption capacity.
+</p>
+
+<!-- Langmuir adsorption isotherm equation is:
+ -->
+
+<p>Langmuir adsorption isotherm equation is:</p>
+
+<!-- $$q_{e}=\frac{kq_{max}c_{e}}{1+kc_{e}}$$
+ -->
+
+<Math
+  displayMode
+  expression={String.raw`
+q_{e}=\frac{kq_{max}c_{e}}{1+kc_{e}}`}
+/>
+
+<!-- where $q_{e}$ is the adsorption amount of the adsorbent in the equilibrium state (mg/g). $c_{e}$ is the equilibrium concentration of the solute in the liquid phase (mg/L), $q_{max}$ is the maximum adsorption capacity of adsorbent on adsorb rate (mg/g), and k is the langmuir constant related to adsorption energy.
+ -->
+
+<p>
+  where <Math expression={`q_{e}`} /> is the adsorption amount of the adsorbent in
+  the equilibrium state (mg/g). <Math expression={`c_{e}`} /> is the equilibrium
+  concentration of the solute in the liquid phase (mg/L), <Math
+    expression={`q_{max}`}
+  /> is the maximum adsorption capacity of adsorbent on adsorb rate (mg/g), and <Math
+    expression={`k`}
+  /> is the langmuir constant related to adsorption energy.
+</p>
+
+<!-- Similarly, we fit the data set to both the Freundlich model and Langmuir model, which are shown in the diagrams above, and the parameters are summarized. Apparently, the correlation coefficient $R^{2}$ of the Freundlich model is 0.98883, which is smaller than the $R^{2}$ of the Langmuir model (0.9957). Therefore, the Langmuir model is more suitable than the Freundlich model for depicting the isotherms of microplastics on our membrane. -->
+
+<p>
+  Similarly, we fit the data set to both the Freundlich model and Langmuir
+  model, which are shown in the diagrams above, and the parameters are
+  summarized. Apparently, the correlation coefficient <Math
+    expression={`R^{2}`}
+  /> of the Freundlich model is 0.98883, which is smaller than the <Math
+    expression={`R^{2}`}
+  /> of the Langmuir model (0.9957). Therefore, the Langmuir model is more suitable
+  than the Freundlich model for depicting the isotherms of microplastics on our membrane.
+</p>
+
+<figure>
+  <div class="two">
+    <img src={remote("/modelling/iso-1.jpg")} alt="Freundlich model" />
+    <img src={remote("/modelling/iso-2.jpg")} alt="Langmuir model" />
+  </div>
+</figure>
+
+<h2>References</h2>
 
 <style>
   .two-video {

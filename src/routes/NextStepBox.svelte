@@ -5,8 +5,8 @@
   export let name = "";
   export let icon = "";
   export let href = "/";
+  export let desc = "";
   export let color = "#064e3b";
-  let hover = false;
   /** @type {HTMLAnchorElement} */
   let container;
   let active = false;
@@ -32,7 +32,7 @@
   </div>
 
   <h2>{name}</h2>
-  <p class="desc">Lorem ipsum dolor sit amet, qui minim labore.</p>
+  <p class="desc">{desc}</p>
 </a>
 
 <style>

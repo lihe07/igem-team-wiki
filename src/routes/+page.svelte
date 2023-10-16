@@ -29,22 +29,16 @@
   <AbsurbParticles bind:enter {percent} />
   <Video {percent} />
   <CompCard {percent} enter={3.15} leave={5}>
-    <b style="color: black;">Whatever Protein</b> is the main functioning component
-    of our membrane. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-    exercitationem? Vel, error. Assumenda consectetur, repellendus, hic necessitatibus
-    vitae numquam libero tenetur sequi aut corporis quaerat debitis in quas est tempora!
+    <b style="color: black;">Oat Protein</b> is the main functioning component of
+    our membrane.
   </CompCard>
   <CompCard {percent} enter={6.0} leave={7.7} left>
-    <b style="color: black;">APT, or Palygorskite</b> Lorem ipsum dolor sit amet
-    consectetur adipisicing elit. Quisquam, exercitationem? Vel, error. Assumenda
-    consectetur, repellendus, hic necessitatibus vitae numquam libero tenetur sequi
-    aut corporis quaerat debitis in quas est tempora!
+    <b style="color: black;">APT, or Palygorskite</b> provides a stable structure
+    for our membrane.
   </CompCard>
   <CompCard {percent} enter={8.6} leave={10.5}>
-    <b style="color: black;">Bacterial Cellulose Membrane</b> Lorem ipsum dolor sit
-    amet consectetur adipisicing elit. Quisquam, exercitationem? Vel, error. Assumenda
-    consectetur, repellendus, hic necessitatibus vitae numquam libero tenetur sequi
-    aut corporis quaerat debitis in quas est tempora!
+    <b style="color: black;">Bacterial Cellulose Membrane</b>
+    consists our framework for the membrane.
   </CompCard>
 </Inplace>
 

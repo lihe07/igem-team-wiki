@@ -1,9 +1,8 @@
 <script>
   import PlainWaveLayout from "$lib/components/PlainWaveLayout.svelte";
+  import { remote } from "$lib/header";
 </script>
 
-<PlainWaveLayout
-  bg="https://static.igem.wiki/teams/4714/wiki/for-test/placeholder-team.jpg"
->
+<PlainWaveLayout bg={remote("/avatars/team.jpg")}>
   <slot />
 </PlainWaveLayout>

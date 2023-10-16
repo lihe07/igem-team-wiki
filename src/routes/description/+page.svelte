@@ -1,8 +1,7 @@
 <script>
-  import StickyImage from "./StickyImage.svelte";
+  import { remote } from "$lib/header";
+  import StickyImage from "$lib/components/StickyImage.svelte";
 </script>
-
-<h1>Project Description</h1>
 
 <p>
   This project aims to address the issue of human ingestion of microplastics by
@@ -21,13 +20,29 @@
 </p>
 
 <figure>
-  <img src="https://via.placeholder.com/500x300" alt="" />
+  <img src={remote("/description/sem.jpg")} alt="" />
   <figcaption>Figure 1: MP SEM</figcaption>
 </figure>
 
 <p>
-  {`The consumption of bottled water has become common in life. As a result, we passively ingest a certain amount of microplastics, and the part that cannot be excreted by the human body accumulates over time and breaks down into smaller nanoparticles (<100 nm). This accumulation poses health risks. Increasing research has found plastic fragments in human fluids and tissues, such as blood and placenta. MPs can j-penetrate "impermeable" barriers like the intestinal mucosal.`}
+  {`The consumption of bottled water has become common in life. As a result, we passively ingest a certain amount of microplastics, and the part that cannot be excreted by the human body accumulates over time and breaks down into smaller nanoparticles (<100 nm). This accumulation poses health risks. Increasing research has found plastic fragments in human fluids and tissues, such as blood and placenta. MPs can j-penetrate "impermeable" barriers like the intestinal mucosal barrier and the blood-brain barrier (Cox et al., 2019). Recent research conducted by multiple universities, including the Vienna Medical University, demonstrated that specific nanometer-sized green fluorescence signals appeared in mouse brain tissue just 2 hours after gastric administration, indicating that 0.293 µm PS particles can be absorbed by the gastrointestinal tract and penetrate the blood-brain barrier (Kopatz et al., 2023). This raises concerns about increased inflammation, neurological disorders, and neurodegenerative diseases.`}
 </p>
+
+<figure>
+  <div class="two">
+    <img
+      src={remote("/description/cap.png")}
+      alt=""
+      style="object-fit: contain; max-height: 20rem;"
+    />
+    <img
+      src="https://via.placeholder.com/400x300"
+      alt=""
+      style="max-height: 20rem;"
+    />
+  </div>
+  <figcaption>Figure 3 and 4</figcaption>
+</figure>
 
 <p>
   Therefore, our team is attempting to design a novel bio-composite material to
@@ -38,9 +53,15 @@
 </p>
 
 <figure>
-  <img src="https://via.placeholder.com/500x300" alt="" />
-  <img src="https://via.placeholder.com/500x300" alt="" />
-  <figcaption>Two figures</figcaption>
+  <div class="two">
+    <img
+      src={remote("/description/cap.png")}
+      alt=""
+      style="object-fit: contain; max-height: 20rem;"
+    />
+    <img src={remote("/mag.svg")} alt="" style="max-height: 20rem;" />
+  </div>
+  <figcaption>Figure 5?</figcaption>
 </figure>
 
 <p>
@@ -49,6 +70,10 @@
   through this bottle cap will contain virtually no microplastics, providing a
   cleaner source of drinking water and reducing passive microplastic ingestion.
 </p>
+
+<figure>
+  <img src={remote("/description/2.png")} />
+</figure>
 
 <p>
   In the realm of biological materials, we have chosen Bacterial Cellulose (BC)
@@ -61,48 +86,192 @@
   et al., 2019).
 </p>
 
+<StickyImage
+  contain
+  images={[
+    remote("/description/1.png"),
+    remote("/description/apt.png"),
+    remote("/description/3.png"),
+    remote("/description/4.png"),
+  ]}
+  descriptions={[
+    `<p>
+However, BC has limited adsorption active sites, resulting in lower overall adsorption capacity for microplastics (Zhang et al., 2023). 此处在图上加个放大镜 画出来表示MPs位点不够，打叉 
+</p>
 <p>
-  After modifying the bacterial cellulose membrane in the aforementioned two
-  steps, we have obtained the biological filtration membrane portion of our
-  designed bottle cap. Regarding the rigid support portion, given the uniqueness
-  of our project design, we have opted to obtain samples of the support
-  structure through 3D printing. By using all-cellulose ink, we are able to
-  create lightweight, super-strong, highly elastic, and highly resilient
-  all-cellulose support structures (Jiang et al., 2021).
+Therefore, we plan to modify BCM in two steps: first, by incorporating attapulgite (APT) to create BC-APT membranes (BAM), and second, by using a Cellulose Binding Module (CBM) to enhance the pore effects and other interactions, such as hydrophobic and electrostatic interactions, between BAM and microplastics.
+</p>`,
+    `
+<p>
+Attapulgite (APT) is a low-cost and abundant clay mineral known for its porous, rod-shaped crystal structure, high specific surface area, and strong cation adsorption capacity. It is often used in anti-diarrheal medications (Haden et al., 1967). Studies have demonstrated that APT combined with BC can produce BAM with excellent microplastic adsorption capabilities (Zhang et al., 2023). 
+</p>
+<p>
+The irregular and randomly distributed clusters formed by BC nanofibers and APT bundles in BAM increase water flux, creating abundant and uniform pore structures that are highly favorable for microplastic filtration (Figure 1). Furthermore, microplastics in water are repelled from the membrane due to their weak negative charge, preventing PS particles from entering the membrane pores while allowing solvent to pass through, maintaining high flux through BAM. 
+</p>
+<p>
+Results show that BAM achieves a removal efficiency of 99.81% for microplastics with a diameter of 1 micrometer. However, further research is needed to assess BAM's effectiveness in removing microplastics with diameters ranging from 100 nanometers to 30 micrometers, which are prevalent in drinking water.
+</p>
+`,
+    `
+<p>
+In order to maximize the microplastic removal efficiency of our filtration membrane, we have chosen to use a Cellulose Binding Module (CBM). Inspired by the "triple-helix" binding mode proposed in previous research, we plan to cross-link BCM with oat proteins using CBM. 
+</p>
+<p>
+Cellulose Binding Modules are specific regions on cellulase enzymes composed of amino acids with aromatic residues (tryptophan or tyrosine), which bind strongly to cellulose chains through van der Waals interactions (Perez & Samain, 2010). CBM has been extensively used in creating protein-polysaccharide composite materials and modifications (Lapidot et al., 2012).
+</p>
+<p>
+It functions by mimicking the role of natural cellulose cross-linkers, anchoring different proteins onto cellulose and producing cellulose-CBM and fused protein composite materials. Mohammadi et al. (2019) proposed a "triple-helix" combination of CBM, functional proteins, and bacterial cellulose, offering a pathway to manufacture highly tunable composite materials. By combining spider silk protein and cellulose, they obtained a novel material with high strength and toughness. Therefore, our project references this binding model but replaces the functional protein with oat proteins to achieve the desired properties.
+</p>
+<p>
+Oat proteins are globular proteins extracted from by-products of oat β-glucan processing. Due to the recent health benefits of oat β-glucan, such as cholesterol reduction and blood sugar regulation, oat proteins are added as 76 health ingredients in food and cosmetics, making them cost-effective and environmentally friendly. In a 2021 study by Wang et al., oat protein sponges were chemically cross-linked and tested for their removal efficiency of PS particles (a type of microplastic), achieving removal efficiencies ranging from 75% to 82% (Wang et al., 2021). Their model suggests that microplastic binding sites on these oat protein sponges are likely hydrophobic groups on protein side chains, capable of hydrophobic interactions with the phenyl rings on PS particles. Considering their minimal impact on protein side chains during the production of oat protein hydrogels, which is mainly achieved through chemical cross-linking and liquid nitrogen freezing followed by lyophilization, we believe that oat proteins possess the desired characteristics for microplastic adsorption and have chosen to incorporate them into our biological material.
+</p>
+`,
+
+    `
+<p>
+After modifying the bacterial cellulose membrane in the aforementioned two steps, we have obtained the biological filtration membrane portion of our designed bottle cap. Regarding the rigid support portion, given the uniqueness of our project design, we have opted to obtain samples of the support structure through 3D printing. By using all-cellulose ink, we are able to create lightweight, super-strong, highly elastic, and highly resilient all-cellulose support structures (Jiang et al., 2021).
 </p>
 
-<StickyImage />
+<p>
+In conclusion, by combining the biological material and the rigid support portion, we can successfully produce the envisioned microplastic filtration bottle cap.
+</p>`,
+  ]}
+/>
 
-<h2>Conclusion</h2>
+<h2>References</h2>
 
 <p>
-  Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
-  labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
-  Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
-  Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
-  Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex
-  occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat
-  officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in
-  Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur
-  duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea
-  consectetur et est culpa et culpa duis.
+  Arthur, C., Baker, J. E., &amp; Bamford, H. A. (2009). Proceedings of the
+  International Research Workshop on the Occurrence, Effects, and Fate of
+  Microplastic Marine Debris, September 9-11, 2008, University of Washington
+  Tacoma, Tacoma, WA, USA.
+</p>
+<p>
+  Cox, K. D., Covernton, G. A., Davies, H. L., Dower, J. F., Juanes, F., &amp;
+  Dudas, S. E. (2019). Human Consumption of Microplastics. Environmental Science
+  &amp; Technology, 53(12), 7068-7074. <a
+    href="https://doi.org/10.1021/acs.est.9b01517"
+    target="_blank"
+    class="url">https://doi.org/10.1021/acs.est.9b01517</a
+  >
+  de Oliveira Barud, H. G., da Silva, R. R., da Silva Barud, H., Tercjak, A., Gutierrez,
+  J., Lustri, W. R., de Oliveira Junior, O. B., &amp; Ribeiro, S. J. (2016). A multipurpose
+  natural and renewable polymer in medical applications: Bacterial cellulose. Carbohydrate
+  Polymers, 153, 406-420.
+</p>
+<p>
+  Haden, W. L., &amp; Schwint, I. A. (1967). Attapulgite: its properties and
+  applications. Industrial &amp; Engineering Chemistry, 59(9), 58-69.
+</p>
+<p>
+  Jiang, J., Oguzlu, H., &amp; Jiang, F. (2021). 3D printing of lightweight,
+  super-strong yet flexible all-cellulose structure. Chemical Engineering
+  Journal, 405, 126668. <a
+    href="https://doi.org/https://doi.org/10.1016/j.cej.2020.126668"
+    target="_blank"
+    class="url">https://doi.org/https://doi.org/10.1016/j.cej.2020.126668</a
+  >
+</p>
+<p>
+  Jiang, Z., Wang, X., Zhao, H., Yang, Z., Zhou, J., Sun, X., Yang, H., Wang,
+  C., &amp; Huan, S. (2023). Micro/nano-plastic removal from wastewater using
+  cellulose membrane: Performance and life cycle assessment. Separation and
+  Purification Technology, 317, 123925. <a
+    href="https://doi.org/https://doi.org/10.1016/j.seppur.2023.123925"
+    target="_blank"
+    class="url">https://doi.org/https://doi.org/10.1016/j.seppur.2023.123925</a
+  >
+</p>
+<p>
+  Yang, H., Liu, Z., Yin, C., Han, Z., Guan, Q., Zhao, Y., Ling, Z., Liu, H.,
+  Yang, K., Sun, W., &amp; Yu, S. (2021). Edible, Ultrastrong, and
+  Microplastic‐Free Bacterial Cellulose‐Based Straws by Biosynthesis. Advanced
+  Functional Materials, 32(15), 2111713. <a
+    href="https://doi.org/10.1002/adfm.202111713"
+    target="_blank"
+    class="url">https://doi.org/10.1002/adfm.202111713</a
+  >
+</p>
+<p>
+  Kopatz, V., Wen, K., Kovács, T., Keimowitz, A. S., Pichler, V., Widder, J.,
+  Vethaak, A. D., Hollóczki, O., &amp; Kenner, L. (2023). Micro-and Nanoplastics
+  Breach the Blood–Brain Barrier (BBB): Biomolecular Corona’s Role Revealed.
+  Nanomaterials, 13(8), 1404.
+</p>
+<p>
+  Lapidot, S., Meirovitch, S., Sharon, S., Heyman, A., Kaplan, D. L., &amp;
+  Shoseyov, O. (2012). Clues for biomimetics from natural composite materials.
+  Nanomedicine, 7(9), 1409-1423.
+</p>
+<p>
+  Mason, S. A., Welch, V. G., &amp; Neratko, J. (2018). Synthetic polymer
+  contamination in bottled water. Frontiers in chemistry, 407.
+</p>
+<p>
+  Mohammadi, P., Aranko, A. S., Landowski, C. P., Ikkala, O., Jaudzems, K.,
+  Wagermaier, W., &amp; Linder, M. B. (2019). Biomimetic composites with
+  enhanced toughening using silk-inspired triblock proteins and aligned
+  nanocellulose reinforcements. Science Advances, 5(9), eaaw2541. <a
+    href="https://doi.org/doi:10.1126/sciadv.aaw2541"
+    target="_blank"
+    class="url">https://doi.org/doi:10.1126/sciadv.aaw2541</a
+  >
+</p>
+<p>
+  PÉrez, S., &amp; Samain, D. (2010). Structure and Engineering of Celluloses.
+  In D. Horton (Ed.), Advances in Carbohydrate Chemistry and Biochemistry (Vol.
+  64, pp. 25-116). Academic Press. <a
+    href="https://doi.org/https://doi.org/10.1016/S0065-2318(10)64003-6"
+    target="_blank"
+    class="url">https://doi.org/https://doi.org/10.1016/S0065-2318(10)64003-6</a
+  >
+</p>
+<p>
+  Wang, X., Xia, Q., Jing, S., Li, C., Chen, Q., Chen, B., Pang, Z., Jiang, B.,
+  Gan, W., Chen, G., Cui, M., Hu, L., &amp; Li, T. (2021). Strong, Hydrostable,
+  and Degradable Straws Based on Cellulose-Lignin Reinforced Composites. Small
+  (Weinheim an Der Bergstrasse, Germany), 17(18), e2008011. <a
+    href="https://doi.org/10.1002/smll.202008011"
+    target="_blank"
+    class="url">https://doi.org/10.1002/smll.202008011</a
+  >
+</p>
+<p>
+  Wang, J., Tavakoli, J., &amp; Tang, Y. (2019). Bacterial cellulose production,
+  properties and applications with different culture methods–A review.
+  Carbohydrate Polymers, 219, 63-76.
+</p>
+<p>
+  Wang, Z., Sun, C., Li, F., &amp; Chen, L. (2021). Fatigue resistance,
+  re-usable and biodegradable sponge materials from plant protein with rapid
+  water adsorption capacity for microplastics removal. Chemical Engineering
+  Journal, 415, 129006. <a
+    href="https://doi.org/https://doi.org/10.1016/j.cej.2021.129006"
+    target="_blank"
+    class="url">https://doi.org/https://doi.org/10.1016/j.cej.2021.129006</a
+  >
 </p>
 
-<p>
-  Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
-  labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
-  Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
-  Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
-  Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex
-  occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat
-  officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in
-  Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur
-  duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea
-  consectetur et est culpa et culpa duis.
-</p>
+<style>
+  .two {
+    display: flex;
+    gap: 2rem;
+  }
 
-<p>
-  In conclusion, by combining the biological material and the rigid support
-  portion, we can successfully produce the envisioned microplastic filtration
-  bottle cap.
-</p>
+  .two img {
+    flex: 1;
+    width: 45%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1000px) {
+    .two {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .two img {
+      width: 95%;
+    }
+  }
+</style>

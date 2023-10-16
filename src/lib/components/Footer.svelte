@@ -1,12 +1,12 @@
+<script>
+  import { remote } from "$lib/header";
+</script>
+
 <footer>
   <div class="icons">
     <h1 class="logo">BAID-CHINA</h1>
     <div class="div" />
-    <img
-      class="igem"
-      alt="igem"
-      src="https://old.igem.org/wiki/images/e/e4/Main_igem_logo.svg"
-    />
+    <img class="igem" alt="igem" src={remote("/igem.svg")} />
   </div>
 
   <p class="copy">Copyright asdasdasd</p>

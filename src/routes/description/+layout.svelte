@@ -2,7 +2,6 @@
   import ArticleLayout from "$lib/components/ArticleLayout.svelte";
 </script>
 
-<ArticleLayout>
+<ArticleLayout name="Project Description">
   <slot />
 </ArticleLayout>
-

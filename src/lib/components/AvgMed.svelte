@@ -57,7 +57,7 @@
   }
 
   .num {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .split {
     width: 4px;

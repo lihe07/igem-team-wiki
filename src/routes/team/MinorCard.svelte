@@ -9,10 +9,9 @@
   <div>
     <h2>{name}</h2>
 
-    <p>
-      Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum
+    <!-- <p> Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum
       sint consectetur cupidatat.
-    </p>
+    </p> -->
   </div>
 </div>
 

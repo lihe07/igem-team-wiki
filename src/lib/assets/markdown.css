@@ -1017,3 +1017,26 @@
 .markdown-body ::-webkit-calendar-picker-indicator {
   filter: invert(50%);
 }
+
+  .two {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .two img {
+    flex: 1;
+    width: 45%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1000px) {
+    .two {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .two img {
+      width: 95%;
+    }
+  }
+
