@@ -12,11 +12,17 @@
   let ele;
 
   function play() {
-    if (ele) ele.currentTime = Number(ele.duration * p);
+    if (ele) ele.currentTime = ele.duration * p || 0;
     requestAnimationFrame(play);
   }
 
-  onMount(() => {
+  onMount(async () => {
+    const resp = await fetch(video);
+    // Make blob url
+    const blob = await resp.blob();
+    const url = URL.createObjectURL(blob);
+    ele.src = url;
+
     play();
   });
 </script>
@@ -28,7 +34,6 @@
 <div style="" class="c">
   <video
     preload="auto"
-    src={video}
     bind:this={ele}
     class="v"
     disablePictureInPicture={true}
