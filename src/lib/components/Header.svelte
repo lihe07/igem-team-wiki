@@ -42,7 +42,7 @@
 
 <header class:fixed class:show class:expand={show_mobile_menu}>
   <div class="main">
-    <a class="team-name" class:white href={base}>BAID-China</a>
+    <a class="team-name" class:white href={base || "/"}>BAID-China</a>
 
     <div class="links">
       <HeaderLinks {white} />
