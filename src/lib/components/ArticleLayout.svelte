@@ -38,9 +38,17 @@
   /** @type {HTMLDivElement} */
   let body;
 
+  /** @type {Element | boolean} */
+  let hideOutline;
+
   onMount(() => {
     outline = [];
     makeOutline(body);
+
+    hideOutline = body.querySelector("div[data-hide-outline]") || false;
+
+    if (hideOutline) {
+    }
   });
 </script>
 

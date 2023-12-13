@@ -3,6 +3,8 @@
   import StickyImage from "$lib/components/StickyImage.svelte";
 </script>
 
+<h2>Introduction</h2>
+
 <p>
   This project aims to address the issue of human ingestion of microplastics by
   designing a special bottle cap with filtration capabilities for bottled water.
@@ -61,7 +63,7 @@
     />
     <img src={remote("/mag.svg")} alt="" style="max-height: 20rem;" />
   </div>
-  <figcaption>Figure 5?</figcaption>
+  <figcaption>Figure 5</figcaption>
 </figure>
 
 <p>
@@ -73,6 +75,7 @@
 
 <figure>
   <img src={remote("/description/2.png")} />
+  <figcaption>Figure 6</figcaption>
 </figure>
 
 <p>
@@ -96,7 +99,7 @@
   ]}
   descriptions={[
     `<p>
-However, BC has limited adsorption active sites, resulting in lower overall adsorption capacity for microplastics (Zhang et al., 2023). 此处在图上加个放大镜 画出来表示MPs位点不够，打叉 
+However, BC has limited adsorption active sites, resulting in lower overall adsorption capacity for microplastics (Zhang et al., 2023). 
 </p>
 <p>
 Therefore, we plan to modify BCM in two steps: first, by incorporating attapulgite (APT) to create BC-APT membranes (BAM), and second, by using a Cellulose Binding Module (CBM) to enhance the pore effects and other interactions, such as hydrophobic and electrostatic interactions, between BAM and microplastics.

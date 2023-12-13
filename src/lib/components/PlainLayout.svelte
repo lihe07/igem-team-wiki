@@ -31,12 +31,6 @@
 </main>
 
 <style scoped>
-  h3 {
-    font-size: 1.4rem;
-    font-family: sans-serif;
-    margin-bottom: 0.7rem;
-  }
-
   .title {
     position: absolute;
     top: 0;
@@ -51,23 +45,6 @@
   h1 {
     font-size: 4.5rem;
     color: white;
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-    margin: 0.5rem 0;
-    font-family: sans-serif;
-    font-size: 20px;
-    line-height: 2;
-  }
-
-  a:hover,
-  a:focus,
-  a:active {
-    opacity: 1;
   }
 
   .header-container {
@@ -100,16 +77,6 @@
     font-size: 20px;
   }
 
-  .aside {
-    width: 20rem;
-    margin-left: 3rem;
-    margin-top: 3rem;
-  }
-  .outline {
-    position: sticky;
-    top: 6rem;
-  }
-
   @media (max-width: 1500px) {
     .markdown-body {
       width: 70%;
@@ -119,10 +86,6 @@
   @media (max-width: 930px) {
     main {
       padding: 0 2rem;
-    }
-
-    .aside {
-      display: none;
     }
 
     h1 {

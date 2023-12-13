@@ -9,7 +9,7 @@
     <img class="igem" alt="igem" src={remote("/igem.svg")} />
   </div>
 
-  <p class="copy">Copyright asdasdasd</p>
+  <p class="copy">Copyright @ 2023 BAID-CHINA</p>
 </footer>
 
 <style>

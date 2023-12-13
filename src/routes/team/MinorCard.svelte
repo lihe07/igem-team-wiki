@@ -17,9 +17,11 @@
 
 <style>
   .card {
-    background: #f5f5f4;
+    background: #e7e5e4;
     border-radius: 1rem;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    box-shadow:
+      0 1px 3px 0 rgb(0 0 0 / 0.1),
+      0 1px 2px -1px rgb(0 0 0 / 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +33,8 @@
   }
   .card:hover {
     opacity: 1;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    box-shadow:
+      0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
 
@@ -48,7 +51,7 @@
 
   img {
     width: 12rem;
-    height: 10rem;
+    height: 11rem;
     object-fit: cover;
     border-radius: 1rem;
     border: white;

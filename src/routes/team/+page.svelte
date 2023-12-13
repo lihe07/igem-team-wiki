@@ -14,29 +14,38 @@
     {
       name: "Ying Dai",
       tags: ["Instructor"],
-      // avatar: "/ying.jpg",
-      // background: "url(/ba.jpg)",
-
       avatar: remote("/avatars/ying.jpg"),
-      background: `url(${remote("/avatars/bg.jpg")})`,
+      background: `url(${remote("/avatars/ba.jpg")})`,
+      desc: "Primary PI; AP Biology teacher at Beijing Academy. Support team activities and connection to the school.",
     },
     {
       name: "Han Gao",
       tags: ["Student", "Leader"],
-      // avatar: "/baid-china/han.jpg",
-      // background: "url(/ba.jpg)",
-
       avatar: remote("/avatars/han.jpg"),
       background: `url(${remote("/avatars/bg.jpg")})`,
+      desc: "A student interested in biology at G11C1. She was the team leader of BAID-China, as well as the co-leader of the Wet lab part.",
     },
     {
       name: "He Li",
       tags: ["Student", "Model", "Team Wiki"],
-      // avatar: "/baid-china/he.jpg",
-      // background: "url(/ba.jpg)",
-
       avatar: remote("/avatars/he.jpg"),
       background: `url(${remote("/avatars/bg.jpg")})`,
+      desc: "A math and chemistry fan. Specialized in computational tasks, he was the leader of modelling team and the developer of our team wiki.",
+    },
+    {
+      name: "Yimo Chen",
+      tags: ["Student", "Human Practices"],
+      // avatar: "/baid-china/yimo.jpg",
+      avatar: remote("/avatars/yimo.jpg"),
+    },
+  ];
+
+  const minor = [
+    {
+      name: "Mufeng Li",
+      tags: ["Student", "Wet Lab"],
+      // avatar: "/baid-china/mufeng.jpg",
+      avatar: remote("/avatars/mufeng.jpg"),
     },
     {
       name: "Tianlang Gao",
@@ -46,21 +55,6 @@
       avatar: remote("/avatars/tianlang.jpg"),
       background: `url(${remote("/avatars/bg.jpg")})`,
     },
-    {
-      name: "Yimo Chen",
-      tags: ["Student", "Human Practices"],
-      // avatar: "/baid-china/yimo.jpg",
-      avatar: remote("/avatars/yimo.jpg"),
-    },
-    {
-      name: "Mufeng Li",
-      tags: ["Student", "Wet Lab"],
-      // avatar: "/baid-china/mufeng.jpg",
-      avatar: remote("/avatars/mufeng.jpg"),
-    },
-  ];
-
-  const minor = [
     {
       name: "Yiyi Ding",
       // avatar: "/yiyi.jpg",
@@ -107,6 +101,32 @@
   {/each}
 </div>
 
+<section
+  style="background: url(https://static.igem.wiki/teams/4714/wiki/avatars/colorful.jpg)"
+  class="sp"
+>
+  <div style="background: rgba(0, 0, 0, 0.3); " class="mask">
+    <h1
+      class="thanks"
+      style="margin: 0; margin-bottom: 2rem; font-family: 'Pacifico'; font-weight: 500; font-size: 3.5rem;"
+    >
+      Special Thanks
+    </h1>
+
+    <div style="max-width: 50rem; margin: auto;">
+      <Card
+        background="transparent"
+        tags={["Art", "Design", "Graphics"]}
+        desc="世界一の美少女絵師でーす"
+        name="Xiyu Su"
+        avatar="https://static.igem.wiki/teams/4714/wiki/avatars/xiyu.jpg"
+      />
+    </div>
+  </div>
+</section>
+
+<h1>Group Members</h1>
+
 <div class="minor">
   {#each minor as e}
     <MinorCard {...e} />
@@ -114,6 +134,28 @@
 </div>
 
 <style>
+  @font-face {
+    font-family: "Pacifico";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://static.igem.wiki/teams/4714/wiki/pacifico.woff2)
+      format("woff2");
+  }
+
+  .sp {
+    color: white;
+    background-size: cover;
+    border-radius: 3rem;
+    overflow: hidden;
+    margin: 5rem -2rem;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  }
+  .mask {
+    position: relative;
+    top: 0;
+    padding: 3rem 3rem;
+  }
   h1 {
     text-align: center;
     font-size: 3rem;
@@ -139,9 +181,13 @@
   }
 
   @media (max-width: 768px) {
+    .sp {
+      margin: 3rem -1rem;
+    }
     .major {
       display: flex;
       flex-direction: column;
+      gap: 3rem;
     }
     .minor {
       grid-template-columns: repeat(1, 1fr);

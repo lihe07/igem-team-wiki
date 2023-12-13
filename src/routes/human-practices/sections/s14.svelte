@@ -5,8 +5,10 @@
 <h3>Third Version</h3>
 
 <figure>
-  <img src={remote("/human-practices/int-1.jpg")} style="max-width: 70%; " />
-  <img src={remote("/human-practices/int-2.jpg")} style="max-width: 70%;" />
+  <div class="two">
+    <img src={remote("/human-practices/int-1.jpg")} />
+    <img src={remote("/human-practices/int-2.jpg")} />
+  </div>
   <figcaption>Figure X: 123</figcaption>
 </figure>
 

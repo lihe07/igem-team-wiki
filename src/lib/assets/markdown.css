@@ -1020,7 +1020,8 @@
 
   .two {
     display: flex;
-    gap: 2rem;
+  justify-content: space-around;
+  gap: 2rem;
   }
 
   .two img {

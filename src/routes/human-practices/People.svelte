@@ -21,6 +21,7 @@
     color: black;
     align-items: center;
     padding: 1rem;
+    flex-direction: column;
   }
   p {
     margin: 0;

@@ -33,7 +33,8 @@
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    box-shadow:
+      0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
     transition: all 0.3s;
   }
@@ -49,7 +50,7 @@
     gap: 1rem;
   }
   .tag {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 0.5rem;
     padding: 0.3rem 0.8rem;
   }
@@ -61,6 +62,8 @@
   }
   .content {
     position: relative;
+    height: 100%;
+    box-sizing: border-box;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -77,6 +80,7 @@
 
   p {
     font-size: 1.3rem;
+    line-height: 2rem;
   }
 
   img {
