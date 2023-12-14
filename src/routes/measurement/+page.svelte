@@ -4,7 +4,7 @@
 
 <h2>Overview</h2>
 
-<img src={remote("/measurements/overview.jpg")} />
+<img src={remote("/measurements/overview.jpg")} alt="" />
 
 <h2>Application of Computer Vision</h2>
 

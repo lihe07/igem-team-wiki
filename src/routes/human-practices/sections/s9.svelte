@@ -24,13 +24,10 @@
   answers.
 </p>
 
-<figure>
-  <div class="two">
-    <img src={remote("/human-practices/chart-1.png")} alt="chart-1" />
-    <img src={remote("/human-practices/chart-2.png")} alt="chart-2" />
-  </div>
-  <!-- <figcaption>Figure X: 213</figcaption> -->
-</figure>
+<div class="two">
+  <img src={remote("/human-practices/chart-1.png")} alt="chart-1" />
+  <img src={remote("/human-practices/chart-2.png")} alt="chart-2" />
+</div>
 
 <p>
   The result shows that bulk water and bottled water together account for the
@@ -42,17 +39,14 @@
   household.
 </p>
 
-<figure>
-  <div class="two">
-    <img
-      src={remote("/human-practices/chart-3.png")}
-      alt="chart-3"
-      style="object-fit: contain;"
-    />
-    <img src={remote("/human-practices/chart-4.png")} alt="chart-4" />
-  </div>
-  <!-- <figcaption>Figure X: 213</figcaption> -->
-</figure>
+<div class="two">
+  <img
+    src={remote("/human-practices/chart-3.png")}
+    alt="chart-3"
+    style="object-fit: contain;"
+  />
+  <img src={remote("/human-practices/chart-4.png")} alt="chart-4" />
+</div>
 
 <p>
   Problems came along with it. Most of the barreled drinking water we buy has a
@@ -79,22 +73,26 @@
   food and water sources, and 28.2% of them focus on the bottle itself.
 </p>
 
-<figure>
-  <div class="two">
-    <img
-      src={remote("/human-practices/chart-6.png")}
-      alt="chart-6"
-      style="object-fit: contain;"
-    />
-    <img
-      src={remote("/human-practices/chart-7.png")}
-      alt="chart-7"
-      style="object-fit: contain;"
-    />
-    <img src={remote("/human-practices/chart-8.png")} alt="chart-8" />
-  </div>
-  <!-- <figcaption>Figure X: 213</figcaption> -->
-</figure>
+<div class="two">
+  <img
+    src={remote("/human-practices/chart-6.png")}
+    alt="chart-6"
+    style="object-fit: contain;"
+  />
+  <img
+    src={remote("/human-practices/chart-7.png")}
+    alt="chart-7"
+    style="object-fit: contain;"
+  />
+</div>
+
+<div class="two">
+  <img
+    src={remote("/human-practices/chart-8.png")}
+    alt="chart-8"
+    style="max-width: 20rem; margin: auto;"
+  />
+</div>
 
 <p>
   The result of this survey clearly showed the necessity of our project. Our

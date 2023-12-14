@@ -84,11 +84,14 @@
           <img src={logo} alt="plasticlear logo" />
         </div>
         <p class="desc">
-          BAID-China Team Wiki by He Li
+          Team wiki built by He Li with Svelte Kit
 
           <br />
 
-          Made for iGEM 2023
+          Source code available at:
+          <a href="https://github.com/lihe07/igem-team-wiki/" target="_blank"
+            >igem-team-wiki</a
+          >
 
           <br />
           Copyright 2023 @ BAID-China
@@ -192,6 +195,12 @@
     display: grid;
     gap: 3rem;
     grid-template-columns: auto 1fr;
+  }
+
+  a {
+    background-color: transparent;
+    color: #0969da;
+    text-decoration: none;
   }
 
   @media (max-width: 1400px) {

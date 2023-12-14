@@ -28,14 +28,18 @@
   <AbsurbParticles bind:enter {percent} />
   <Video {percent} />
   <CompCard {percent} enter={3.15} leave={5}>
-    <b>Oat Protein</b> is the main functioning component of our membrane.
+    <b>Oat globulin</b>, a naturally extracted or biologically modified protein
+    with hydrophobic functional groups, increases the membrane’s removal
+    efficiency by electrostatic and hydrophobic interactions.
   </CompCard>
   <CompCard {percent} enter={6.0} leave={7.7} left>
-    <b>APT, or Palygorskite</b> provides a stable structure for our membrane.
+    <b>Attapulgite (APT)</b>, a cost-effective clay mineral with porous
+    structure, increased the MP absorption sites on the filter membrane.
   </CompCard>
   <CompCard {percent} enter={8.6} leave={10.5}>
-    <b>Bacterial Cellulose Membrane</b>
-    consists our framework for the membrane.
+    <b>Bacterial cellulose (BC)</b>, a common biomedical material with high
+    mechanical flexibility, biocompatibility, and low environmental impact,
+    serves as the base cellulose structure of the membrane.
   </CompCard>
 </Inplace>
 

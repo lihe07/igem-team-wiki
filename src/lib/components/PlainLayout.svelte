@@ -81,7 +81,7 @@
   }
   .bg img {
     width: 100%;
-    height: 500px;
+    height: 100%;
     object-fit: cover;
     filter: brightness(0.7);
     transition: transform 0.1s;

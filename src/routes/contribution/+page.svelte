@@ -5,10 +5,10 @@
 </p>
 
 <p>
-  2. We created a part named "part X" by modifying the monomers proposed by
-  Links China 2021, offering future teams valuable enhancements. Additionally,
-  the creation of "part Y" involves the reapplication of Links China 2021's
-  triblock structure, serving as a reference for teams working on
+  2. We created a part named "CBM3" by modifying the monomers proposed by Links
+  China 2021, offering future teams valuable enhancements. Additionally, the
+  creation of "CBM3-Globulin-CBM3" involves the reapplication of Links China
+  2021's triblock structure, serving as a reference for teams working on
   materials-related projects.
 </p>
 
