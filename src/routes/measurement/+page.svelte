@@ -99,10 +99,10 @@
   following steps:
 </p>
 
-<p>
-  Materials used:<br />
-  - PS microplastics 0.1mm microspheres (purchased from [source])
-</p>
+<p>Materials used:</p>
+<ul>
+  <li>PS microplastics 0.1mm microspheres (purchased from [source])</li>
+</ul>
 
 <p>
   1.1g of plastic microspheres was extracted using an iron spatula. The plastic

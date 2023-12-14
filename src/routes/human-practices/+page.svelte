@@ -105,4 +105,8 @@
   completed the tew rounds of fixation.
 </p>
 
-<img src={remote("/human-practices/mindmap.svg")} alt="mindmap" />
+<a href={remote("/human-practices/16.svg")} target="_blank">
+  <img src={remote("/human-practices/16.svg")} alt="mindmap" />
+</a>
+
+<p>(Click the above image to open / download.)</p>

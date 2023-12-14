@@ -37,6 +37,7 @@
       tags: ["Student", "Human Practices"],
       // avatar: "/baid-china/yimo.jpg",
       avatar: remote("/avatars/yimo.jpg"),
+      desc: "A student who loves social science. In BAID-China, she was the leader of Human Practice and also was responsible to wiki pages writing.",
     },
   ];
 

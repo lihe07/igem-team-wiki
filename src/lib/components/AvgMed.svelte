@@ -4,6 +4,21 @@
   export let name = "gut";
   export let foods = ["bear", "water"];
   export let age = 50;
+
+  let _foods = "";
+  $: {
+    if (foods.length > 2)
+      _foods = foods
+        .slice(0, -1)
+        .concat(["and " + foods[foods.length - 1]])
+        .join(", ");
+
+    if (foods.length == 2) _foods = foods[0] + " and " + foods[1];
+
+    if (foods.length == 1) _foods = foods[0];
+
+    if (foods.length == 0) _foods = "nothing but air";
+  }
 </script>
 
 <div class="container">
@@ -20,13 +35,14 @@
   </div>
 
   <p class="desc">
-    The modeling indicated that people who regularly ingest <span
-      >{foods.join(", ")}</span
+    The modeling indicated that one who regularly ingest <span
+      >{_foods.toLowerCase()}</span
     >
-    are expected to have an MP concentration of <span>{avg}</span> in the
+    are expected to have an MP concentration of <span>{avg}</span> in their
     <span>{name}</span>
     at the age of <span>{age}</span>
-    years. The median of MP concentration in this population is {med}.
+    years. The median of MP concentration in this population is
+    <span>{med}</span>.
   </p>
 </div>
 

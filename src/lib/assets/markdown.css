@@ -38,6 +38,10 @@
   display: block;
 }
 
+.markdown-body figcaption {
+  margin-top: 1rem;
+}
+
 .markdown-body summary {
   display: list-item;
 }
@@ -123,6 +127,7 @@
   border-radius: 1rem;
   max-width: 30rem;
   max-height: 30rem;
+  width: 100%;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 

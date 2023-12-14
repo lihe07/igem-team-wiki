@@ -935,7 +935,9 @@ E_{el} = 332.0637(Q_{i}Q_{j}/\epsilon R_{ij})`}
   <figure>
     <video
       src={remote("/modelling/absorb-fibre.js")}
-      controls
+      autoplay
+      muted
+      loop
       style="max-width: 40rem; margin: auto; "
     >
       <track kind="captions" />
@@ -949,7 +951,9 @@ E_{el} = 332.0637(Q_{i}Q_{j}/\epsilon R_{ij})`}
   <figure>
     <video
       src={remote("/modelling/absorb-prot.js")}
-      controls
+      autoplay
+      muted
+      loop
       style="max-width: 40rem; margin: auto; "
     >
       <track kind="captions" />
@@ -1050,7 +1054,12 @@ E_{el} = 332.0637(Q_{i}Q_{j}/\epsilon R_{ij})`}
 \frac{t}{q_{t}}=\frac{1}{k_{2}q_{e}^{2}}+\frac{1}{q_{e}}`}
 />
 
-<!-- We fit our data set in both pseudo-first and pseudo-second-order models, which are given in the two diagrams above. The adsorption capacity increases rapidly in the first 1.5 minutes and reaches the adsorption equilibrium in about 4 minutes. In addition, the correlation coefficient $R^{2}$ of the pseudo-first-order model is 0.99615, which is higher than the correlation coefficient of the pseudo-second-order model -- 0.98645. Thus, the pseudo-first-order model is more consistent with the adsorptive kinetics of microplastics on our membrane. -->
+<figure>
+  <div class="two">
+    <img src={remote("/modelling/kin-1.jpg")} alt="Pseudo-first-order model" />
+    <img src={remote("/modelling/kin-2.jpg")} alt="Pseudo-second-order model" />
+  </div>
+</figure>
 
 <p>
   We fit our data set in both pseudo-first and pseudo-second-order models, which
@@ -1063,24 +1072,10 @@ E_{el} = 332.0637(Q_{i}Q_{j}/\epsilon R_{ij})`}
   model is more consistent with the adsorptive kinetics of microplastics on our membrane.
 </p>
 
-<figure>
-  <div class="two">
-    <img src={remote("/modelling/kin-1.jpg")} alt="Pseudo-first-order model" />
-    <img src={remote("/modelling/kin-2.jpg")} alt="Pseudo-second-order model" />
-  </div>
-</figure>
-
 <h2>Adsorption isotherm</h2>
-
-<!-- Freundlich adsorption isotherm equation is:
-$$q_{e}=k_{F}{c_{e}^{\frac{1}{n}}}$$
- -->
 
 <p>Freundlich adsorption isotherm equation is:</p>
 <Math displayMode expression={String.raw`q_{e}=k_{F}{c_{e}^{\frac{1}{n}}}`} />
-
-<!-- where $q_{e}$ is the adsorption amount of the adsorbent in the equilibrium state (mg/g), $c_{e}$ is the equilibrium concentration of the solute in the liquid phase (mg/L), n is the inhomogeneity factor of the adsorption strength of .... ions, which varies with the inhomogeneity of the adsorbent, and $k_{F}$ is the constant related to adsorption capacity.
- -->
 
 <p>
   where <Math expression={`q_{e}`} /> is the adsorption amount of the adsorbent in
@@ -1092,22 +1087,13 @@ $$q_{e}=k_{F}{c_{e}^{\frac{1}{n}}}$$
   constant related to adsorption capacity.
 </p>
 
-<!-- Langmuir adsorption isotherm equation is:
- -->
-
 <p>Langmuir adsorption isotherm equation is:</p>
-
-<!-- $$q_{e}=\frac{kq_{max}c_{e}}{1+kc_{e}}$$
- -->
 
 <Math
   displayMode
   expression={String.raw`
 q_{e}=\frac{kq_{max}c_{e}}{1+kc_{e}}`}
 />
-
-<!-- where $q_{e}$ is the adsorption amount of the adsorbent in the equilibrium state (mg/g). $c_{e}$ is the equilibrium concentration of the solute in the liquid phase (mg/L), $q_{max}$ is the maximum adsorption capacity of adsorbent on adsorb rate (mg/g), and k is the langmuir constant related to adsorption energy.
- -->
 
 <p>
   where <Math expression={`q_{e}`} /> is the adsorption amount of the adsorbent in
@@ -1119,7 +1105,12 @@ q_{e}=\frac{kq_{max}c_{e}}{1+kc_{e}}`}
   /> is the langmuir constant related to adsorption energy.
 </p>
 
-<!-- Similarly, we fit the data set to both the Freundlich model and Langmuir model, which are shown in the diagrams above, and the parameters are summarized. Apparently, the correlation coefficient $R^{2}$ of the Freundlich model is 0.98883, which is smaller than the $R^{2}$ of the Langmuir model (0.9957). Therefore, the Langmuir model is more suitable than the Freundlich model for depicting the isotherms of microplastics on our membrane. -->
+<figure>
+  <div class="two">
+    <img src={remote("/modelling/iso-1.jpg")} alt="Freundlich model" />
+    <img src={remote("/modelling/iso-2.jpg")} alt="Langmuir model" />
+  </div>
+</figure>
 
 <p>
   Similarly, we fit the data set to both the Freundlich model and Langmuir
@@ -1132,14 +1123,101 @@ q_{e}=\frac{kq_{max}c_{e}}{1+kc_{e}}`}
   than the Freundlich model for depicting the isotherms of microplastics on our membrane.
 </p>
 
-<figure>
-  <div class="two">
-    <img src={remote("/modelling/iso-1.jpg")} alt="Freundlich model" />
-    <img src={remote("/modelling/iso-2.jpg")} alt="Langmuir model" />
-  </div>
-</figure>
-
 <h2>References</h2>
+
+<p>
+  Kumar, L., Sehrawat, R., &amp; Kong, Y. (2021). Oat proteins: A perspective on
+  functional properties. <em>LWT</em>, <em>152</em>, 112307.
+  doi:10.1016/j.lwt.2021.112307
+</p>
+<p>
+  Van Duin, A. C. T., Dasgupta, S., Lorant, F., &amp; Goddard, W. A. (2001).
+  ReaxFF: a reactive force field for hydrocarbons. <em
+    >The Journal of Physical Chemistry A</em
+  >, <em>105</em>(41), 9396–9409.
+</p>
+<p>
+  Chenoweth, K., Van Duin, A. C. T., &amp; Goddard, W. A. (2008). ReaxFF
+  reactive force field for molecular dynamics simulations of hydrocarbon
+  oxidation. <em>The Journal of Physical Chemistry A</em>, <em>112</em>(5),
+  1040–1053.
+</p>
+<p>
+  Smirnov, K. S., &amp; van de Graaf, B. (1996). Consistent implementation of
+  the electronegativity equalization method in molecular mechanics and molecular
+  dynamics. <em>J. Chem. Soc. , Faraday Trans.</em>, <em>92</em>, 2469–2474.
+  doi:10.1039/FT9969202469
+</p>
+<p>
+  Desta, I. T., Porter, K. A., Xia, B., Kozakov, D., &amp; Vajda, S. (2020).
+  Performance and its limits in rigid body protein-protein docking. <em
+    >Structure</em
+  >, <em>28</em>(9), 1071–1081.
+</p>
+<p>
+  Vajda, S., Yueh, C., Beglov, D., Bohnuud, T., Mottarella, S. E., Xia, B., …
+  Kozakov, D. (2017). New additions to the C lus P ro server motivated by CAPRI. <em
+    >Proteins: Structure, Function, and Bioinformatics</em
+  >, <em>85</em>(3), 435–444.
+</p>
+<p>
+  Kozakov, D., Hall, D. R., Xia, B., Porter, K. A., Padhorny, D., Yueh, C., …
+  Vajda, S. (2017). The ClusPro web server for protein--protein docking. <em
+    >Nature Protocols</em
+  >, <em>12</em>(2), 255–278.
+</p>
+<p>
+  Kozakov, D., Beglov, D., Bohnuud, T., Mottarella, S. E., Xia, B., Hall, D. R.,
+  &amp; Vajda, S. (2013). How good is automated protein docking? <em
+    >Proteins: Structure, Function, and Bioinformatics</em
+  >, <em>81</em>(12), 2159–2166.
+</p>
+<p>
+  Fraga, S., Karwowski, J., &amp; Saxena, K. M. S. (1 1976). <em
+    >Handbook of atomic data</em
+  >. <em>place = United States, year = 1976, month = 1</em>(volume = , place =
+  United States, year = 1976, month = 1). Retrieved from
+  <a href="https://www.osti.gov/biblio/6501446" target="_blank" class="url"
+    >https://www.osti.gov/biblio/6501446</a
+  >
+</p>
+<p>
+  Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O.,
+  … Others. (2021). Highly accurate protein structure prediction with AlphaFold. <em
+    >Nature</em
+  >, <em>596</em>(7873), 583–589.
+</p>
+<p>
+  Chenoweth, K., van Duin, A. C. T., &amp; Goddard, W. A. (2008). ReaxFF
+  Reactive Force Field for Molecular Dynamics Simulations of Hydrocarbon
+  Oxidation. <em>The Journal of Physical Chemistry A</em>, <em>112</em>(5),
+  1040–1053. doi:10.1021/jp709896w
+</p>
+<p>
+  Rappe, A. K., Casewit, C. J., Colwell, K. S., Goddard, W. A., Iii, &amp;
+  Skiff, W. M. (1992). UFF, a full periodic table force field for molecular
+  mechanics and molecular dynamics simulations. <em
+    >Journal of the American Chemical Society</em
+  >, <em>114</em>(25), 10024–10035. doi:10.1021/ja00051a040
+</p>
+<p>
+  Mayo, S. L., Olafson, B. D., &amp; Goddard, W. A. (1990). DREIDING: a generic
+  force field for molecular simulations. <em
+    >The Journal of Physical Chemistry</em
+  >, <em>94</em>(26), 8897–8909. doi:10.1021/j100389a010
+</p>
+<p>
+  Casewit, C. J., Colwell, K. S., &amp; Rappe, A. K. (1992a). Application of a
+  universal force field to main group compounds. <em
+    >Journal of the American Chemical Society</em
+  >, <em>114</em>(25), 10046–10053. doi:10.1021/ja00051a042
+</p>
+<p>
+  Casewit, C. J., Colwell, K. S., &amp; Rappe, A. K. (1992b). Application of a
+  universal force field to organic molecules. <em
+    >Journal of the American Chemical Society</em
+  >, <em>114</em>(25), 10035–10046. doi:10.1021/ja00051a041
+</p>
 
 <style>
   .two-video {

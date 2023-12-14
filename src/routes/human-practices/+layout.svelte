@@ -53,6 +53,19 @@
     remote("/human-practices/13.svg"),
     remote("/human-practices/14.svg"),
   ];
+
+  const transforms = {
+    5: "translateX(-62%) scale(200%)",
+    6: "translateX(-70%) scale(250%)",
+    7: "translateX(-50%) scale(200%)",
+    8: "translateX(-50%) scale(200%)",
+    9: "translateX(-50%) scale(200%)",
+    10: "translateX(-50%) scale(200%)",
+    11: "translateX(-50%) scale(200%)",
+    12: "translateX(-50%) scale(200%)",
+    13: "translateX(-50%) scale(200%)",
+    14: "translateX(-50%) scale(200%)",
+  };
 </script>
 
 <ArticleLayout name="Human Practice">
@@ -61,7 +74,7 @@
 
 <main>
   <div class="markdown-body" style="margin: 4rem 0; ">
-    <StickyImage contain descriptions={sections} {images} />
+    <StickyImage contain descriptions={sections} {images} {transforms} />
     <h2>References</h2>
   </div>
 </main>

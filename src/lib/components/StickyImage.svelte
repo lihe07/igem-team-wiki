@@ -13,6 +13,8 @@
     "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
   ];
 
+  export let transforms = {};
+
   let current = 0;
   export let contain = false;
 
@@ -36,6 +38,8 @@
     window.addEventListener("scroll", onScroll);
     window.addEventListener("resize", onScroll);
 
+    onScroll();
+
     return () => {
       window.removeEventListener("resize", onScroll);
       window.removeEventListener("scroll", onScroll);
@@ -44,9 +48,15 @@
 </script>
 
 <div class="container">
-  <div class="images" class:hide={current < 0 || images.length <= 0}>
+  <div class="images">
     {#each images as image, i}
-      <img src={image} class:active={current === i} alt="" class:contain />
+      <img
+        src={image}
+        class:active={current === i}
+        alt=""
+        class:contain
+        style={`transform: ${transforms[i]}`}
+      />
     {/each}
   </div>
   <div class="texts" bind:this={texts}>
@@ -76,9 +86,10 @@
 
   .images {
     position: sticky;
-    top: calc(50% - 15rem);
+    top: 5%;
     width: 50%;
-    height: 30rem;
+    max-height: 90vh;
+    overflow: hidden;
   }
 
   .texts {
@@ -122,9 +133,10 @@
     .images {
       width: 100%;
       position: sticky;
-      top: 5rem;
-      height: 10rem;
+      top: 65px;
+      height: 20rem;
       background: white;
+      z-index: 2;
     }
   }
 </style>

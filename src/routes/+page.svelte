@@ -4,7 +4,6 @@
   import First from "./First.svelte";
   import Footer from "./Footer.svelte";
   import Inplace from "./Inplace.svelte";
-  import LearnMore from "./LearnMore.svelte";
   import Microplastics from "./Microplastics.svelte";
   import Particles from "./Particles.svelte";
   import Video from "./Video.svelte";

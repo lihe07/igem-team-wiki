@@ -135,26 +135,54 @@
     [key: number]: number;
   }
 
+  let avg_tis, avg_gut, med_tis, med_gut;
+
+  function median(arr) {
+    arr.sort((a, b) => a - b);
+
+    const mid = Math.floor(arr.length / 2);
+
+    let med;
+    if (arr.length % 2 === 0) {
+      med = (arr[mid - 1] + arr[mid]) / 2;
+    } else {
+      med = arr[mid];
+    }
+
+    return med;
+  }
+
   $: if (tissue_chart && gut_chart) {
     const C_tis_samples: Samples = {};
     const C_mp_samples: Samples = {};
+    const tis_samples = [];
+    const mp_samples = [];
+    let tis_sum = 0,
+      gut_sum = 0;
     for (let i = 0; i < SAMPLE_NUM; i++) {
       const res = calculate(t, selectedFoods, irs);
 
       C_tis_samples[res.C_tis - 0.5] =
         (C_tis_samples[res.C_tis - 0.5] || 0) + 1;
 
+      tis_sum += res.C_tis;
+      tis_samples.push(res.C_tis);
       C_mp_samples[res.C_mp - 0.5] = (C_mp_samples[res.C_mp - 0.5] || 0) + 1;
+      gut_sum += res.C_mp;
+      mp_samples.push(res.C_mp);
     }
+
+    avg_tis = tis_sum / SAMPLE_NUM;
+    avg_gut = gut_sum / SAMPLE_NUM;
+    med_tis = median(tis_samples);
+    med_gut = median(mp_samples);
 
     tissue_chart.data.datasets[0].data = Object.entries(C_tis_samples).map(
       ([x, y]) => ({
         x: Number(x),
         y,
-      })
+      }),
     );
-
-    console.log(C_tis_samples);
 
     tissue_chart.update();
 
@@ -162,7 +190,7 @@
       ([x, y]) => ({
         x: Number(x),
         y,
-      })
+      }),
     );
 
     gut_chart.update();
@@ -189,7 +217,7 @@
                   (selectedFoods = [...selectedFoods, food.name])}
                 on:unchecked={() =>
                   (selectedFoods = selectedFoods.filter(
-                    (e) => e !== food.name
+                    (e) => e !== food.name,
                   ))}
               />
 
@@ -224,7 +252,12 @@
     <div class="tissue">
       <Card>
         <!-- Rightmost  -->
-        <AvgMed name="Tissue" />
+        <AvgMed
+          name="tissue"
+          avg={avg_tis}
+          med={med_tis}
+          foods={selectedFoods}
+        />
       </Card>
     </div>
 
@@ -239,7 +272,7 @@
     <div class="gut">
       <Card>
         <!-- Rightmost  -->
-        <AvgMed />
+        <AvgMed name="gut" avg={avg_gut} med={med_gut} foods={selectedFoods} />
       </Card>
     </div>
   </main>
