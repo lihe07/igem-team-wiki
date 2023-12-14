@@ -86,10 +86,13 @@
 
   .images {
     position: sticky;
-    top: 5%;
+    top: 10vh;
     width: 50%;
-    max-height: 90vh;
+    max-height: 80vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .texts {

@@ -26,14 +26,14 @@
   For the biobased filtration membrane, we employ bacterial cellulose as the
   cellulose matrix. To enhance adsorption efficiency, we first engineer oat
   proteins into the cellulose matrix using cellulose-binding modules (CBMs). We
-  have created a triblock structure component called "xxxx" to strengthen the
-  binding between cellulose and oat proteins. This combination forms the
-  foundational membrane for filtering microplastics, along with CBM3-OP-CBM3
-  composite proteins. Furthermore, we tested the addition of substances like
-  APT, tannic acid, and catechins to increase microplastic adsorption sites on
-  the membrane. In microplastic removal efficiency tests, we utilize a
-  microscopic Raman spectrometer to characterize the composition (types) of
-  microplastics in water. We have pioneered an AI-based algorithm for
+  have created a triblock structure component called "CBM3-Globulin-CBM3" to
+  strengthen the binding between cellulose and oat proteins. This combination
+  forms the foundational membrane for filtering microplastics, along with
+  CBM3-OP-CBM3 composite proteins. Furthermore, we tested the addition of
+  substances like APT, tannic acid, and catechins to increase microplastic
+  adsorption sites on the membrane. In microplastic removal efficiency tests, we
+  utilize a microscopic Raman spectrometer to characterize the composition
+  (types) of microplastics in water. We have pioneered an AI-based algorithm for
   high-precision microplastic counting in drinking water.
 </p>
 
@@ -85,7 +85,7 @@
       microplastics. Therefore, we have chosen to incorporate it into our
       biomaterials.
     </p>
-    <p>LMF</p>
+    <!-- <p>LMF</p> -->
   </li>
 
   <li>Build</li>
@@ -100,15 +100,19 @@
   <li>Test</li>
 
   <li style="list-style-type:none;">
+    <figure>
+      <img src={remote("/engineering/sds.jpg")} />
+    </figure>
+
     We conducted SDS-PAGE experiments on the extracted proteins, with results
-    shown in figure. The result revealed prominent bands at 22kDa, 32kDa, and
-    55kDa, which is consistent with the research conducted by Shotwell et al. in
-    1900. Their research identified that oat protein 12S comprises two subunits
-    of 22kDa and 32kDa, which would be separated during electrophoresis. The
-    presence of a band near 55kDa suggests the existence of 7S proteins, while
-    other bands correspond to other proteins. Consequently, it can be inferred
-    that the extracted oat protein exhibits a purity ranging from 60% to 70%,
-    which is within the normal and slightly higher range.
+    shown in the figure above. The result revealed prominent bands at 22kDa,
+    32kDa, and 55kDa, which is consistent with the research conducted by
+    Shotwell et al. in 1900. Their research identified that oat protein 12S
+    comprises two subunits of 22kDa and 32kDa, which would be separated during
+    electrophoresis. The presence of a band near 55kDa suggests the existence of
+    7S proteins, while other bands correspond to other proteins. Consequently,
+    it can be inferred that the extracted oat protein exhibits a purity ranging
+    from 60% to 70%, which is within the normal and slightly higher range.
   </li>
 
   <li>Learn</li>
@@ -116,13 +120,14 @@
   <li style="list-style-type: none;">
     Through this engineering cycle, a convenient method for oat protein
     extraction has been successfully proposed and validated using readily
-    available materials. Additionally, the corresponding part (Bka____) have
-    been created, allowing future teams to easily choose different methods for
-    oat protein extraction as per their experimental requirements. Notably, oat
-    protein has remained unexplored in previous iGEM teams. Owing to its
-    pertinent attributes and straightforward extraction, oat protein holds great
-    potential as a research focus for future teams in the fields of nutrition,
-    agriculture, and related disciplines.
+    available materials. Additionally, the corresponding part, <a
+      href="http://parts.igem.org/Part:BBa_K4714002">BBa_K4714002</a
+    >, have been created, allowing future teams to easily choose different
+    methods for oat protein extraction as per their experimental requirements.
+    Notably, oat protein has remained unexplored in previous iGEM teams. Owing
+    to its pertinent attributes and straightforward extraction, oat protein
+    holds great potential as a research focus for future teams in the fields of
+    nutrition, agriculture, and related disciplines.
   </li>
 </ul>
 
@@ -265,13 +270,15 @@
       2012). In our experiment, we employed CBM3 from Ruminiclostridium
       thermocellum (Protein Data Bank (PDB) accession: 1NBC). This component was
       initially proposed by LinksChina 2021. Previously, the Imperial College
-      2014 team used the cellulose-binding domain (partBkAxxx) individually as
-      an additive to enhance the adsorption of heavy metal pollutants by
-      bacterial cellulose membranes. Moreover, research by Mohammadi et al. in
-      2019 indicated that CBM3-CBM3 dimers, when binding to cellulose, exhibited
-      greater mechanical strength and pressure tolerance compared to CBM3
-      monomers combined with cellulose. Therefore, CBM3-CBM3 was designed and
-      expressed for testing CBM3's adsorption capabilities.
+      2014 team used the cellulose-binding domain, <a
+        href="http://parts.igem.org/Part:BBa_K1321356:Experience"
+        >BBa_K1321356</a
+      >, individually as an additive to enhance the adsorption of heavy metal
+      pollutants by bacterial cellulose membranes. Moreover, research by
+      Mohammadi et al. in 2019 indicated that CBM3-CBM3 dimers, when binding to
+      cellulose, exhibited greater mechanical strength and pressure tolerance
+      compared to CBM3 monomers combined with cellulose. Therefore, CBM3-CBM3
+      was designed and expressed for testing CBM3's adsorption capabilities.
     </p>
 
     <p>
@@ -288,12 +295,54 @@
       component, thereby maximizing the efficiency of microplastic adsorption.
     </p>
 
-    <p>【质粒构建过程，2个】</p>
+    <!-- <p>【质粒构建过程，2个】</p> -->
 
-    <b><i>In Silico</i> Design</b>
+    <p>
+      In the study, we designed the amino acid sequences of CBM3-CBM3 and
+      CBM3-Globulin-CBM3 fusion proteins, and reverse-translated and
+      codon-optimized their expression sequences based on the Escherichia coli
+      codon usage. Prior to assembling the expression sequences, we conducted
+      transmembrane region prediction, hydrophobicity analysis, and disorder
+      analysis on the designed sequences. After confirming that the designed
+      sequences met the desired criteria, the sequences were synthesized. The
+      synthetic sequences were then introduced into the pET28a vector using
+      BamHI-HindIII restriction ss sites for plasmid construction. The
+      constructed plasmid was subsequently introduced into Escherichia coli
+      strains for induction expression.
+    </p>
+
+    <p>
+      Following the completion of plasmid assembly, we performed protein
+      purification using a His tag and conducted preliminary analysis of
+      expression results through SDS-PAGE electrophoresis. Furthermore, although
+      CBM3 has been confirmed for soluble expression in Escherichia coli on
+      multiple occasions, the solubility expression of oat 11S globulin, which
+      has been less studied, remains unknown. Even if the oat 11S globulin
+      itself exhibits good solubility expression, it is uncertain whether the
+      fusion protein will alter this desirable characteristic. Therefore, we
+      induced expression in modified bacterial strains and conducted soluble
+      expression analysis on their protein products, obtaining a solubility
+      result of 0.8504. This further confirms the utility of the designed fusion
+      protein.
+    </p>
+
+    <figure>
+      <div class="two">
+        <img src={remote("/engineering/part1.jpg")} />
+        <img src={remote("/engineering/part2.jpg")} />
+      </div>
+    </figure>
+
+    <!-- <b><i>In Silico</i> Design</b> -->
   </li>
 
   <li>Build</li>
+
+  <li style="list-style-type: none;">
+    Tsingke Biotech used Escherichia coli TOP10 to synthesize the designed
+    plasmid, and helped us with protein expression and purification. The
+    obtained proteins were used for further experimental analysis.
+  </li>
 
   <li>Test</li>
 
@@ -310,6 +359,22 @@
   </li>
 
   <li>Learn</li>
+
+  <li style="list-style-type: none;">
+    <figure>
+      <img
+        src={remote("/engineering/8c9040f30b03f2df3e1a8aacdba9fbf.png")}
+        style="max-width: 50rem;"
+      />
+    </figure>
+    To evaluate the interaction between proteins and membranes, an Energy Dispersive
+    Spectrometer (EDS) analysis was conducted on samples containing BC+Oat membrane,
+    BC membrane, and BC+CBM-Globulin-CBM+APT membrane. The obtained results demonstrated
+    the occurrence of nitrogen in both BC+Oat membrane and BC+CBM-Globulin-CBM+APT
+    membrane, with a measured nitrogen content of 10.8%wt. In contrast, the absence
+    of nitrogen in the BC membrane confirmed the successful binding of proteins to
+    the membrane.
+  </li>
 </ul>
 
 <h2>Target 3: APT as an Additive to the Base</h2>
@@ -319,20 +384,20 @@
 
   <li style="list-style-type:none;">
     <p>
-      Attapulgite (APT), a low-cost and abundant clay mineral, exhibits a
-      porous, rod-shaped crystalline structure, a large surface area, and high
-      cation adsorption capacity. It is frequently employed in anti-diarrheal
-      medications (Haden et al., 1967). Research has demonstrated that BC-APT
-      membranes (BAM) produced by combining APT with bacterial cellulose possess
-      excellent microplastic adsorption capabilities (Zhang et al., 2023). The
-      irregular, randomly distributed clusters formed by BC nanofibers
-      crosslinked with APT bundles increase water flux, generating an abundant
-      and uniform pore structure ideal for microplastic filtration (see figure).
-      Furthermore, microplastics in water experience a repulsive effect with APT
-      as they pass through the membrane due to their weak negative charge,
-      preventing PS particles from entering the membrane pores. This allows the
-      solvent in the filtrate to pass through, maintaining a high flux for BAM
-      during water filtration.
+      <img src={remote("/engineering/bam.jpg")} style="width: 100%" />
+      Attapulgite (APT), a low-cost and abundant clay mineral, exhibits a porous,
+      rod-shaped crystalline structure, a large surface area, and high cation adsorption
+      capacity. It is frequently employed in anti-diarrheal medications (Haden et
+      al., 1967). Research has demonstrated that BC-APT membranes (BAM) produced
+      by combining APT with bacterial cellulose possess excellent microplastic adsorption
+      capabilities (Zhang et al., 2023). The irregular, randomly distributed clusters
+      formed by BC nanofibers crosslinked with APT bundles increase water flux, generating
+      an abundant and uniform pore structure ideal for microplastic filtration (see
+      figure). Furthermore, microplastics in water experience a repulsive effect
+      with APT as they pass through the membrane due to their weak negative charge,
+      preventing PS particles from entering the membrane pores. This allows the solvent
+      in the filtrate to pass through, maintaining a high flux for BAM during water
+      filtration.
     </p>
 
     <p>
@@ -414,7 +479,10 @@
       are presented in the table and graph.
     </p>
 
-    <p>(Table/Graph)</p>
+    <div style="text-align: center;">
+      <img src={remote("/engineering/tab1.jpg")} />
+      <img src={remote("/engineering/tab2.jpg")} />
+    </div>
 
     <p>
       A two-way ANOVA analysis was conducted on the data related to D. magna
@@ -501,7 +569,18 @@
       resulting support structure.
     </p>
 
-    <p>PIC</p>
+    <figure>
+      <div class="two">
+        <img src={remote("/engineering/left.jpg")} />
+        <img src={remote("/engineering/right.jpg")} />
+      </div>
+      <figcaption>
+        Left: extracted cellulose microfibers
+        <br />
+        Right: water stability experiment of composite (Wang et al, 2021)
+      </figcaption>
+    </figure>
+
     <p>
       To demonstrate the superior mechanical strength and water stability of
       cellulose-lignin reinforced composite materials, we further fabricated
@@ -578,7 +657,10 @@
       <li>Real bottle cap structures prepared using molds and baking.</li>
     </ol>
 
-    <p>[PIC]</p>
+    <!---->
+    <!-- <figure> -->
+    <!--   <img src={remote("/mag.svg")} /> -->
+    <!-- </figure> -->
   </li>
 
   <li>Test</li>
@@ -620,13 +702,20 @@
   <li>Design</li>
 
   <li style="list-style-type:none">
+    <figure>
+      <div class="two">
+        <img src={remote("/engineering/str1.jpg")} />
+        <img src={remote("/engineering/str2.jpg")} />
+      </div>
+    </figure>
+
     The original plan was to use stainless steel molds for the most precise
     control of microplastic contamination. However, due to cost constraints
     (creating a stainless steel mold from scratch costs nearly 10,000 RMB or
     approximately 1,370 dollars), we decided to use 3D printed heat-resistant
-    flexible nylon molds to produce the support structures. As shown in Figure
-    _, the envisioned support structures were modeled using Blender and
-    SolidWorks, and the initial drawings were used for test printing.
+    flexible nylon molds to produce the support structures. As shown in the
+    figure above, the envisioned support structures were modeled using Blender
+    and SolidWorks, and the initial drawings were used for test printing.
   </li>
 
   <li>Construction and Testing</li>

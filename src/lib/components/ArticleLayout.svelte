@@ -77,7 +77,7 @@
 
   a {
     color: black;
-    text-decoration: none;
+    text-decoration: none !important;
     opacity: 0.7;
     transition: opacity 0.2s;
     margin: 0.5rem 0;

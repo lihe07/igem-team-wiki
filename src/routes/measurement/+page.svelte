@@ -60,9 +60,7 @@
 </p>
 
 <figure>
-  <img
-    src="https://lms.d.zhan.com/zhanlms/addon_homework/2023/10/6750693652cde17de967/image1.jpeg"
-  />
+  <img src={remote("/measurements/cola.jpg")} style="max-width: 40rem;" />
 </figure>
 
 <p>

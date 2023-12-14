@@ -4,12 +4,13 @@
   export let desc = "No description provided.";
   export let tags = [""];
   export let background = "#e5e5e5";
+  export let blur = "10px";
 </script>
 
 <div class="card">
-  <div style={`background: ${background}`} class="bg" />
+  <div style={`background-image: ${background}; opacity: 0.6;`} class="bg" />
 
-  <div class="content">
+  <div class="content" style={`backdrop-filter: blur(${blur}); `}>
     <img src={avatar} alt="" srcset="" />
 
     <div>
@@ -57,6 +58,8 @@
 
   .bg {
     position: absolute;
+    background-clip: cover;
+    background-position: center;
     width: 100%;
     height: 100%;
   }
@@ -70,7 +73,7 @@
     gap: 3rem;
     font-family: sans-serif;
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     padding: 3rem;
   }
   h2 {

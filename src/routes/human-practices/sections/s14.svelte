@@ -41,7 +41,7 @@
 
 <p>
   Their suggestions mainly include the following aspects, and we have made
-  improvements and replies one by one: （这个文段要改, 高韩负责）
+  improvements and replies one by one:
 </p>
 
 <h4>Durability</h4>
