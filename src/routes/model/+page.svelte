@@ -7,6 +7,68 @@
 
 <h2>The Accumulation of MPs in human body</h2>
 
+<p>
+  The lifetime accumulation of microplastics for human can be modeled as the
+  rate of the amount of microplastics inside human's bodies respect to the time,
+  in which the balance of intake and loss processes are considered.
+</p>
+
+<p>We have:</p>
+
+<Math
+  displayMode
+  expression={String.raw`
+\begin{align*}
+\frac{\mathrm{d} C_{\mathrm{MP}}}{\mathrm{d} t} = (1 - f_{\mathrm{abs}} \cdot f_{\mathrm{a, n}}) \sum_{i = 1}^{n}(\mathrm{Ir}_{i} \cdot C_{i}) + (1 - f_{\mathrm{abs}}) \cdot (f_{\mathrm{dep}} \cdot \mathrm{InR} \cdot C_{\mathrm{a}}) \\
++ k_{\mathrm{tis}} \cdot C_{\mathrm{tis}} - k_{\mathrm{loss}} \cdot C_{\mathrm{MP}}
+\end{align*}
+`}
+/>
+
+<p>
+  and the amount of microplastics inside human's tissue can be expressed as:
+</p>
+
+<Math
+  displayMode
+  expression={String.raw`
+\frac{\mathrm{d} C_{\mathrm{tis}}}{\mathrm{d} t} = f_{\mathrm{abs}} \cdot f_{\mathrm{a, n} } \sum _{i = 1}^{n}(\mathrm{Ir}_{i} \cdot C_{i} ) + f_{\mathrm{abs} } \cdot (f_{\mathrm{dep} } \cdot \mathrm{InR} \cdot C_{\mathrm{a}} ) - k_{\mathrm{tis} } \cdot C_{\mathrm{tis} }
+`}
+/>
+
+<!-- where $i$ refers to the index of the $n$ food types in the study, $C_{i}$ is the microplastics concentration per media in terms of number concentrations, $\mathrm{Ir}_{i}$ represents the related daily ingestion rate, $f_{\mathrm{abs}}$ represents the intestinal absorption, $f_{\mathrm{a, n}}$ refers to the total number of ingested particles ranged from 1 to 10 $\mu$m, $C_{\mathrm{a}}$ is the microplastics concentration in the air, $\mathrm{InR}$ is the inhalation rate, $f_{\mathrm{dep}}$ is assumed as a constant representing the fraction of inhaled particles that deposited in the nasopharyngeal cavities, $C_{\mathrm{tis}}$ refers to the amount of removal of microplastics from the tissue, $k_{\mathrm{tis}}$ is the biliary excretion rate constant, and $k_{\mathrm{loss}}$ represents the loss rate constant of microplastics based on stool frequencies. -->
+
+<p>
+  where <Math expression={`i`} /> refers to the index of the <Math
+    expression={`n`}
+  /> food types in the study, <Math expression={`C_{i}`} /> is the microplastics
+  concentration per media in terms of number concentrations, <Math
+    expression={`\\mathrm{Ir}_{i}`}
+  /> represents the related daily ingestion rate, <Math
+    expression={`f_{\\mathrm{abs}}`}
+  /> represents the intestinal absorption, <Math
+    expression={`f_{\\mathrm{a, n}}`}
+  /> refers to the total number of ingested particles ranged from 1 to 10 <Math
+    expression={`\\mu`}
+  />m, <Math expression={`C_{\\mathrm{a}}`} /> is the microplastics concentration
+  in the air, <Math expression={`\\mathrm{InR}`} /> is the inhalation rate, <Math
+    expression={`f_{\\mathrm{dep}}`}
+  /> is assumed as a constant representing the fraction of inhaled particles that
+  deposited in the nasopharyngeal cavities, <Math
+    expression={`C_{\\mathrm{tis}}`}
+  /> refers to the amount of removal of microplastics from the tissue, <Math
+    expression={`k_{\\mathrm{tis}}`}
+  /> is the biliary excretion rate constant, and <Math
+    expression={`k_{\\mathrm{loss}}`}
+  /> represents the loss rate constant of microplastics based on stool frequencies.
+</p>
+
+<p>
+  Collectively, these equations and the relevant data help us constructed a well
+  simulation and visualization of microplastics accumulation over lifetime
+  inside human's bodies.
+</p>
+
 <h2>Protein Structure Prediction</h2>
 
 <h3>Protein Docking</h3>
@@ -1124,6 +1186,13 @@ q_{e}=\frac{kq_{max}c_{e}}{1+kc_{e}}`}
 </p>
 
 <h2>References</h2>
+
+<p>
+  Mohamed Nor, N. H., Kooi, M., Diepens, N. J., & Koelmans, A. A. (2021).
+  Lifetime accumulation of microplastic in children and adults. <em
+    >Environmental Science & Technology, 55</em
+  >(8), 5084–5096.
+</p>
 
 <p>
   Kumar, L., Sehrawat, R., &amp; Kong, Y. (2021). Oat proteins: A perspective on

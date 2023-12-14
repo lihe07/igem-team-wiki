@@ -9,7 +9,7 @@
     <img src={remote("/human-practices/plant-2.jpg")} alt="plant-2" />
   </div>
 
-  <figcaption>Figure X: Visiting Water Plnat</figcaption>
+  <figcaption>Visiting water plant</figcaption>
 </figure>
 
 <p>

@@ -65,7 +65,7 @@
   };
 </script>
 
-<ArticleLayout name="Human Practice">
+<ArticleLayout name="Human Practice" bg={remote("/human-practices/head.jpg")}>
   <slot />
 </ArticleLayout>
 

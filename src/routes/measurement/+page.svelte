@@ -2,6 +2,10 @@
   import { remote } from "$lib/header";
 </script>
 
+<h2>Overview</h2>
+
+<img src={remote("/measurements/overview.jpg")} />
+
 <h2>Application of Computer Vision</h2>
 
 <p>

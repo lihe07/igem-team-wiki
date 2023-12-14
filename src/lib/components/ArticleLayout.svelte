@@ -1,17 +1,10 @@
 <script>
   import "$lib/assets/markdown.css";
-  import Header from "$lib/components/Header.svelte";
   import { onDestroy, onMount } from "svelte";
+  import PlainLayout from "./PlainLayout.svelte";
   export let bg =
     "https://static.igem.wiki/teams/4714/wiki/for-test/placeholder.jpg";
   export let name = "";
-
-  onMount(() => (window.header_thres = 300));
-  onDestroy(() => {
-    if (typeof window !== "undefined") {
-      window.header_thres = "window";
-    }
-  });
 
   let outline = [];
 
@@ -52,58 +45,34 @@
   });
 </script>
 
-<img class="bg" src={bg} alt="background" />
-
-<div class="title">
-  <h1>{name}</h1>
-</div>
-
-<div class="header-container">
-  <Header fixed={false} white={true} />
-</div>
-
-<main>
-  <div class="markdown-body" style="margin: 4rem 0; " bind:this={body}>
-    <slot />
-  </div>
-
-  <div class="aside">
-    <div class="outline">
-      <h3>On this page:</h3>
-
-      {#each outline as entry}
-        <a
-          href={`#${entry.id}`}
-          style="display: block; margin-left: ${(entry.level - 2) * 1.5}rem"
-        >
-          {entry.text}
-        </a>
-      {/each}
+<PlainLayout {name} {bg}>
+  <main>
+    <div class="markdown-body" bind:this={body}>
+      <slot />
     </div>
-  </div>
-</main>
+
+    <div class="aside">
+      <div class="outline">
+        <h3>On this page:</h3>
+
+        {#each outline as entry}
+          <a
+            href={`#${entry.id}`}
+            style="display: block; margin-left: ${(entry.level - 2) * 1.5}rem"
+          >
+            {entry.text}
+          </a>
+        {/each}
+      </div>
+    </div>
+  </main>
+</PlainLayout>
 
 <style scoped>
   h3 {
     font-size: 1.4rem;
     font-family: sans-serif;
     margin-bottom: 0.7rem;
-  }
-
-  .title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 500px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  h1 {
-    font-size: 4.5rem;
-    color: white;
   }
 
   a {
@@ -123,27 +92,8 @@
     opacity: 1;
   }
 
-  .header-container {
-    position: absolute;
-    top: 1.5rem;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-  }
-  .bg {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    filter: brightness(0.7);
-  }
   main {
-    padding: 0 5rem;
-    max-width: 100rem;
     width: 100%;
-    margin: auto;
-    box-sizing: border-box;
-    background: white;
-
     display: flex;
   }
 
@@ -156,7 +106,6 @@
   .aside {
     width: 20rem;
     margin-left: 3rem;
-    margin-top: 3rem;
   }
   .outline {
     position: sticky;

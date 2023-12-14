@@ -57,7 +57,6 @@
     alt="drink"
     style="padding: 2rem; width: 80%;"
   />
-  <figcaption>Figure X: lorem</figcaption>
 </figure>
 
 <p><b>Engineer Yin:</b> Can intercepted microplastics be reused?</p>

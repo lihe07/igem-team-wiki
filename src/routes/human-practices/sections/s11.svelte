@@ -1,4 +1,5 @@
 <script>
+  import { remote } from "$lib/header";
   import SectionHeader from "../SectionHeader.svelte";
 </script>
 
@@ -11,7 +12,11 @@
   specific process can be viewed here lab链接】)
 </p>
 
-<SectionHeader title="Fixation" subtitle="" />
+<SectionHeader
+  title="Fixation"
+  subtitle=""
+  background={`url(${remote("/human-practices/head.jpg")})`}
+/>
 
 <p>
   Upon the theoretical design completion of our initial bottle cap version, we
