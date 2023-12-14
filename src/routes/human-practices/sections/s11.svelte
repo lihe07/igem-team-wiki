@@ -17,8 +17,7 @@
   Upon the theoretical design completion of our initial bottle cap version, we
   commenced soliciting feedback from various stakeholders in society. Our
   shareholders include: filtering engineer, a consumer representative, and a
-  representative from the Bottled Water
-  Company.(这三类人在拍版的时候最好有三个大块，每块中有介绍)
+  representative from the Bottled Water Company.
 </p>
 
 <ol>

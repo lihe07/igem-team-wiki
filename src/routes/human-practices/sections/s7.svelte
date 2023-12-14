@@ -5,7 +5,11 @@
   import SectionHeader from "../SectionHeader.svelte";
 </script>
 
-<SectionHeader title="Adjustment" subtitle="Shifting the Problem" />
+<SectionHeader
+  title="Adjustment"
+  subtitle="Shifting the Problem"
+  background={`url(${remote("/human-practices/adj.jpg")})`}
+/>
 
 <p>
   However, after we presented our well-designed Plan A to the water treatment

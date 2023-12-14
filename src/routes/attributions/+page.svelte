@@ -8,6 +8,27 @@
 <h2>Attribution Form</h2>
 
 <p>
+  Note: There were some inaccuracies in the initial team member attribution,
+  stemming from complex circumstances that do not pertain to any serious
+  breaches of academic integrity. We would like to clarify the following:
+</p>
+<p>
+  Within our team, Yiwei Wan and Yiyi Ding have made certain contributions to
+  our project, with a noteworthy emphasis on sharing the financial
+  responsibilities associated with competition fees alongside other team
+  members.
+</p>
+<p>
+  We acknowledge their involvement, which has played a role in the team gaining
+  valuable experiences.
+</p>
+<p>
+  Moving forward, we want to encourage teams to consider recruiting more members
+  who can bring a diverse range of skills and actively contribute to the
+  project&#39;s substantive aspects.
+</p>
+
+<p>
   In accordance with the
   <a href="https://competition.igem.org/deliverables/project-attribution">
     new requirements
@@ -69,7 +90,8 @@
   .container {
     background: white;
     border-radius: 1rem;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    box-shadow:
+      0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
     overflow: hidden;
     margin-top: 2rem;

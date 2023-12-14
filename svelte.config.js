@@ -14,7 +14,7 @@ const config = {
 			handleHttpError: "warn",
 		},
 		paths: {
-			// base: "/baid-china",
+			base: "/baid-china",
 			// base: "/",
 		},
 	},

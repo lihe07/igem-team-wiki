@@ -78,11 +78,7 @@
     />
     <img src={remote("/mag.svg")} alt="" style="max-height: 20rem;" />
   </div>
-  <figcaption>
-    Figure 5 (left): Structure of “Plasticlear”
-    <br />
-    Figure 6 (right): Removal mechanism of MPs in Plasticlear
-  </figcaption>
+  <figcaption>Figure 5: Structure of “Plasticlear”</figcaption>
 </figure>
 
 <p>
@@ -92,11 +88,11 @@
   cleaner source of drinking water and reducing passive microplastic ingestion.
 </p>
 
-<!-- <figure> -->
-<!--   <img src={remote("/description/2.png")} /> -->
-<!--   <figcaption>Figure 6</figcaption> -->
-<!-- </figure> -->
-<!---->
+<figure>
+  <img src={remote("/description/2.png")} alt="removal-mechanism" />
+  <figcaption>Figure 6: Removal mechanism of MPs in Plasticlear</figcaption>
+</figure>
+
 <p>
   In the realm of biological materials, we have chosen Bacterial Cellulose (BC)
   as the substrate, produced by cultivating bacterial cellulose membranes (BCM)
@@ -112,9 +108,10 @@
   contain
   images={[
     remote("/description/1.png"),
-    remote("/description/apt.png"),
+    remote("/description/apt.jpg"),
     remote("/description/bam.jpg"),
-    remote("/description/3.png"),
+    remote("/description/oat.jpg"),
+    remote("/description/tannic.jpg"),
     remote("/description/final.png"),
   ]}
   descriptions={[
@@ -150,8 +147,20 @@ It functions by mimicking the role of natural cellulose cross-linkers, anchoring
 Oat proteins are globular proteins extracted from by-products of oat β-glucan processing. Due to the recent health benefits of oat β-glucan, such as cholesterol reduction and blood sugar regulation, oat proteins are added as 76 health ingredients in food and cosmetics, making them cost-effective and environmentally friendly. In a 2021 study by Wang et al., oat protein sponges were chemically cross-linked and tested for their removal efficiency of PS particles (a type of microplastic), achieving removal efficiencies ranging from 75% to 82% (Wang et al., 2021). Their model suggests that microplastic binding sites on these oat protein sponges are likely hydrophobic groups on protein side chains, capable of hydrophobic interactions with the phenyl rings on PS particles. Considering their minimal impact on protein side chains during the production of oat protein hydrogels, which is mainly achieved through chemical cross-linking and liquid nitrogen freezing followed by lyophilization, we believe that oat proteins possess the desired characteristics for microplastic adsorption and have chosen to incorporate them into our biological material.
 </p>
 `,
-
     `
+<p>
+  In addition to the standard components of our filter membrane, we also
+  experimented with a variety of eco-friendly additives to enhance its
+  performance and sustainability. Our goal was to improve the removal capacity
+  of the membrane while maintaining its cost-effectiveness. We tried
+  incorporating different natural materials, such as cellulose, coffee grounds,
+  and bagasse, into the membrane matrix. These additives were chosen for their
+  known ability to enhance filtration properties and their environmentally
+  friendly nature.
+</p>
+`,
+    `
+
 <p>
 After modifying the bacterial cellulose membrane in the aforementioned two steps, we have obtained the biological filtration membrane portion of our designed bottle cap. Regarding the rigid support portion, given the uniqueness of our project design, we have opted to obtain samples of the support structure through 3D printing. By using all-cellulose ink, we are able to create lightweight, super-strong, highly elastic, and highly resilient all-cellulose support structures (Jiang et al., 2021).
 </p>

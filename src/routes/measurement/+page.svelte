@@ -101,7 +101,7 @@
 
 <p>Materials used:</p>
 <ul>
-  <li>PS microplastics 0.1mm microspheres (purchased from [source])</li>
+  <li>PS microplastics 0.1mm microspheres (purchased from Yuan Biotech.)</li>
 </ul>
 
 <p>

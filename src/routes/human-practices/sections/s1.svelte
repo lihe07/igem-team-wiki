@@ -1,8 +1,13 @@
 <script>
+  import { remote } from "$lib/header";
   import SectionHeader from "../SectionHeader.svelte";
 </script>
 
-<SectionHeader title="Exploration" subtitle="The Origin of Our Program" />
+<SectionHeader
+  title="Exploration"
+  subtitle="The Origin of Our Program"
+  background={`url(${remote("/human-practices/exp.jpg")}`}
+/>
 <p>
   In our literature review, we initially explored the significant rise in
   microplastics (MPs) based on an article published by The Guardian. This

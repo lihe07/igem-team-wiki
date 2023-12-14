@@ -1,10 +1,7 @@
 <script>
   import ArticleLayout from "$lib/components/ArticleLayout.svelte";
-  import PlainLayout from "$lib/components/PlainLayout.svelte";
   import { remote } from "$lib/header";
   import StickyImage from "$lib/components/StickyImage.svelte";
-  import Block from "./Block.svelte";
-  import SectionHeader from "./SectionHeader.svelte";
   import s1 from "./sections/s1.svelte";
   import s2 from "./sections/s2.svelte";
   import s3 from "./sections/s3.svelte";
@@ -49,9 +46,9 @@
     remote("/human-practices/9.svg"),
     remote("/human-practices/10.svg"),
     remote("/human-practices/11.svg"),
-    remote("/human-practices/12.svg"),
-    remote("/human-practices/13.svg"),
     remote("/human-practices/14.svg"),
+    remote("/human-practices/15.svg"),
+    remote("/human-practices/16.svg"),
   ];
 
   const transforms = {
@@ -76,6 +73,76 @@
   <div class="markdown-body" style="margin: 4rem 0; ">
     <StickyImage contain descriptions={sections} {images} {transforms} />
     <h2>References</h2>
+
+    <p>
+      Carrington, D. (2021, December 8). <em
+        >Microplastics cause damage to human cells, study shows</em
+      >. The Guardian.
+      <a
+        href="https://www.theguardian.com/environment/2021/dec/08/microplastics-damage-human-cells-study-plastic"
+        target="_blank"
+        class="url"
+        >https://www.theguardian.com/environment/2021/dec/08/microplastics-damage-human-cells-study-plastic</a
+      >
+    </p>
+    <p>
+      Mason, S. A., Welch, V. G., &amp; Neratko, J. (2018). Synthetic Polymer
+      Contamination in Bottled Water. <em>Frontiers in Chemistry</em>,
+      <em>6</em>(407).
+      <a
+        href="https://doi.org/10.3389/fchem.2018.00407"
+        target="_blank"
+        class="url">https://doi.org/10.3389/fchem.2018.00407</a
+      >
+    </p>
+    <p>
+      Meng, F., Zhang, S., Oh, Y., Zhou, Z., Shin, H.-S., &amp; Chae, S.-R.
+      (2017). Fouling in membrane bioreactors: An updated review. <em
+        >Water Research</em
+      >, <em>114</em>, 151–180.
+      <a
+        href="https://doi.org/10.1016/j.watres.2017.02.006"
+        target="_blank"
+        class="url">https://doi.org/10.1016/j.watres.2017.02.006</a
+      >
+    </p>
+    <p>
+      Radityaningrum, A. D., Trihadiningrum, Y., Mar’atusholihah, Soedjono, E.
+      S., &amp; Herumurti, W. (2021). Microplastic contamination in water supply
+      and the removal efficiencies of the treatment plants: A case of Surabaya
+      City, Indonesia. <em>Journal of Water Process Engineering</em>,
+      <em>43</em>, 102195.
+      <a
+        href="https://doi.org/10.1016/j.jwpe.2021.102195"
+        target="_blank"
+        class="url">https://doi.org/10.1016/j.jwpe.2021.102195</a
+      >
+    </p>
+    <p>
+      Shen, M., Zeng, Z., Wen, X., Ren, X., Zeng, G., Zhang, Y., &amp; Xiao, R.
+      (2021). Presence of microplastics in drinking water from freshwater
+      sources: the investigation in Changsha, China. <em
+        >Environmental Science and Pollution Research</em
+      >, <em>28</em>(31), 42313–42324.
+      <a
+        href="https://doi.org/10.1007/s11356-021-13769-x"
+        target="_blank"
+        class="url">https://doi.org/10.1007/s11356-021-13769-x</a
+      >
+    </p>
+    <p>
+      Vercauteren, M., Semmouri, I., Van Acker, E., Pequeur, E., Van Esch, L.,
+      Uljee, I., Asselman, J., &amp; Janssen, C. R. (2023). Assessment of road
+      run-off and domestic wastewater contribution to microplastic pollution in
+      a densely populated area (Flanders, Belgium). <em
+        >Environmental Pollution</em
+      >, <em>333</em>, 122090.
+      <a
+        href="https://doi.org/10.1016/j.envpol.2023.122090"
+        target="_blank"
+        class="url">https://doi.org/10.1016/j.envpol.2023.122090</a
+      >
+    </p>
   </div>
 </main>
 

@@ -29,7 +29,7 @@
     <img src={remote("/human-practices/chart-1.png")} alt="chart-1" />
     <img src={remote("/human-practices/chart-2.png")} alt="chart-2" />
   </div>
-  <figcaption>Figure X: 213</figcaption>
+  <!-- <figcaption>Figure X: 213</figcaption> -->
 </figure>
 
 <p>
@@ -51,7 +51,7 @@
     />
     <img src={remote("/human-practices/chart-4.png")} alt="chart-4" />
   </div>
-  <figcaption>Figure X: 213</figcaption>
+  <!-- <figcaption>Figure X: 213</figcaption> -->
 </figure>
 
 <p>
@@ -93,7 +93,7 @@
     />
     <img src={remote("/human-practices/chart-8.png")} alt="chart-8" />
   </div>
-  <figcaption>Figure X: 213</figcaption>
+  <!-- <figcaption>Figure X: 213</figcaption> -->
 </figure>
 
 <p>
