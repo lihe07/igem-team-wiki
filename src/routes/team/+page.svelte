@@ -198,6 +198,7 @@
     width: 100%;
     height: 100%;
     transition: transform 0.1s;
+    object-fit: cover;
   }
   .mask {
     position: relative;
